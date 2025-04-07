@@ -1,4 +1,5 @@
 version: v2
+clean: true
 plugins:  
   - remote: buf.build/protocolbuffers/dart:v21.1.2
     out: gen

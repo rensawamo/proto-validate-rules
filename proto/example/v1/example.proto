@@ -1,23 +1,13 @@
 // proto_validate_examples.proto
 syntax = "proto3";
 
-package example.hello.v1;
+package example.v1;
 
 import "buf/validate/validate.proto";
 import "google/protobuf/any.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
-// 文字列に1文字以上が必要なとき
-message Hello {
-  string hello = 1 [(buf.validate.field).string.min_len = 1];
-}
-
-// メッセージ全体のバリデーションを無効にしたいとき
-message DisabledExample {
-  option (buf.validate.message).disabled = true;
-  string val = 1 [(buf.validate.field).string.min_len = 1];
-}
 
 // oneofフィールドのうち、どれか一つは必須にしたいとき
 message OneofExample {

@@ -1,0 +1,109 @@
+// proto_validate_examples.proto
+syntax = "proto3";
+
+package example.v1;
+
+import "buf/validate/validate.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+// 最小限のバリデーション例
+message Hello {
+  string hello = 1 [(buf.validate.field).string.min_len = 1];
+}
+
+// メッセージ全体のバリデーションを無効化
+message DisabledExample {
+  option (buf.validate.message).disabled = true;
+  string val = 1 [(buf.validate.field).string.min_len = 1];
+}
+
+// oneofフィールドのバリデーション
+message OneofExample {
+  oneof union {
+    option (buf.validate.oneof).required = true;
+    string val1 = 1;
+    string val2 = 2;
+  }
+}
+
+// 文字列バリデーション
+message StringValidationExample {
+  string const_value = 1 [(buf.validate.field).string.const = "const"];
+  string len_value = 2 [(buf.validate.field).string.len = 5];
+  string min_len_value = 3 [(buf.validate.field).string.min_len = 5];
+  string max_len_value = 4 [(buf.validate.field).string.max_len = 5];
+  string pattern_value = 5 [(buf.validate.field).string.pattern = "^hello, .*$"];
+  string email_value = 6 [(buf.validate.field).string.email = true];
+  string uri_value = 7 [(buf.validate.field).string.uri = true];
+  string uuid_value = 8 [(buf.validate.field).string.uuid = true];
+  string ip_value = 9 [(buf.validate.field).string.ip = true];
+  string ipv4_value = 10 [(buf.validate.field).string.ipv4 = true];
+  string ipv6_value = 11 [(buf.validate.field).string.ipv6 = true];
+  string prefix_value = 12 [(buf.validate.field).string.prefix = "Hello"];
+  string suffix_value = 13 [(buf.validate.field).string.suffix = "World"];
+  string contains_value = 14 [(buf.validate.field).string.contains = "banana"];
+  string not_contains_value = 15 [(buf.validate.field).string.not_contains = "banana"];
+  string in_value = 16 [
+    (buf.validate.field).string.in = "Java",
+    (buf.validate.field).string.in = "Go"
+  ];
+  string not_in_value = 17 [
+    (buf.validate.field).string.not_in = "Rust",
+    (buf.validate.field).string.not_in = "Scala"
+  ];
+}
+
+// ブール値バリデーション
+message BoolValidationExample {
+  bool true_value = 1 [(buf.validate.field).bool.const = true];
+  bool false_value = 2 [(buf.validate.field).bool.const = false];
+}
+
+// double型バリデーション
+message DoubleValidationExample {
+  double const_value = 1 [(buf.validate.field).double.const = 42.0];
+  double lt_value = 2 [(buf.validate.field).double.lt = 10.0];
+  double lte_value = 3 [(buf.validate.field).double.lte = 10.0];
+  double gt_value = 4 [(buf.validate.field).double.gt = 10.0];
+  double gte_value = 5 [(buf.validate.field).double.gte = 10.0];
+  double in_value = 6 [
+    (buf.validate.field).double.in = 10.0,
+    (buf.validate.field).double.in = 12.0
+  ];
+  double not_in_value = 7 [
+    (buf.validate.field).double.not_in = 14.0,
+    (buf.validate.field).double.not_in = 16.0
+  ];
+}
+
+// enumバリデーション
+message EnumValidationExample {
+  enum MyEnum {
+    MY_ENUM_UNSPECIFIED = 0;
+    VALUE1 = 1;
+    VALUE2 = 2;
+  }
+  MyEnum const_value = 1 [(buf.validate.field).enum.const = 1];
+  MyEnum defined_only = 2 [(buf.validate.field).enum.defined_only = true];
+}
+
+// 繰り返しフィールドバリデーション
+message RepeatedValidationExample {
+  repeated string min_items = 1 [(buf.validate.field).repeated.min_items = 2];
+  repeated string max_items = 2 [(buf.validate.field).repeated.max_items = 5];
+  repeated string unique_items = 3 [(buf.validate.field).repeated.unique = true];
+  repeated string item_rules = 4 [
+    (buf.validate.field).repeated.items = {string: {min_len: 2, max_len: 10}}
+  ];
+}
+
+// CELバリデーション
+message FieldConstraintsExample {
+  int32 even_value = 1 [(buf.validate.field).cel = {
+    id: "even_check",
+    message: "must be even",
+    expression: "this % 2 == 0"
+  }];
+}

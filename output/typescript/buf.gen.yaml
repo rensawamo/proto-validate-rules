@@ -1,0 +1,13 @@
+version: v2
+clean: true
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: https://github.com/rensawamo/common-proto/output/go/gen
+plugins:
+  - remote: buf.build/community/stephenh-ts-proto:v2.6.1
+    include_imports: true
+    include_wkt: true
+    out: gen
+    opt: paths=source_relative

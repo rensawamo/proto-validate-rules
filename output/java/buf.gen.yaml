@@ -1,0 +1,6 @@
+version: v2
+plugins:  
+  - remote: buf.build/protocolbuffers/java:v30.1
+    out: gen
+    include_wkt: true
+    include_imports: true

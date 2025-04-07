@@ -10,3 +10,5 @@ modules:
   - path: proto/example
 deps:
   - buf.build/bufbuild/protovalidate
+
+  

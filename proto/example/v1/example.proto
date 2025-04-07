@@ -1,12 +1,9 @@
-// proto_validate_examples.proto
 syntax = "proto3";
 
 package example.v1;
 
+// https://github.com/bufbuild/protovalidate?tab=readme-ov-file
 import "buf/validate/validate.proto";
-import "google/protobuf/any.proto";
-import "google/protobuf/duration.proto";
-import "google/protobuf/timestamp.proto";
 
 // 最小限のバリデーション例
 message Hello {
@@ -82,8 +79,8 @@ message DoubleValidationExample {
 message EnumValidationExample {
   enum MyEnum {
     MY_ENUM_UNSPECIFIED = 0;
-    VALUE1 = 1;
-    VALUE2 = 2;
+    MY_ENUM_VALUE1 = 1;
+    MY_ENUM_VALUE2 = 2;
   }
   MyEnum const_value = 1 [(buf.validate.field).enum.const = 1];
   MyEnum defined_only = 2 [(buf.validate.field).enum.defined_only = true];
@@ -94,16 +91,19 @@ message RepeatedValidationExample {
   repeated string min_items = 1 [(buf.validate.field).repeated.min_items = 2];
   repeated string max_items = 2 [(buf.validate.field).repeated.max_items = 5];
   repeated string unique_items = 3 [(buf.validate.field).repeated.unique = true];
-  repeated string item_rules = 4 [
-    (buf.validate.field).repeated.items = {string: {min_len: 2, max_len: 10}}
-  ];
+  repeated string item_rules = 4 [(buf.validate.field).repeated.items = {
+    string: {
+      min_len: 2
+      max_len: 10
+    }
+  }];
 }
 
 // CELバリデーション
 message FieldConstraintsExample {
   int32 even_value = 1 [(buf.validate.field).cel = {
-    id: "even_check",
-    message: "must be even",
+    id: "even_check"
+    message: "must be even"
     expression: "this % 2 == 0"
   }];
 }

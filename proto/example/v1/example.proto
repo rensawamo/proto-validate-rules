@@ -8,7 +8,6 @@ import "google/protobuf/any.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
-
 // oneofフィールドのうち、どれか一つは必須にしたいとき
 message OneofExample {
   oneof union {
@@ -280,4 +279,34 @@ message FieldConstraintsExample {
     (buf.validate.field).string.email = true,
     (buf.validate.field).ignore = IGNORE_IF_UNPOPULATED
   ];
+}
+
+
+
+// --- 以下は追加ルール説明 ---
+
+message AdditionalValidationExamples {
+  // 値が空のときバリデーションを無視したいとき
+  // ※ 空文字列・ゼロ値などをスキップしたい場合に有効
+  string val = 1 [(buf.validate.field).ignore_empty = true];
+
+  // repeated のリストに対して最大要素数や個別要素のルールを定義したいとき
+  repeated string tags = 2 [
+    (buf.validate.field).repeated = {
+      max_items: 10
+      items: { string: { max_len: 100 } }
+    }
+  ];
+
+  // フィールドの可視性を限定したいとき（PREVIEW など）
+  string preview_field = 3 [(google.api.message_visibility).restriction = "PREVIEW"];
+
+  // 出力専用（レスポンス専用）フィールドであることを明示したいとき
+  string result = 4 [(google.api.field_behavior) = OUTPUT_ONLY];
+
+  // int32 フィールドの範囲を指定したいとき（0より大きく、100以下）
+  int32 percentage = 5 [(buf.validate.field).int32 = {
+    gt: 0
+    lte: 100
+  }];
 }

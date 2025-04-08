@@ -13,30 +13,25 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use helloDescriptor instead')
-const Hello$json = {
-  '1': 'Hello',
+@$core.Deprecated('Use deprecatedExampleDescriptor instead')
+const DeprecatedExample$json = {
+  '1': 'DeprecatedExample',
   '2': [
-    {'1': 'hello', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'hello'},
+    {
+      '1': 'deprecated_value',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {'3': true},
+      '10': 'deprecatedValue',
+    },
   ],
 };
 
-/// Descriptor for `Hello`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List helloDescriptor = $convert.base64Decode(
-    'CgVIZWxsbxIdCgVoZWxsbxgBIAEoCUIHukgEcgIQAVIFaGVsbG8=');
-
-@$core.Deprecated('Use disabledExampleDescriptor instead')
-const DisabledExample$json = {
-  '1': 'DisabledExample',
-  '2': [
-    {'1': 'val', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'val'},
-  ],
-  '7': {},
-};
-
-/// Descriptor for `DisabledExample`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List disabledExampleDescriptor = $convert.base64Decode(
-    'Cg9EaXNhYmxlZEV4YW1wbGUSGQoDdmFsGAEgASgJQge6SARyAhABUgN2YWw6BbpIAggB');
+/// Descriptor for `DeprecatedExample`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deprecatedExampleDescriptor = $convert.base64Decode(
+    'ChFEZXByZWNhdGVkRXhhbXBsZRItChBkZXByZWNhdGVkX3ZhbHVlGAEgASgJQgIYAVIPZGVwcm'
+    'VjYXRlZFZhbHVl');
 
 @$core.Deprecated('Use oneofExampleDescriptor instead')
 const OneofExample$json = {
@@ -54,6 +49,21 @@ const OneofExample$json = {
 final $typed_data.Uint8List oneofExampleDescriptor = $convert.base64Decode(
     'CgxPbmVvZkV4YW1wbGUSFAoEdmFsMRgBIAEoCUgAUgR2YWwxEhQKBHZhbDIYAiABKAlIAFIEdm'
     'FsMkIOCgV1bmlvbhIFukgCCAE=');
+
+@$core.Deprecated('Use ignoreEmptyExampleDescriptor instead')
+const IgnoreEmptyExample$json = {
+  '1': 'IgnoreEmptyExample',
+  '2': [
+    {'1': 'val1', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'val1'},
+    {'1': 'val2', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'val2'},
+    {'1': 'val3', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'val3'},
+  ],
+};
+
+/// Descriptor for `IgnoreEmptyExample`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List ignoreEmptyExampleDescriptor = $convert.base64Decode(
+    'ChJJZ25vcmVFbXB0eUV4YW1wbGUSGgoEdmFsMRgBIAEoCUIGukgD2AECUgR2YWwxEhoKBHZhbD'
+    'IYAiABKAlCBrpIA9gBA1IEdmFsMhIaCgR2YWwzGAMgASgJQga6SAPYAQFSBHZhbDM=');
 
 @$core.Deprecated('Use stringValidationExampleDescriptor instead')
 const StringValidationExample$json = {
@@ -107,25 +117,25 @@ final $typed_data.Uint8List stringValidationExampleDescriptor = $convert.base64D
     'cHJlZml4VmFsdWUSLwoMc3VmZml4X3ZhbHVlGAogASgJQgy6SAlyB0IFV29ybGRSC3N1ZmZpeF'
     'ZhbHVlEjQKDmNvbnRhaW5zX3ZhbHVlGAsgASgJQg26SApyCEoGYmFuYW5hUg1jb250YWluc1Zh'
     'bHVlEjwKEm5vdF9jb250YWluc192YWx1ZRgMIAEoCUIOukgLcgm6AQZiYW5hbmFSEG5vdENvbn'
-    'RhaW5zVmFsdWUSMgoIaW5fdmFsdWUYDSABKAlCF7pIFHISUgRKYXZhUgZLb3RsaW5SAkdvUgdp'
-    'blZhbHVlEjkKDG5vdF9pbl92YWx1ZRgOIAEoCUIXukgUchJaBEphdmFaBktvdGxpbloCR29SCm'
-    '5vdEluVmFsdWUSKAoLZW1haWxfdmFsdWUYDyABKAlCB7pIBHICYAFSCmVtYWlsVmFsdWUSLgoO'
-    'aG9zdG5hbWVfdmFsdWUYECABKAlCB7pIBHICaAFSDWhvc3RuYW1lVmFsdWUSIgoIaXBfdmFsdW'
-    'UYESABKAlCB7pIBHICcAFSB2lwVmFsdWUSJgoKaXB2NF92YWx1ZRgSIAEoCUIHukgEcgJ4AVIJ'
-    'aXB2NFZhbHVlEicKCmlwdjZfdmFsdWUYEyABKAlCCLpIBXIDgAEBUglpcHY2VmFsdWUSJQoJdX'
-    'JpX3ZhbHVlGBQgASgJQgi6SAVyA4gBAVIIdXJpVmFsdWUSLAoNdXJpX3JlZl92YWx1ZRgVIAEo'
-    'CUIIukgFcgOQAQFSC3VyaVJlZlZhbHVlEi0KDWFkZHJlc3NfdmFsdWUYFiABKAlCCLpIBXIDqA'
-    'EBUgxhZGRyZXNzVmFsdWUSJwoKdXVpZF92YWx1ZRgXIAEoCUIIukgFcgOwAQFSCXV1aWRWYWx1'
-    'ZRIpCgt0dXVpZF92YWx1ZRgYIAEoCUIIukgFcgOIAgFSCnR1dWlkVmFsdWUSPwoXaXBfd2l0aF'
-    '9wcmVpZnhsZW5fdmFsdWUYGSABKAlCCLpIBXID0AEBUhRpcFdpdGhQcmVpZnhsZW5WYWx1ZRJD'
-    'ChlpcHY0X3dpdGhfcHJlaWZ4bGVuX3ZhbHVlGBogASgJQgi6SAVyA9gBAVIWaXB2NFdpdGhQcm'
-    'VpZnhsZW5WYWx1ZRJDChlpcHY2X3dpdGhfcHJlaWZ4bGVuX3ZhbHVlGBsgASgJQgi6SAVyA+AB'
-    'AVIWaXB2NldpdGhQcmVpZnhsZW5WYWx1ZRIwCg9pcF9wcmVmaXhfdmFsdWUYHCABKAlCCLpIBX'
-    'ID6AEBUg1pcFByZWZpeFZhbHVlEjIKEGlwNF9wcmVmaXhfdmFsdWUYHSABKAlCCLpIBXID8AEB'
-    'Ug5pcDRQcmVmaXhWYWx1ZRIyChBpcDZfcHJlZml4X3ZhbHVlGB4gASgJQgi6SAVyA/gBAVIOaX'
-    'A2UHJlZml4VmFsdWUSNwoTaG9zdF9hbmRfcG9ydF92YWx1ZRgfIAEoCUIIukgFcgOAAgFSEGhv'
-    'c3RBbmRQb3J0VmFsdWUSPgoVd2VsbF9rb3duX3JlZ2V4X3ZhbHVlGCAgASgJQgu6SAhyBsgBAc'
-    'ABAVISd2VsbEtvd25SZWdleFZhbHVl');
+    'RhaW5zVmFsdWUSKQoIaW5fdmFsdWUYDSABKAlCDrpIC3IJUgFBUgFCUgFDUgdpblZhbHVlEjAK'
+    'DG5vdF9pbl92YWx1ZRgOIAEoCUIOukgLcglaAUFaAUJaAUNSCm5vdEluVmFsdWUSKAoLZW1haW'
+    'xfdmFsdWUYDyABKAlCB7pIBHICYAFSCmVtYWlsVmFsdWUSLgoOaG9zdG5hbWVfdmFsdWUYECAB'
+    'KAlCB7pIBHICaAFSDWhvc3RuYW1lVmFsdWUSIgoIaXBfdmFsdWUYESABKAlCB7pIBHICcAFSB2'
+    'lwVmFsdWUSJgoKaXB2NF92YWx1ZRgSIAEoCUIHukgEcgJ4AVIJaXB2NFZhbHVlEicKCmlwdjZf'
+    'dmFsdWUYEyABKAlCCLpIBXIDgAEBUglpcHY2VmFsdWUSJQoJdXJpX3ZhbHVlGBQgASgJQgi6SA'
+    'VyA4gBAVIIdXJpVmFsdWUSLAoNdXJpX3JlZl92YWx1ZRgVIAEoCUIIukgFcgOQAQFSC3VyaVJl'
+    'ZlZhbHVlEi0KDWFkZHJlc3NfdmFsdWUYFiABKAlCCLpIBXIDqAEBUgxhZGRyZXNzVmFsdWUSJw'
+    'oKdXVpZF92YWx1ZRgXIAEoCUIIukgFcgOwAQFSCXV1aWRWYWx1ZRIpCgt0dXVpZF92YWx1ZRgY'
+    'IAEoCUIIukgFcgOIAgFSCnR1dWlkVmFsdWUSPwoXaXBfd2l0aF9wcmVpZnhsZW5fdmFsdWUYGS'
+    'ABKAlCCLpIBXID0AEBUhRpcFdpdGhQcmVpZnhsZW5WYWx1ZRJDChlpcHY0X3dpdGhfcHJlaWZ4'
+    'bGVuX3ZhbHVlGBogASgJQgi6SAVyA9gBAVIWaXB2NFdpdGhQcmVpZnhsZW5WYWx1ZRJDChlpcH'
+    'Y2X3dpdGhfcHJlaWZ4bGVuX3ZhbHVlGBsgASgJQgi6SAVyA+ABAVIWaXB2NldpdGhQcmVpZnhs'
+    'ZW5WYWx1ZRIwCg9pcF9wcmVmaXhfdmFsdWUYHCABKAlCCLpIBXID6AEBUg1pcFByZWZpeFZhbH'
+    'VlEjIKEGlwNF9wcmVmaXhfdmFsdWUYHSABKAlCCLpIBXID8AEBUg5pcDRQcmVmaXhWYWx1ZRIy'
+    'ChBpcDZfcHJlZml4X3ZhbHVlGB4gASgJQgi6SAVyA/gBAVIOaXA2UHJlZml4VmFsdWUSNwoTaG'
+    '9zdF9hbmRfcG9ydF92YWx1ZRgfIAEoCUIIukgFcgOAAgFSEGhvc3RBbmRQb3J0VmFsdWUSPgoV'
+    'd2VsbF9rb3duX3JlZ2V4X3ZhbHVlGCAgASgJQgu6SAhyBsgBAcABAVISd2VsbEtvd25SZWdleF'
+    'ZhbHVl');
 
 @$core.Deprecated('Use boolValidationExampleDescriptor instead')
 const BoolValidationExample$json = {
@@ -202,49 +212,14 @@ final $typed_data.Uint8List doubleValidationExampleDescriptor = $convert.base64D
     'QiC6SB0SGzkAAAAAAAAkQDkAAAAAAAAmQDkAAAAAAAAoQFIKbm90SW5WYWx1ZRIqCgxmaW5pdG'
     'VfdmFsdWUYCCABKAFCB7pIBBICQAFSC2Zpbml0ZVZhbHVl');
 
-@$core.Deprecated('Use enumValidationExampleDescriptor instead')
-const EnumValidationExample$json = {
-  '1': 'EnumValidationExample',
-  '2': [
-    {'1': 'const_value', '3': 1, '4': 1, '5': 14, '6': '.example.hello.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'constValue'},
-    {'1': 'defined_only_value', '3': 2, '4': 1, '5': 14, '6': '.example.hello.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'definedOnlyValue'},
-    {'1': 'in_value', '3': 3, '4': 1, '5': 14, '6': '.example.hello.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'inValue'},
-    {'1': 'not_in_value', '3': 4, '4': 1, '5': 14, '6': '.example.hello.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'notInValue'},
-  ],
-  '4': [EnumValidationExample_MyEnum$json],
-};
-
-@$core.Deprecated('Use enumValidationExampleDescriptor instead')
-const EnumValidationExample_MyEnum$json = {
-  '1': 'MyEnum',
-  '2': [
-    {'1': 'MY_ENUM_UNSPECIFIED', '2': 0},
-    {'1': 'MY_ENUM_VALUE1', '2': 1},
-    {'1': 'MY_ENUM_VALUE2', '2': 2},
-    {'1': 'MY_ENUM_VALUE3', '2': 3},
-  ],
-};
-
-/// Descriptor for `EnumValidationExample`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List enumValidationExampleDescriptor = $convert.base64Decode(
-    'ChVFbnVtVmFsaWRhdGlvbkV4YW1wbGUSWQoLY29uc3RfdmFsdWUYASABKA4yLi5leGFtcGxlLm'
-    'hlbGxvLnYxLkVudW1WYWxpZGF0aW9uRXhhbXBsZS5NeUVudW1CCLpIBYIBAggBUgpjb25zdFZh'
-    'bHVlEmYKEmRlZmluZWRfb25seV92YWx1ZRgCIAEoDjIuLmV4YW1wbGUuaGVsbG8udjEuRW51bV'
-    'ZhbGlkYXRpb25FeGFtcGxlLk15RW51bUIIukgFggECEAFSEGRlZmluZWRPbmx5VmFsdWUSVQoI'
-    'aW5fdmFsdWUYAyABKA4yLi5leGFtcGxlLmhlbGxvLnYxLkVudW1WYWxpZGF0aW9uRXhhbXBsZS'
-    '5NeUVudW1CCrpIB4IBBBgBGAJSB2luVmFsdWUSXAoMbm90X2luX3ZhbHVlGAQgASgOMi4uZXhh'
-    'bXBsZS5oZWxsby52MS5FbnVtVmFsaWRhdGlvbkV4YW1wbGUuTXlFbnVtQgq6SAeCAQQgASACUg'
-    'pub3RJblZhbHVlIl0KBk15RW51bRIXChNNWV9FTlVNX1VOU1BFQ0lGSUVEEAASEgoOTVlfRU5V'
-    'TV9WQUxVRTEQARISCg5NWV9FTlVNX1ZBTFVFMhACEhIKDk1ZX0VOVU1fVkFMVUUzEAM=');
-
 @$core.Deprecated('Use mapValidationExampleDescriptor instead')
 const MapValidationExample$json = {
   '1': 'MapValidationExample',
   '2': [
-    {'1': 'min_pairs_value', '3': 1, '4': 3, '5': 11, '6': '.example.hello.v1.MapValidationExample.MinPairsValueEntry', '8': {}, '10': 'minPairsValue'},
-    {'1': 'max_pairs_value', '3': 2, '4': 3, '5': 11, '6': '.example.hello.v1.MapValidationExample.MaxPairsValueEntry', '8': {}, '10': 'maxPairsValue'},
-    {'1': 'keys_value', '3': 3, '4': 3, '5': 11, '6': '.example.hello.v1.MapValidationExample.KeysValueEntry', '8': {}, '10': 'keysValue'},
-    {'1': 'values_value', '3': 4, '4': 3, '5': 11, '6': '.example.hello.v1.MapValidationExample.ValuesValueEntry', '8': {}, '10': 'valuesValue'},
+    {'1': 'min_pairs_value', '3': 1, '4': 3, '5': 11, '6': '.example.v1.MapValidationExample.MinPairsValueEntry', '8': {}, '10': 'minPairsValue'},
+    {'1': 'max_pairs_value', '3': 2, '4': 3, '5': 11, '6': '.example.v1.MapValidationExample.MaxPairsValueEntry', '8': {}, '10': 'maxPairsValue'},
+    {'1': 'keys_value', '3': 3, '4': 3, '5': 11, '6': '.example.v1.MapValidationExample.KeysValueEntry', '8': {}, '10': 'keysValue'},
+    {'1': 'values_value', '3': 4, '4': 3, '5': 11, '6': '.example.v1.MapValidationExample.ValuesValueEntry', '8': {}, '10': 'valuesValue'},
   ],
   '3': [MapValidationExample_MinPairsValueEntry$json, MapValidationExample_MaxPairsValueEntry$json, MapValidationExample_KeysValueEntry$json, MapValidationExample_ValuesValueEntry$json],
 };
@@ -291,19 +266,19 @@ const MapValidationExample_ValuesValueEntry$json = {
 
 /// Descriptor for `MapValidationExample`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mapValidationExampleDescriptor = $convert.base64Decode(
-    'ChRNYXBWYWxpZGF0aW9uRXhhbXBsZRJrCg9taW5fcGFpcnNfdmFsdWUYASADKAsyOS5leGFtcG'
-    'xlLmhlbGxvLnYxLk1hcFZhbGlkYXRpb25FeGFtcGxlLk1pblBhaXJzVmFsdWVFbnRyeUIIukgF'
-    'mgECCAJSDW1pblBhaXJzVmFsdWUSawoPbWF4X3BhaXJzX3ZhbHVlGAIgAygLMjkuZXhhbXBsZS'
-    '5oZWxsby52MS5NYXBWYWxpZGF0aW9uRXhhbXBsZS5NYXhQYWlyc1ZhbHVlRW50cnlCCLpIBZoB'
-    'AhACUg1tYXhQYWlyc1ZhbHVlEmQKCmtleXNfdmFsdWUYAyADKAsyNS5leGFtcGxlLmhlbGxvLn'
-    'YxLk1hcFZhbGlkYXRpb25FeGFtcGxlLktleXNWYWx1ZUVudHJ5Qg66SAuaAQgiBnIEEAMYClIJ'
-    'a2V5c1ZhbHVlEmoKDHZhbHVlc192YWx1ZRgEIAMoCzI3LmV4YW1wbGUuaGVsbG8udjEuTWFwVm'
-    'FsaWRhdGlvbkV4YW1wbGUuVmFsdWVzVmFsdWVFbnRyeUIOukgLmgEIKgZyBBADGApSC3ZhbHVl'
-    'c1ZhbHVlGkAKEk1pblBhaXJzVmFsdWVFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZR'
-    'gCIAEoCVIFdmFsdWU6AjgBGkAKEk1heFBhaXJzVmFsdWVFbnRyeRIQCgNrZXkYASABKAlSA2tl'
-    'eRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGjwKDktleXNWYWx1ZUVudHJ5EhAKA2tleRgBIA'
-    'EoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEaPgoQVmFsdWVzVmFsdWVFbnRyeRIQ'
-    'CgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+    'ChRNYXBWYWxpZGF0aW9uRXhhbXBsZRJlCg9taW5fcGFpcnNfdmFsdWUYASADKAsyMy5leGFtcG'
+    'xlLnYxLk1hcFZhbGlkYXRpb25FeGFtcGxlLk1pblBhaXJzVmFsdWVFbnRyeUIIukgFmgECCAJS'
+    'DW1pblBhaXJzVmFsdWUSZQoPbWF4X3BhaXJzX3ZhbHVlGAIgAygLMjMuZXhhbXBsZS52MS5NYX'
+    'BWYWxpZGF0aW9uRXhhbXBsZS5NYXhQYWlyc1ZhbHVlRW50cnlCCLpIBZoBAhACUg1tYXhQYWly'
+    'c1ZhbHVlEl4KCmtleXNfdmFsdWUYAyADKAsyLy5leGFtcGxlLnYxLk1hcFZhbGlkYXRpb25FeG'
+    'FtcGxlLktleXNWYWx1ZUVudHJ5Qg66SAuaAQgiBnIEEAMYClIJa2V5c1ZhbHVlEmQKDHZhbHVl'
+    'c192YWx1ZRgEIAMoCzIxLmV4YW1wbGUudjEuTWFwVmFsaWRhdGlvbkV4YW1wbGUuVmFsdWVzVm'
+    'FsdWVFbnRyeUIOukgLmgEIKgZyBBADGApSC3ZhbHVlc1ZhbHVlGkAKEk1pblBhaXJzVmFsdWVF'
+    'bnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBGkAKEk1heF'
+    'BhaXJzVmFsdWVFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6'
+    'AjgBGjwKDktleXNWYWx1ZUVudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUg'
+    'V2YWx1ZToCOAEaPgoQVmFsdWVzVmFsdWVFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1'
+    'ZRgCIAEoCVIFdmFsdWU6AjgB');
 
 @$core.Deprecated('Use repeatedValidationExampleDescriptor instead')
 const RepeatedValidationExample$json = {
@@ -369,6 +344,41 @@ final $typed_data.Uint8List durationValidationExampleDescriptor = $convert.base6
     'DG5vdF9pbl92YWx1ZRgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkISukgPqgEMQg'
     'IIBUICCAZCAggHUgpub3RJblZhbHVl');
 
+@$core.Deprecated('Use enumValidationExampleDescriptor instead')
+const EnumValidationExample$json = {
+  '1': 'EnumValidationExample',
+  '2': [
+    {'1': 'const_value', '3': 1, '4': 1, '5': 14, '6': '.example.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'constValue'},
+    {'1': 'defined_only_value', '3': 2, '4': 1, '5': 14, '6': '.example.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'definedOnlyValue'},
+    {'1': 'in_value', '3': 3, '4': 1, '5': 14, '6': '.example.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'inValue'},
+    {'1': 'not_in_value', '3': 4, '4': 1, '5': 14, '6': '.example.v1.EnumValidationExample.MyEnum', '8': {}, '10': 'notInValue'},
+  ],
+  '4': [EnumValidationExample_MyEnum$json],
+};
+
+@$core.Deprecated('Use enumValidationExampleDescriptor instead')
+const EnumValidationExample_MyEnum$json = {
+  '1': 'MyEnum',
+  '2': [
+    {'1': 'MY_ENUM_UNSPECIFIED', '2': 0},
+    {'1': 'MY_ENUM_VALUE1', '2': 1},
+    {'1': 'MY_ENUM_VALUE2', '2': 2},
+    {'1': 'MY_ENUM_VALUE3', '2': 3},
+  ],
+};
+
+/// Descriptor for `EnumValidationExample`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enumValidationExampleDescriptor = $convert.base64Decode(
+    'ChVFbnVtVmFsaWRhdGlvbkV4YW1wbGUSUwoLY29uc3RfdmFsdWUYASABKA4yKC5leGFtcGxlLn'
+    'YxLkVudW1WYWxpZGF0aW9uRXhhbXBsZS5NeUVudW1CCLpIBYIBAggBUgpjb25zdFZhbHVlEmAK'
+    'EmRlZmluZWRfb25seV92YWx1ZRgCIAEoDjIoLmV4YW1wbGUudjEuRW51bVZhbGlkYXRpb25FeG'
+    'FtcGxlLk15RW51bUIIukgFggECEAFSEGRlZmluZWRPbmx5VmFsdWUSTwoIaW5fdmFsdWUYAyAB'
+    'KA4yKC5leGFtcGxlLnYxLkVudW1WYWxpZGF0aW9uRXhhbXBsZS5NeUVudW1CCrpIB4IBBBgBGA'
+    'JSB2luVmFsdWUSVgoMbm90X2luX3ZhbHVlGAQgASgOMiguZXhhbXBsZS52MS5FbnVtVmFsaWRh'
+    'dGlvbkV4YW1wbGUuTXlFbnVtQgq6SAeCAQQgASACUgpub3RJblZhbHVlIl0KBk15RW51bRIXCh'
+    'NNWV9FTlVNX1VOU1BFQ0lGSUVEEAASEgoOTVlfRU5VTV9WQUxVRTEQARISCg5NWV9FTlVNX1ZB'
+    'TFVFMhACEhIKDk1ZX0VOVU1fVkFMVUUzEAM=');
+
 @$core.Deprecated('Use timestampValidationExampleDescriptor instead')
 const TimestampValidationExample$json = {
   '1': 'TimestampValidationExample',
@@ -399,47 +409,32 @@ final $typed_data.Uint8List timestampValidationExampleDescriptor = $convert.base
     'IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCC7pICLIBBUoDCJAcUgt3aXRoaW5WYW'
     'x1ZQ==');
 
+@$core.Deprecated('Use googleApiFieldExampleDescriptor instead')
+const GoogleApiFieldExample$json = {
+  '1': 'GoogleApiFieldExample',
+  '2': [
+    {'1': 'created_at', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'createdAt'},
+    {'1': 'updated_at', '3': 2, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'updatedAt'},
+    {'1': 'required_at', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'requiredAt'},
+    {'1': 'optional_at', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '8': {}, '10': 'optionalAt'},
+  ],
+  '7': {},
+};
+
+/// Descriptor for `GoogleApiFieldExample`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List googleApiFieldExampleDescriptor = $convert.base64Decode(
+    'ChVHb29nbGVBcGlGaWVsZEV4YW1wbGUSPgoKY3JlYXRlZF9hdBgBIAEoCzIaLmdvb2dsZS5wcm'
+    '90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJY3JlYXRlZEF0Ej4KCnVwZGF0ZWRfYXQYAiABKAsyGi5n'
+    'b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQRSCXVwZGF0ZWRBdBJACgtyZXF1aXJlZF9hdB'
+    'gDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAlIKcmVxdWlyZWRBdBJACgtv'
+    'cHRpb25hbF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAVIKb3B0aW'
+    '9uYWxBdDoP+tLkkwIJEgdQUkVWSUVX');
+
 @$core.Deprecated('Use fieldConstraintsExampleDescriptor instead')
 const FieldConstraintsExample$json = {
   '1': 'FieldConstraintsExample',
   '2': [
     {'1': 'even_value', '3': 1, '4': 1, '5': 5, '8': {}, '10': 'evenValue'},
-    {'1': 'required_message_value', '3': 2, '4': 1, '5': 11, '6': '.example.hello.v1.FieldConstraintsExample.MyValue', '8': {}, '10': 'requiredMessageValue'},
-    {'1': 'required_string_value', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'requiredStringValue'},
-    {'1': 'required_int32_value', '3': 4, '4': 1, '5': 5, '8': {}, '10': 'requiredInt32Value'},
-    {'1': 'required_enum_value', '3': 5, '4': 1, '5': 14, '6': '.example.hello.v1.FieldConstraintsExample.Status', '8': {}, '10': 'requiredEnumValue'},
-    {'1': 'required_repeated_value', '3': 6, '4': 3, '5': 9, '8': {}, '10': 'requiredRepeatedValue'},
-    {'1': 'required_map_value', '3': 7, '4': 3, '5': 11, '6': '.example.hello.v1.FieldConstraintsExample.RequiredMapValueEntry', '8': {}, '10': 'requiredMapValue'},
-    {'1': 'ignore_value', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'ignoreValue'},
-  ],
-  '3': [FieldConstraintsExample_MyValue$json, FieldConstraintsExample_RequiredMapValueEntry$json],
-  '4': [FieldConstraintsExample_Status$json],
-};
-
-@$core.Deprecated('Use fieldConstraintsExampleDescriptor instead')
-const FieldConstraintsExample_MyValue$json = {
-  '1': 'MyValue',
-  '2': [
-    {'1': 'value', '3': 1, '4': 1, '5': 5, '10': 'value'},
-  ],
-};
-
-@$core.Deprecated('Use fieldConstraintsExampleDescriptor instead')
-const FieldConstraintsExample_RequiredMapValueEntry$json = {
-  '1': 'RequiredMapValueEntry',
-  '2': [
-    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
-  ],
-  '7': {'7': true},
-};
-
-@$core.Deprecated('Use fieldConstraintsExampleDescriptor instead')
-const FieldConstraintsExample_Status$json = {
-  '1': 'Status',
-  '2': [
-    {'1': 'STATUS_UNSPECIFIED', '2': 0},
-    {'1': 'STATUS_OK', '2': 1},
   ],
 };
 
@@ -447,18 +442,5 @@ const FieldConstraintsExample_Status$json = {
 final $typed_data.Uint8List fieldConstraintsExampleDescriptor = $convert.base64Decode(
     'ChdGaWVsZENvbnN0cmFpbnRzRXhhbXBsZRJbCgpldmVuX3ZhbHVlGAEgASgFQjy6SDm6ATYKCm'
     'ludDMyLmV2ZW4SGXZhbHVlIG11c3QgYmUgZXZlbiBudW1iZXIaDXRoaXMgJSAyID09IDBSCWV2'
-    'ZW5WYWx1ZRJvChZyZXF1aXJlZF9tZXNzYWdlX3ZhbHVlGAIgASgLMjEuZXhhbXBsZS5oZWxsby'
-    '52MS5GaWVsZENvbnN0cmFpbnRzRXhhbXBsZS5NeVZhbHVlQga6SAPIAQFSFHJlcXVpcmVkTWVz'
-    'c2FnZVZhbHVlEjoKFXJlcXVpcmVkX3N0cmluZ192YWx1ZRgDIAEoCUIGukgDyAEBUhNyZXF1aX'
-    'JlZFN0cmluZ1ZhbHVlEjgKFHJlcXVpcmVkX2ludDMyX3ZhbHVlGAQgASgFQga6SAPIAQFSEnJl'
-    'cXVpcmVkSW50MzJWYWx1ZRJoChNyZXF1aXJlZF9lbnVtX3ZhbHVlGAUgASgOMjAuZXhhbXBsZS'
-    '5oZWxsby52MS5GaWVsZENvbnN0cmFpbnRzRXhhbXBsZS5TdGF0dXNCBrpIA8gBAVIRcmVxdWly'
-    'ZWRFbnVtVmFsdWUSPgoXcmVxdWlyZWRfcmVwZWF0ZWRfdmFsdWUYBiADKAlCBrpIA8gBAVIVcm'
-    'VxdWlyZWRSZXBlYXRlZFZhbHVlEnUKEnJlcXVpcmVkX21hcF92YWx1ZRgHIAMoCzI/LmV4YW1w'
-    'bGUuaGVsbG8udjEuRmllbGRDb25zdHJhaW50c0V4YW1wbGUuUmVxdWlyZWRNYXBWYWx1ZUVudH'
-    'J5Qga6SAPIAQFSEHJlcXVpcmVkTWFwVmFsdWUSLQoMaWdub3JlX3ZhbHVlGAggASgJQgq6SAfY'
-    'AQFyAmABUgtpZ25vcmVWYWx1ZRofCgdNeVZhbHVlEhQKBXZhbHVlGAEgASgFUgV2YWx1ZRpDCh'
-    'VSZXF1aXJlZE1hcFZhbHVlRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlS'
-    'BXZhbHVlOgI4ASIvCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASDQoJU1RBVFVTX0'
-    '9LEAE=');
+    'ZW5WYWx1ZQ==');
 

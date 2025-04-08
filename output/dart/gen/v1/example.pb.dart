@@ -20,23 +20,25 @@ import 'example.pbenum.dart';
 
 export 'example.pbenum.dart';
 
-/// 文字列に1文字以上が必要なとき
-class Hello extends $pb.GeneratedMessage {
-  factory Hello({
-    $core.String? hello,
+/// 非推奨のフィールドを使いたいとき
+class DeprecatedExample extends $pb.GeneratedMessage {
+  factory DeprecatedExample({
+  @$core.Deprecated('This field is deprecated.')
+    $core.String? deprecatedValue,
   }) {
     final $result = create();
-    if (hello != null) {
-      $result.hello = hello;
+    if (deprecatedValue != null) {
+      // ignore: deprecated_member_use_from_same_package
+      $result.deprecatedValue = deprecatedValue;
     }
     return $result;
   }
-  Hello._() : super();
-  factory Hello.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Hello.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  DeprecatedExample._() : super();
+  factory DeprecatedExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DeprecatedExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Hello', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'hello')
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DeprecatedExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'deprecatedValue')
     ..hasRequiredFields = false
   ;
 
@@ -44,82 +46,36 @@ class Hello extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Hello clone() => Hello()..mergeFromMessage(this);
+  DeprecatedExample clone() => DeprecatedExample()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Hello copyWith(void Function(Hello) updates) => super.copyWith((message) => updates(message as Hello)) as Hello;
+  DeprecatedExample copyWith(void Function(DeprecatedExample) updates) => super.copyWith((message) => updates(message as DeprecatedExample)) as DeprecatedExample;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static Hello create() => Hello._();
-  Hello createEmptyInstance() => create();
-  static $pb.PbList<Hello> createRepeated() => $pb.PbList<Hello>();
+  static DeprecatedExample create() => DeprecatedExample._();
+  DeprecatedExample createEmptyInstance() => create();
+  static $pb.PbList<DeprecatedExample> createRepeated() => $pb.PbList<DeprecatedExample>();
   @$core.pragma('dart2js:noInline')
-  static Hello getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Hello>(create);
-  static Hello? _defaultInstance;
+  static DeprecatedExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeprecatedExample>(create);
+  static DeprecatedExample? _defaultInstance;
 
+  /// 非推奨のフィールドを使いたいとき
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  $core.String get hello => $_getSZ(0);
+  $core.String get deprecatedValue => $_getSZ(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  set hello($core.String v) { $_setString(0, v); }
+  set deprecatedValue($core.String v) { $_setString(0, v); }
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  $core.bool hasHello() => $_has(0);
+  $core.bool hasDeprecatedValue() => $_has(0);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
-  void clearHello() => clearField(1);
-}
-
-/// メッセージ全体のバリデーションを無効にしたいとき
-class DisabledExample extends $pb.GeneratedMessage {
-  factory DisabledExample({
-    $core.String? val,
-  }) {
-    final $result = create();
-    if (val != null) {
-      $result.val = val;
-    }
-    return $result;
-  }
-  DisabledExample._() : super();
-  factory DisabledExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory DisabledExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DisabledExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'val')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  DisabledExample clone() => DisabledExample()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  DisabledExample copyWith(void Function(DisabledExample) updates) => super.copyWith((message) => updates(message as DisabledExample)) as DisabledExample;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static DisabledExample create() => DisabledExample._();
-  DisabledExample createEmptyInstance() => create();
-  static $pb.PbList<DisabledExample> createRepeated() => $pb.PbList<DisabledExample>();
-  @$core.pragma('dart2js:noInline')
-  static DisabledExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DisabledExample>(create);
-  static DisabledExample? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get val => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set val($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasVal() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearVal() => clearField(1);
+  void clearDeprecatedValue() => clearField(1);
 }
 
 enum OneofExample_Union {
@@ -152,7 +108,7 @@ class OneofExample extends $pb.GeneratedMessage {
     2 : OneofExample_Union.val2,
     0 : OneofExample_Union.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OneofExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OneofExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOS(1, _omitFieldNames ? '' : 'val1')
     ..aOS(2, _omitFieldNames ? '' : 'val2')
@@ -200,6 +156,89 @@ class OneofExample extends $pb.GeneratedMessage {
   $core.bool hasVal2() => $_has(1);
   @$pb.TagNumber(2)
   void clearVal2() => clearField(2);
+}
+
+/// ignore_empty
+class IgnoreEmptyExample extends $pb.GeneratedMessage {
+  factory IgnoreEmptyExample({
+    $core.String? val1,
+    $core.String? val2,
+    $core.String? val3,
+  }) {
+    final $result = create();
+    if (val1 != null) {
+      $result.val1 = val1;
+    }
+    if (val2 != null) {
+      $result.val2 = val2;
+    }
+    if (val3 != null) {
+      $result.val3 = val3;
+    }
+    return $result;
+  }
+  IgnoreEmptyExample._() : super();
+  factory IgnoreEmptyExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory IgnoreEmptyExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IgnoreEmptyExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'val1')
+    ..aOS(2, _omitFieldNames ? '' : 'val2')
+    ..aOS(3, _omitFieldNames ? '' : 'val3')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  IgnoreEmptyExample clone() => IgnoreEmptyExample()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  IgnoreEmptyExample copyWith(void Function(IgnoreEmptyExample) updates) => super.copyWith((message) => updates(message as IgnoreEmptyExample)) as IgnoreEmptyExample;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static IgnoreEmptyExample create() => IgnoreEmptyExample._();
+  IgnoreEmptyExample createEmptyInstance() => create();
+  static $pb.PbList<IgnoreEmptyExample> createRepeated() => $pb.PbList<IgnoreEmptyExample>();
+  @$core.pragma('dart2js:noInline')
+  static IgnoreEmptyExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IgnoreEmptyExample>(create);
+  static IgnoreEmptyExample? _defaultInstance;
+
+  /// Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+  @$pb.TagNumber(1)
+  $core.String get val1 => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set val1($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasVal1() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVal1() => clearField(1);
+
+  /// 常にバリデーションをスキップする
+  @$pb.TagNumber(2)
+  $core.String get val2 => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set val2($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasVal2() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearVal2() => clearField(2);
+
+  /// リクエストボディに値がないときだけバリデーションをスキップする
+  /// ただし、リクエストボディに値がある場合はバリデーションを実行する
+  @$pb.TagNumber(3)
+  $core.String get val3 => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set val3($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasVal3() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearVal3() => clearField(3);
 }
 
 /// 各種文字列バリデーションを試したいとき
@@ -341,7 +380,7 @@ class StringValidationExample extends $pb.GeneratedMessage {
   factory StringValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory StringValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StringValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StringValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'constValue')
     ..aOS(2, _omitFieldNames ? '' : 'lenValue')
     ..aOS(3, _omitFieldNames ? '' : 'minLenValue')
@@ -714,7 +753,7 @@ class StringValidationExample extends $pb.GeneratedMessage {
   void clearWellKownRegexValue() => clearField(32);
 }
 
-/// 真偽値がtrueに限定されるとき
+/// bool型の値を制限したいとき
 class BoolValidationExample extends $pb.GeneratedMessage {
   factory BoolValidationExample({
     $core.bool? trueValue,
@@ -733,7 +772,7 @@ class BoolValidationExample extends $pb.GeneratedMessage {
   factory BoolValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BoolValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoolValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BoolValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..aOB(1, _omitFieldNames ? '' : 'trueValue')
     ..aOB(2, _omitFieldNames ? '' : 'falseValue')
     ..hasRequiredFields = false
@@ -760,6 +799,7 @@ class BoolValidationExample extends $pb.GeneratedMessage {
   static BoolValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BoolValidationExample>(create);
   static BoolValidationExample? _defaultInstance;
 
+  /// 真偽値がtrueに限定されるとき
   @$pb.TagNumber(1)
   $core.bool get trueValue => $_getBF(0);
   @$pb.TagNumber(1)
@@ -843,7 +883,7 @@ class BytesValidationExample extends $pb.GeneratedMessage {
   factory BytesValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory BytesValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BytesValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BytesValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'constValue', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'lenValue', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'minLenValue', $pb.PbFieldType.OY)
@@ -1055,7 +1095,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   factory DoubleValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DoubleValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DoubleValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DoubleValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..a<$core.double>(1, _omitFieldNames ? '' : 'constValue', $pb.PbFieldType.OD)
     ..a<$core.double>(2, _omitFieldNames ? '' : 'ltValue', $pb.PbFieldType.OD)
     ..a<$core.double>(3, _omitFieldNames ? '' : 'lteValue', $pb.PbFieldType.OD)
@@ -1088,6 +1128,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   static DoubleValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DoubleValidationExample>(create);
   static DoubleValidationExample? _defaultInstance;
 
+  /// 値が 42.0 である必要がある
   @$pb.TagNumber(1)
   $core.double get constValue => $_getN(0);
   @$pb.TagNumber(1)
@@ -1097,6 +1138,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearConstValue() => clearField(1);
 
+  /// 10.0 より小さい値である必要がある（9.9など）
   @$pb.TagNumber(2)
   $core.double get ltValue => $_getN(1);
   @$pb.TagNumber(2)
@@ -1106,6 +1148,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLtValue() => clearField(2);
 
+  /// 10.0 以下の値である必要がある（10.0もOK）
   @$pb.TagNumber(3)
   $core.double get lteValue => $_getN(2);
   @$pb.TagNumber(3)
@@ -1115,6 +1158,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLteValue() => clearField(3);
 
+  /// 10.0 より大きい値である必要がある（10.1など）
   @$pb.TagNumber(4)
   $core.double get gtValue => $_getN(3);
   @$pb.TagNumber(4)
@@ -1124,6 +1168,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearGtValue() => clearField(4);
 
+  /// 10.0 以上の値である必要がある（10.0もOK）
   @$pb.TagNumber(5)
   $core.double get gteValue => $_getN(4);
   @$pb.TagNumber(5)
@@ -1133,6 +1178,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearGteValue() => clearField(5);
 
+  /// 10.0, 11.0, 12.0 のいずれかでなければならない
   @$pb.TagNumber(6)
   $core.double get inValue => $_getN(5);
   @$pb.TagNumber(6)
@@ -1142,6 +1188,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearInValue() => clearField(6);
 
+  /// 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
   @$pb.TagNumber(7)
   $core.double get notInValue => $_getN(6);
   @$pb.TagNumber(7)
@@ -1151,7 +1198,7 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearNotInValue() => clearField(7);
 
-  /// 無限大やNaNを弾きたいとき
+  /// 無限大や NaN を拒否したいとき（finite = true）
   @$pb.TagNumber(8)
   $core.double get finiteValue => $_getN(7);
   @$pb.TagNumber(8)
@@ -1160,99 +1207,6 @@ class DoubleValidationExample extends $pb.GeneratedMessage {
   $core.bool hasFiniteValue() => $_has(7);
   @$pb.TagNumber(8)
   void clearFiniteValue() => clearField(8);
-}
-
-/// 列挙型（enum）の値制限をしたいとき
-class EnumValidationExample extends $pb.GeneratedMessage {
-  factory EnumValidationExample({
-    EnumValidationExample_MyEnum? constValue,
-    EnumValidationExample_MyEnum? definedOnlyValue,
-    EnumValidationExample_MyEnum? inValue,
-    EnumValidationExample_MyEnum? notInValue,
-  }) {
-    final $result = create();
-    if (constValue != null) {
-      $result.constValue = constValue;
-    }
-    if (definedOnlyValue != null) {
-      $result.definedOnlyValue = definedOnlyValue;
-    }
-    if (inValue != null) {
-      $result.inValue = inValue;
-    }
-    if (notInValue != null) {
-      $result.notInValue = notInValue;
-    }
-    return $result;
-  }
-  EnumValidationExample._() : super();
-  factory EnumValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory EnumValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EnumValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
-    ..e<EnumValidationExample_MyEnum>(1, _omitFieldNames ? '' : 'constValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
-    ..e<EnumValidationExample_MyEnum>(2, _omitFieldNames ? '' : 'definedOnlyValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
-    ..e<EnumValidationExample_MyEnum>(3, _omitFieldNames ? '' : 'inValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
-    ..e<EnumValidationExample_MyEnum>(4, _omitFieldNames ? '' : 'notInValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  EnumValidationExample clone() => EnumValidationExample()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  EnumValidationExample copyWith(void Function(EnumValidationExample) updates) => super.copyWith((message) => updates(message as EnumValidationExample)) as EnumValidationExample;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static EnumValidationExample create() => EnumValidationExample._();
-  EnumValidationExample createEmptyInstance() => create();
-  static $pb.PbList<EnumValidationExample> createRepeated() => $pb.PbList<EnumValidationExample>();
-  @$core.pragma('dart2js:noInline')
-  static EnumValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnumValidationExample>(create);
-  static EnumValidationExample? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  EnumValidationExample_MyEnum get constValue => $_getN(0);
-  @$pb.TagNumber(1)
-  set constValue(EnumValidationExample_MyEnum v) { setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasConstValue() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearConstValue() => clearField(1);
-
-  @$pb.TagNumber(2)
-  EnumValidationExample_MyEnum get definedOnlyValue => $_getN(1);
-  @$pb.TagNumber(2)
-  set definedOnlyValue(EnumValidationExample_MyEnum v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasDefinedOnlyValue() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDefinedOnlyValue() => clearField(2);
-
-  @$pb.TagNumber(3)
-  EnumValidationExample_MyEnum get inValue => $_getN(2);
-  @$pb.TagNumber(3)
-  set inValue(EnumValidationExample_MyEnum v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasInValue() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearInValue() => clearField(3);
-
-  @$pb.TagNumber(4)
-  EnumValidationExample_MyEnum get notInValue => $_getN(3);
-  @$pb.TagNumber(4)
-  set notInValue(EnumValidationExample_MyEnum v) { setField(4, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasNotInValue() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearNotInValue() => clearField(4);
 }
 
 /// Mapのサイズやキー・値の制約をしたいとき
@@ -1282,11 +1236,11 @@ class MapValidationExample extends $pb.GeneratedMessage {
   factory MapValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory MapValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MapValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
-    ..m<$core.String, $core.String>(1, _omitFieldNames ? '' : 'minPairsValue', entryClassName: 'MapValidationExample.MinPairsValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.hello.v1'))
-    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'maxPairsValue', entryClassName: 'MapValidationExample.MaxPairsValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.hello.v1'))
-    ..m<$core.String, $core.String>(3, _omitFieldNames ? '' : 'keysValue', entryClassName: 'MapValidationExample.KeysValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.hello.v1'))
-    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'valuesValue', entryClassName: 'MapValidationExample.ValuesValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.hello.v1'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MapValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, _omitFieldNames ? '' : 'minPairsValue', entryClassName: 'MapValidationExample.MinPairsValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.v1'))
+    ..m<$core.String, $core.String>(2, _omitFieldNames ? '' : 'maxPairsValue', entryClassName: 'MapValidationExample.MaxPairsValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.v1'))
+    ..m<$core.String, $core.String>(3, _omitFieldNames ? '' : 'keysValue', entryClassName: 'MapValidationExample.KeysValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.v1'))
+    ..m<$core.String, $core.String>(4, _omitFieldNames ? '' : 'valuesValue', entryClassName: 'MapValidationExample.ValuesValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.v1'))
     ..hasRequiredFields = false
   ;
 
@@ -1351,7 +1305,7 @@ class RepeatedValidationExample extends $pb.GeneratedMessage {
   factory RepeatedValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory RepeatedValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RepeatedValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RepeatedValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..pPS(1, _omitFieldNames ? '' : 'minItemsValue')
     ..pPS(2, _omitFieldNames ? '' : 'maxItemsValue')
     ..pPS(3, _omitFieldNames ? '' : 'uniqueValue')
@@ -1380,15 +1334,19 @@ class RepeatedValidationExample extends $pb.GeneratedMessage {
   static RepeatedValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RepeatedValidationExample>(create);
   static RepeatedValidationExample? _defaultInstance;
 
+  /// 繰り返しフィールドの最小要素数を指定したいとき
   @$pb.TagNumber(1)
   $core.List<$core.String> get minItemsValue => $_getList(0);
 
+  /// 繰り返しフィールドの最大要素数を指定したいとき
   @$pb.TagNumber(2)
   $core.List<$core.String> get maxItemsValue => $_getList(1);
 
+  /// 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
   @$pb.TagNumber(3)
   $core.List<$core.String> get uniqueValue => $_getList(2);
 
+  /// 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
   @$pb.TagNumber(4)
   $core.List<$core.String> get itemsValue => $_getList(3);
 }
@@ -1412,7 +1370,7 @@ class AnyValidationExample extends $pb.GeneratedMessage {
   factory AnyValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory AnyValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AnyValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AnyValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..aOM<$3.Any>(1, _omitFieldNames ? '' : 'inValue', subBuilder: $3.Any.create)
     ..aOM<$3.Any>(2, _omitFieldNames ? '' : 'notInValue', subBuilder: $3.Any.create)
     ..hasRequiredFields = false
@@ -1439,6 +1397,8 @@ class AnyValidationExample extends $pb.GeneratedMessage {
   static AnyValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AnyValidationExample>(create);
   static AnyValidationExample? _defaultInstance;
 
+  /// int32やstringのAny型を許可したいとき
+  /// ただし、Any型の中身はint32やstringである必要がある
   @$pb.TagNumber(1)
   $3.Any get inValue => $_getN(0);
   @$pb.TagNumber(1)
@@ -1450,6 +1410,8 @@ class AnyValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $3.Any ensureInValue() => $_ensure(0);
 
+  /// int32やstringのAny型を許可したくないとき
+  /// ただし、Any型の中身はint32やstring 以外である必要がある
   @$pb.TagNumber(2)
   $3.Any get notInValue => $_getN(1);
   @$pb.TagNumber(2)
@@ -1462,6 +1424,7 @@ class AnyValidationExample extends $pb.GeneratedMessage {
   $3.Any ensureNotInValue() => $_ensure(1);
 }
 
+/// Durationの比較をしたいとき
 /// Durationの比較をしたいとき
 class DurationValidationExample extends $pb.GeneratedMessage {
   factory DurationValidationExample({
@@ -1501,7 +1464,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   factory DurationValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory DurationValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DurationValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DurationValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..aOM<$0.Duration>(1, _omitFieldNames ? '' : 'constValue', subBuilder: $0.Duration.create)
     ..aOM<$0.Duration>(2, _omitFieldNames ? '' : 'ltValue', subBuilder: $0.Duration.create)
     ..aOM<$0.Duration>(3, _omitFieldNames ? '' : 'lteValue', subBuilder: $0.Duration.create)
@@ -1533,6 +1496,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   static DurationValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DurationValidationExample>(create);
   static DurationValidationExample? _defaultInstance;
 
+  /// 指定された秒数と正確に一致している必要があるとき
   @$pb.TagNumber(1)
   $0.Duration get constValue => $_getN(0);
   @$pb.TagNumber(1)
@@ -1544,6 +1508,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $0.Duration ensureConstValue() => $_ensure(0);
 
+  /// 指定された秒数より短い必要があるとき
   @$pb.TagNumber(2)
   $0.Duration get ltValue => $_getN(1);
   @$pb.TagNumber(2)
@@ -1555,6 +1520,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $0.Duration ensureLtValue() => $_ensure(1);
 
+  /// 指定された秒数以下である必要があるとき
   @$pb.TagNumber(3)
   $0.Duration get lteValue => $_getN(2);
   @$pb.TagNumber(3)
@@ -1566,6 +1532,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $0.Duration ensureLteValue() => $_ensure(2);
 
+  /// 指定された秒数より長い必要があるとき
   @$pb.TagNumber(4)
   $0.Duration get gtValue => $_getN(3);
   @$pb.TagNumber(4)
@@ -1577,6 +1544,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $0.Duration ensureGtValue() => $_ensure(3);
 
+  /// 指定された秒数以上である必要があるとき
   @$pb.TagNumber(5)
   $0.Duration get gteValue => $_getN(4);
   @$pb.TagNumber(5)
@@ -1588,6 +1556,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $0.Duration ensureGteValue() => $_ensure(4);
 
+  /// 指定された複数の候補の中のいずれかに一致している必要があるとき
   @$pb.TagNumber(6)
   $0.Duration get inValue => $_getN(5);
   @$pb.TagNumber(6)
@@ -1599,6 +1568,7 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $0.Duration ensureInValue() => $_ensure(5);
 
+  /// 指定された複数の値以外でなければならないとき
   @$pb.TagNumber(7)
   $0.Duration get notInValue => $_getN(6);
   @$pb.TagNumber(7)
@@ -1609,6 +1579,103 @@ class DurationValidationExample extends $pb.GeneratedMessage {
   void clearNotInValue() => clearField(7);
   @$pb.TagNumber(7)
   $0.Duration ensureNotInValue() => $_ensure(6);
+}
+
+/// 列挙型（enum）の値制限をしたいとき
+class EnumValidationExample extends $pb.GeneratedMessage {
+  factory EnumValidationExample({
+    EnumValidationExample_MyEnum? constValue,
+    EnumValidationExample_MyEnum? definedOnlyValue,
+    EnumValidationExample_MyEnum? inValue,
+    EnumValidationExample_MyEnum? notInValue,
+  }) {
+    final $result = create();
+    if (constValue != null) {
+      $result.constValue = constValue;
+    }
+    if (definedOnlyValue != null) {
+      $result.definedOnlyValue = definedOnlyValue;
+    }
+    if (inValue != null) {
+      $result.inValue = inValue;
+    }
+    if (notInValue != null) {
+      $result.notInValue = notInValue;
+    }
+    return $result;
+  }
+  EnumValidationExample._() : super();
+  factory EnumValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory EnumValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'EnumValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
+    ..e<EnumValidationExample_MyEnum>(1, _omitFieldNames ? '' : 'constValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
+    ..e<EnumValidationExample_MyEnum>(2, _omitFieldNames ? '' : 'definedOnlyValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
+    ..e<EnumValidationExample_MyEnum>(3, _omitFieldNames ? '' : 'inValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
+    ..e<EnumValidationExample_MyEnum>(4, _omitFieldNames ? '' : 'notInValue', $pb.PbFieldType.OE, defaultOrMaker: EnumValidationExample_MyEnum.MY_ENUM_UNSPECIFIED, valueOf: EnumValidationExample_MyEnum.valueOf, enumValues: EnumValidationExample_MyEnum.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  EnumValidationExample clone() => EnumValidationExample()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  EnumValidationExample copyWith(void Function(EnumValidationExample) updates) => super.copyWith((message) => updates(message as EnumValidationExample)) as EnumValidationExample;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EnumValidationExample create() => EnumValidationExample._();
+  EnumValidationExample createEmptyInstance() => create();
+  static $pb.PbList<EnumValidationExample> createRepeated() => $pb.PbList<EnumValidationExample>();
+  @$core.pragma('dart2js:noInline')
+  static EnumValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnumValidationExample>(create);
+  static EnumValidationExample? _defaultInstance;
+
+  /// 特定の値だけを許可
+  @$pb.TagNumber(1)
+  EnumValidationExample_MyEnum get constValue => $_getN(0);
+  @$pb.TagNumber(1)
+  set constValue(EnumValidationExample_MyEnum v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasConstValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearConstValue() => clearField(1);
+
+  /// enumに定義された値のみ許可（未定義の数値はエラー）
+  @$pb.TagNumber(2)
+  EnumValidationExample_MyEnum get definedOnlyValue => $_getN(1);
+  @$pb.TagNumber(2)
+  set definedOnlyValue(EnumValidationExample_MyEnum v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDefinedOnlyValue() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDefinedOnlyValue() => clearField(2);
+
+  /// 指定した値（1または2）のみ許容
+  @$pb.TagNumber(3)
+  EnumValidationExample_MyEnum get inValue => $_getN(2);
+  @$pb.TagNumber(3)
+  set inValue(EnumValidationExample_MyEnum v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasInValue() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearInValue() => clearField(3);
+
+  /// 指定した値（1と2）以外のみ許容
+  @$pb.TagNumber(4)
+  EnumValidationExample_MyEnum get notInValue => $_getN(3);
+  @$pb.TagNumber(4)
+  set notInValue(EnumValidationExample_MyEnum v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNotInValue() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNotInValue() => clearField(4);
 }
 
 /// Timestampの比較をしたいとき
@@ -1654,7 +1721,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   factory TimestampValidationExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TimestampValidationExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimestampValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TimestampValidationExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'constValue', subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'ltValue', subBuilder: $1.Timestamp.create)
     ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'lteValue', subBuilder: $1.Timestamp.create)
@@ -1687,6 +1754,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   static TimestampValidationExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimestampValidationExample>(create);
   static TimestampValidationExample? _defaultInstance;
 
+  /// 指定された時刻と一致している必要があるとき
   @$pb.TagNumber(1)
   $1.Timestamp get constValue => $_getN(0);
   @$pb.TagNumber(1)
@@ -1698,6 +1766,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.Timestamp ensureConstValue() => $_ensure(0);
 
+  /// 指定された時刻よりも前である必要があるとき
   @$pb.TagNumber(2)
   $1.Timestamp get ltValue => $_getN(1);
   @$pb.TagNumber(2)
@@ -1709,6 +1778,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $1.Timestamp ensureLtValue() => $_ensure(1);
 
+  /// 指定された時刻以前（同じでもOK）である必要があるとき
   @$pb.TagNumber(3)
   $1.Timestamp get lteValue => $_getN(2);
   @$pb.TagNumber(3)
@@ -1720,6 +1790,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $1.Timestamp ensureLteValue() => $_ensure(2);
 
+  /// 現在時刻よりも前である必要があるとき
   @$pb.TagNumber(4)
   $1.Timestamp get ltNowValue => $_getN(3);
   @$pb.TagNumber(4)
@@ -1731,6 +1802,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $1.Timestamp ensureLtNowValue() => $_ensure(3);
 
+  /// 指定された時刻よりも後である必要があるとき
   @$pb.TagNumber(5)
   $1.Timestamp get gtValue => $_getN(4);
   @$pb.TagNumber(5)
@@ -1742,6 +1814,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $1.Timestamp ensureGtValue() => $_ensure(4);
 
+  /// 指定された時刻以降（同じでもOK）である必要があるとき
   @$pb.TagNumber(6)
   $1.Timestamp get gteValue => $_getN(5);
   @$pb.TagNumber(6)
@@ -1753,6 +1826,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $1.Timestamp ensureGteValue() => $_ensure(5);
 
+  /// 現在時刻よりも後である必要があるとき
   @$pb.TagNumber(7)
   $1.Timestamp get gtNowValue => $_getN(6);
   @$pb.TagNumber(7)
@@ -1764,6 +1838,7 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $1.Timestamp ensureGtNowValue() => $_ensure(6);
 
+  /// 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
   @$pb.TagNumber(8)
   $1.Timestamp get withinValue => $_getN(7);
   @$pb.TagNumber(8)
@@ -1776,22 +1851,37 @@ class TimestampValidationExample extends $pb.GeneratedMessage {
   $1.Timestamp ensureWithinValue() => $_ensure(7);
 }
 
-class FieldConstraintsExample_MyValue extends $pb.GeneratedMessage {
-  factory FieldConstraintsExample_MyValue({
-    $core.int? value,
+class GoogleApiFieldExample extends $pb.GeneratedMessage {
+  factory GoogleApiFieldExample({
+    $1.Timestamp? createdAt,
+    $1.Timestamp? updatedAt,
+    $1.Timestamp? requiredAt,
+    $1.Timestamp? optionalAt,
   }) {
     final $result = create();
-    if (value != null) {
-      $result.value = value;
+    if (createdAt != null) {
+      $result.createdAt = createdAt;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    if (requiredAt != null) {
+      $result.requiredAt = requiredAt;
+    }
+    if (optionalAt != null) {
+      $result.optionalAt = optionalAt;
     }
     return $result;
   }
-  FieldConstraintsExample_MyValue._() : super();
-  factory FieldConstraintsExample_MyValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory FieldConstraintsExample_MyValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GoogleApiFieldExample._() : super();
+  factory GoogleApiFieldExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GoogleApiFieldExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FieldConstraintsExample.MyValue', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'value', $pb.PbFieldType.O3)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GoogleApiFieldExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
+    ..aOM<$1.Timestamp>(1, _omitFieldNames ? '' : 'createdAt', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'updatedAt', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'requiredAt', subBuilder: $1.Timestamp.create)
+    ..aOM<$1.Timestamp>(4, _omitFieldNames ? '' : 'optionalAt', subBuilder: $1.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -1799,69 +1889,80 @@ class FieldConstraintsExample_MyValue extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  FieldConstraintsExample_MyValue clone() => FieldConstraintsExample_MyValue()..mergeFromMessage(this);
+  GoogleApiFieldExample clone() => GoogleApiFieldExample()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  FieldConstraintsExample_MyValue copyWith(void Function(FieldConstraintsExample_MyValue) updates) => super.copyWith((message) => updates(message as FieldConstraintsExample_MyValue)) as FieldConstraintsExample_MyValue;
+  GoogleApiFieldExample copyWith(void Function(GoogleApiFieldExample) updates) => super.copyWith((message) => updates(message as GoogleApiFieldExample)) as GoogleApiFieldExample;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static FieldConstraintsExample_MyValue create() => FieldConstraintsExample_MyValue._();
-  FieldConstraintsExample_MyValue createEmptyInstance() => create();
-  static $pb.PbList<FieldConstraintsExample_MyValue> createRepeated() => $pb.PbList<FieldConstraintsExample_MyValue>();
+  static GoogleApiFieldExample create() => GoogleApiFieldExample._();
+  GoogleApiFieldExample createEmptyInstance() => create();
+  static $pb.PbList<GoogleApiFieldExample> createRepeated() => $pb.PbList<GoogleApiFieldExample>();
   @$core.pragma('dart2js:noInline')
-  static FieldConstraintsExample_MyValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FieldConstraintsExample_MyValue>(create);
-  static FieldConstraintsExample_MyValue? _defaultInstance;
+  static GoogleApiFieldExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GoogleApiFieldExample>(create);
+  static GoogleApiFieldExample? _defaultInstance;
 
+  /// サーバーからの出力専用フィールド（リクエストに含めても無視される）
   @$pb.TagNumber(1)
-  $core.int get value => $_getIZ(0);
+  $1.Timestamp get createdAt => $_getN(0);
   @$pb.TagNumber(1)
-  set value($core.int v) { $_setSignedInt32(0, v); }
+  set createdAt($1.Timestamp v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasValue() => $_has(0);
+  $core.bool hasCreatedAt() => $_has(0);
   @$pb.TagNumber(1)
-  void clearValue() => clearField(1);
+  void clearCreatedAt() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Timestamp ensureCreatedAt() => $_ensure(0);
+
+  /// クライアントからの入力専用フィールド（レスポンスには含まれない）
+  @$pb.TagNumber(2)
+  $1.Timestamp get updatedAt => $_getN(1);
+  @$pb.TagNumber(2)
+  set updatedAt($1.Timestamp v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUpdatedAt() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUpdatedAt() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Timestamp ensureUpdatedAt() => $_ensure(1);
+
+  /// リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+  @$pb.TagNumber(3)
+  $1.Timestamp get requiredAt => $_getN(2);
+  @$pb.TagNumber(3)
+  set requiredAt($1.Timestamp v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRequiredAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRequiredAt() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Timestamp ensureRequiredAt() => $_ensure(2);
+
+  /// 明示的にオプション（省略可能）であることを示すフィールド
+  @$pb.TagNumber(4)
+  $1.Timestamp get optionalAt => $_getN(3);
+  @$pb.TagNumber(4)
+  set optionalAt($1.Timestamp v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasOptionalAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearOptionalAt() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Timestamp ensureOptionalAt() => $_ensure(3);
 }
 
 /// CEL式で柔軟なルールを定義したいとき
 class FieldConstraintsExample extends $pb.GeneratedMessage {
   factory FieldConstraintsExample({
     $core.int? evenValue,
-    FieldConstraintsExample_MyValue? requiredMessageValue,
-    $core.String? requiredStringValue,
-    $core.int? requiredInt32Value,
-    FieldConstraintsExample_Status? requiredEnumValue,
-    $core.Iterable<$core.String>? requiredRepeatedValue,
-    $core.Map<$core.String, $core.String>? requiredMapValue,
-    $core.String? ignoreValue,
   }) {
     final $result = create();
     if (evenValue != null) {
       $result.evenValue = evenValue;
-    }
-    if (requiredMessageValue != null) {
-      $result.requiredMessageValue = requiredMessageValue;
-    }
-    if (requiredStringValue != null) {
-      $result.requiredStringValue = requiredStringValue;
-    }
-    if (requiredInt32Value != null) {
-      $result.requiredInt32Value = requiredInt32Value;
-    }
-    if (requiredEnumValue != null) {
-      $result.requiredEnumValue = requiredEnumValue;
-    }
-    if (requiredRepeatedValue != null) {
-      $result.requiredRepeatedValue.addAll(requiredRepeatedValue);
-    }
-    if (requiredMapValue != null) {
-      $result.requiredMapValue.addAll(requiredMapValue);
-    }
-    if (ignoreValue != null) {
-      $result.ignoreValue = ignoreValue;
     }
     return $result;
   }
@@ -1869,15 +1970,8 @@ class FieldConstraintsExample extends $pb.GeneratedMessage {
   factory FieldConstraintsExample.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory FieldConstraintsExample.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FieldConstraintsExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.hello.v1'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'FieldConstraintsExample', package: const $pb.PackageName(_omitMessageNames ? '' : 'example.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'evenValue', $pb.PbFieldType.O3)
-    ..aOM<FieldConstraintsExample_MyValue>(2, _omitFieldNames ? '' : 'requiredMessageValue', subBuilder: FieldConstraintsExample_MyValue.create)
-    ..aOS(3, _omitFieldNames ? '' : 'requiredStringValue')
-    ..a<$core.int>(4, _omitFieldNames ? '' : 'requiredInt32Value', $pb.PbFieldType.O3)
-    ..e<FieldConstraintsExample_Status>(5, _omitFieldNames ? '' : 'requiredEnumValue', $pb.PbFieldType.OE, defaultOrMaker: FieldConstraintsExample_Status.STATUS_UNSPECIFIED, valueOf: FieldConstraintsExample_Status.valueOf, enumValues: FieldConstraintsExample_Status.values)
-    ..pPS(6, _omitFieldNames ? '' : 'requiredRepeatedValue')
-    ..m<$core.String, $core.String>(7, _omitFieldNames ? '' : 'requiredMapValue', entryClassName: 'FieldConstraintsExample.RequiredMapValueEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('example.hello.v1'))
-    ..aOS(8, _omitFieldNames ? '' : 'ignoreValue')
     ..hasRequiredFields = false
   ;
 
@@ -1902,6 +1996,7 @@ class FieldConstraintsExample extends $pb.GeneratedMessage {
   static FieldConstraintsExample getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FieldConstraintsExample>(create);
   static FieldConstraintsExample? _defaultInstance;
 
+  /// 偶数であることを検証するCEL式
   @$pb.TagNumber(1)
   $core.int get evenValue => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1910,59 +2005,6 @@ class FieldConstraintsExample extends $pb.GeneratedMessage {
   $core.bool hasEvenValue() => $_has(0);
   @$pb.TagNumber(1)
   void clearEvenValue() => clearField(1);
-
-  @$pb.TagNumber(2)
-  FieldConstraintsExample_MyValue get requiredMessageValue => $_getN(1);
-  @$pb.TagNumber(2)
-  set requiredMessageValue(FieldConstraintsExample_MyValue v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasRequiredMessageValue() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearRequiredMessageValue() => clearField(2);
-  @$pb.TagNumber(2)
-  FieldConstraintsExample_MyValue ensureRequiredMessageValue() => $_ensure(1);
-
-  @$pb.TagNumber(3)
-  $core.String get requiredStringValue => $_getSZ(2);
-  @$pb.TagNumber(3)
-  set requiredStringValue($core.String v) { $_setString(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasRequiredStringValue() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearRequiredStringValue() => clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.int get requiredInt32Value => $_getIZ(3);
-  @$pb.TagNumber(4)
-  set requiredInt32Value($core.int v) { $_setSignedInt32(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasRequiredInt32Value() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearRequiredInt32Value() => clearField(4);
-
-  @$pb.TagNumber(5)
-  FieldConstraintsExample_Status get requiredEnumValue => $_getN(4);
-  @$pb.TagNumber(5)
-  set requiredEnumValue(FieldConstraintsExample_Status v) { setField(5, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasRequiredEnumValue() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearRequiredEnumValue() => clearField(5);
-
-  @$pb.TagNumber(6)
-  $core.List<$core.String> get requiredRepeatedValue => $_getList(5);
-
-  @$pb.TagNumber(7)
-  $core.Map<$core.String, $core.String> get requiredMapValue => $_getMap(6);
-
-  @$pb.TagNumber(8)
-  $core.String get ignoreValue => $_getSZ(7);
-  @$pb.TagNumber(8)
-  set ignoreValue($core.String v) { $_setString(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasIgnoreValue() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearIgnoreValue() => clearField(8);
 }
 
 

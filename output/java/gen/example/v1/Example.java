@@ -3,7 +3,7 @@
 // source: v1/example.proto
 // Protobuf Java Version: 4.30.1
 
-package example.hello.v1;
+package example.v1;
 
 public final class Example {
   private Example() {}
@@ -25,33 +25,45 @@ public final class Example {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface HelloOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.Hello)
+  public interface DeprecatedExampleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:example.v1.DeprecatedExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-     * @return The hello.
+     * <pre>
+     * 非推奨のフィールドを使いたいとき
+     * </pre>
+     *
+     * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+     * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+     *     See v1/example.proto;l=14
+     * @return The deprecatedValue.
      */
-    java.lang.String getHello();
+    @java.lang.Deprecated java.lang.String getDeprecatedValue();
     /**
-     * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for hello.
+     * <pre>
+     * 非推奨のフィールドを使いたいとき
+     * </pre>
+     *
+     * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+     * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+     *     See v1/example.proto;l=14
+     * @return The bytes for deprecatedValue.
      */
-    com.google.protobuf.ByteString
-        getHelloBytes();
+    @java.lang.Deprecated com.google.protobuf.ByteString
+        getDeprecatedValueBytes();
   }
   /**
    * <pre>
-   * 文字列に1文字以上が必要なとき
+   * 非推奨のフィールドを使いたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.Hello}
+   * Protobuf type {@code example.v1.DeprecatedExample}
    */
-  public static final class Hello extends
+  public static final class DeprecatedExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.Hello)
-      HelloOrBuilder {
+      // @@protoc_insertion_point(message_implements:example.v1.DeprecatedExample)
+      DeprecatedExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -60,62 +72,74 @@ public final class Example {
         /* minor= */ 30,
         /* patch= */ 1,
         /* suffix= */ "",
-        Hello.class.getName());
+        DeprecatedExample.class.getName());
     }
-    // Use Hello.newBuilder() to construct.
-    private Hello(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use DeprecatedExample.newBuilder() to construct.
+    private DeprecatedExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private Hello() {
-      hello_ = "";
+    private DeprecatedExample() {
+      deprecatedValue_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_Hello_descriptor;
+      return example.v1.Example.internal_static_example_v1_DeprecatedExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_Hello_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_DeprecatedExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.Hello.class, example.hello.v1.Example.Hello.Builder.class);
+              example.v1.Example.DeprecatedExample.class, example.v1.Example.DeprecatedExample.Builder.class);
     }
 
-    public static final int HELLO_FIELD_NUMBER = 1;
+    public static final int DEPRECATED_VALUE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object hello_ = "";
+    private volatile java.lang.Object deprecatedValue_ = "";
     /**
-     * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-     * @return The hello.
+     * <pre>
+     * 非推奨のフィールドを使いたいとき
+     * </pre>
+     *
+     * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+     * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+     *     See v1/example.proto;l=14
+     * @return The deprecatedValue.
      */
     @java.lang.Override
-    public java.lang.String getHello() {
-      java.lang.Object ref = hello_;
+    @java.lang.Deprecated public java.lang.String getDeprecatedValue() {
+      java.lang.Object ref = deprecatedValue_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        hello_ = s;
+        deprecatedValue_ = s;
         return s;
       }
     }
     /**
-     * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for hello.
+     * <pre>
+     * 非推奨のフィールドを使いたいとき
+     * </pre>
+     *
+     * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+     * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+     *     See v1/example.proto;l=14
+     * @return The bytes for deprecatedValue.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getHelloBytes() {
-      java.lang.Object ref = hello_;
+    @java.lang.Deprecated public com.google.protobuf.ByteString
+        getDeprecatedValueBytes() {
+      java.lang.Object ref = deprecatedValue_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        hello_ = b;
+        deprecatedValue_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -136,8 +160,8 @@ public final class Example {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(hello_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, hello_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(deprecatedValue_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, deprecatedValue_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -148,8 +172,8 @@ public final class Example {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(hello_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, hello_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(deprecatedValue_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, deprecatedValue_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -161,13 +185,13 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.Hello)) {
+      if (!(obj instanceof example.v1.Example.DeprecatedExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.Hello other = (example.hello.v1.Example.Hello) obj;
+      example.v1.Example.DeprecatedExample other = (example.v1.Example.DeprecatedExample) obj;
 
-      if (!getHello()
-          .equals(other.getHello())) return false;
+      if (!getDeprecatedValue()
+          .equals(other.getDeprecatedValue())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -179,51 +203,51 @@ public final class Example {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + HELLO_FIELD_NUMBER;
-      hash = (53 * hash) + getHello().hashCode();
+      hash = (37 * hash) + DEPRECATED_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + getDeprecatedValue().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.Hello parseFrom(byte[] data)
+    public static example.v1.Example.DeprecatedExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.Hello parseFrom(java.io.InputStream input)
+    public static example.v1.Example.DeprecatedExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -231,26 +255,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.Hello parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.DeprecatedExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.Hello parseDelimitedFrom(
+    public static example.v1.Example.DeprecatedExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.Hello parseFrom(
+    public static example.v1.Example.DeprecatedExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -263,7 +287,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.Hello prototype) {
+    public static Builder newBuilder(example.v1.Example.DeprecatedExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -280,29 +304,29 @@ public final class Example {
     }
     /**
      * <pre>
-     * 文字列に1文字以上が必要なとき
+     * 非推奨のフィールドを使いたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.Hello}
+     * Protobuf type {@code example.v1.DeprecatedExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.Hello)
-        example.hello.v1.Example.HelloOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.DeprecatedExample)
+        example.v1.Example.DeprecatedExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_Hello_descriptor;
+        return example.v1.Example.internal_static_example_v1_DeprecatedExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_Hello_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_DeprecatedExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.Hello.class, example.hello.v1.Example.Hello.Builder.class);
+                example.v1.Example.DeprecatedExample.class, example.v1.Example.DeprecatedExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.Hello.newBuilder()
+      // Construct using example.v1.Example.DeprecatedExample.newBuilder()
       private Builder() {
 
       }
@@ -316,24 +340,24 @@ public final class Example {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        hello_ = "";
+        deprecatedValue_ = "";
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_Hello_descriptor;
+        return example.v1.Example.internal_static_example_v1_DeprecatedExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.Hello getDefaultInstanceForType() {
-        return example.hello.v1.Example.Hello.getDefaultInstance();
+      public example.v1.Example.DeprecatedExample getDefaultInstanceForType() {
+        return example.v1.Example.DeprecatedExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.Hello build() {
-        example.hello.v1.Example.Hello result = buildPartial();
+      public example.v1.Example.DeprecatedExample build() {
+        example.v1.Example.DeprecatedExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -341,34 +365,34 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.Hello buildPartial() {
-        example.hello.v1.Example.Hello result = new example.hello.v1.Example.Hello(this);
+      public example.v1.Example.DeprecatedExample buildPartial() {
+        example.v1.Example.DeprecatedExample result = new example.v1.Example.DeprecatedExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.Hello result) {
+      private void buildPartial0(example.v1.Example.DeprecatedExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.hello_ = hello_;
+          result.deprecatedValue_ = deprecatedValue_;
         }
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.Hello) {
-          return mergeFrom((example.hello.v1.Example.Hello)other);
+        if (other instanceof example.v1.Example.DeprecatedExample) {
+          return mergeFrom((example.v1.Example.DeprecatedExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.Hello other) {
-        if (other == example.hello.v1.Example.Hello.getDefaultInstance()) return this;
-        if (!other.getHello().isEmpty()) {
-          hello_ = other.hello_;
+      public Builder mergeFrom(example.v1.Example.DeprecatedExample other) {
+        if (other == example.v1.Example.DeprecatedExample.getDefaultInstance()) return this;
+        if (!other.getDeprecatedValue().isEmpty()) {
+          deprecatedValue_ = other.deprecatedValue_;
           bitField0_ |= 0x00000001;
           onChanged();
         }
@@ -399,7 +423,7 @@ public final class Example {
                 done = true;
                 break;
               case 10: {
-                hello_ = input.readStringRequireUtf8();
+                deprecatedValue_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
@@ -420,95 +444,125 @@ public final class Example {
       }
       private int bitField0_;
 
-      private java.lang.Object hello_ = "";
+      private java.lang.Object deprecatedValue_ = "";
       /**
-       * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-       * @return The hello.
+       * <pre>
+       * 非推奨のフィールドを使いたいとき
+       * </pre>
+       *
+       * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+       * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+       *     See v1/example.proto;l=14
+       * @return The deprecatedValue.
        */
-      public java.lang.String getHello() {
-        java.lang.Object ref = hello_;
+      @java.lang.Deprecated public java.lang.String getDeprecatedValue() {
+        java.lang.Object ref = deprecatedValue_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          hello_ = s;
+          deprecatedValue_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-       * @return The bytes for hello.
+       * <pre>
+       * 非推奨のフィールドを使いたいとき
+       * </pre>
+       *
+       * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+       * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+       *     See v1/example.proto;l=14
+       * @return The bytes for deprecatedValue.
        */
-      public com.google.protobuf.ByteString
-          getHelloBytes() {
-        java.lang.Object ref = hello_;
+      @java.lang.Deprecated public com.google.protobuf.ByteString
+          getDeprecatedValueBytes() {
+        java.lang.Object ref = deprecatedValue_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          hello_ = b;
+          deprecatedValue_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-       * @param value The hello to set.
+       * <pre>
+       * 非推奨のフィールドを使いたいとき
+       * </pre>
+       *
+       * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+       * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+       *     See v1/example.proto;l=14
+       * @param value The deprecatedValue to set.
        * @return This builder for chaining.
        */
-      public Builder setHello(
+      @java.lang.Deprecated public Builder setDeprecatedValue(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
-        hello_ = value;
+        deprecatedValue_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
+       * <pre>
+       * 非推奨のフィールドを使いたいとき
+       * </pre>
+       *
+       * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+       * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+       *     See v1/example.proto;l=14
        * @return This builder for chaining.
        */
-      public Builder clearHello() {
-        hello_ = getDefaultInstance().getHello();
+      @java.lang.Deprecated public Builder clearDeprecatedValue() {
+        deprecatedValue_ = getDefaultInstance().getDeprecatedValue();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
-       * <code>string hello = 1 [json_name = "hello", (.buf.validate.field) = { ... }</code>
-       * @param value The bytes for hello to set.
+       * <pre>
+       * 非推奨のフィールドを使いたいとき
+       * </pre>
+       *
+       * <code>string deprecated_value = 1 [json_name = "deprecatedValue", deprecated = true];</code>
+       * @deprecated example.v1.DeprecatedExample.deprecated_value is deprecated.
+       *     See v1/example.proto;l=14
+       * @param value The bytes for deprecatedValue to set.
        * @return This builder for chaining.
        */
-      public Builder setHelloBytes(
+      @java.lang.Deprecated public Builder setDeprecatedValueBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         checkByteStringIsUtf8(value);
-        hello_ = value;
+        deprecatedValue_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.Hello)
+      // @@protoc_insertion_point(builder_scope:example.v1.DeprecatedExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.Hello)
-    private static final example.hello.v1.Example.Hello DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.DeprecatedExample)
+    private static final example.v1.Example.DeprecatedExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.Hello();
+      DEFAULT_INSTANCE = new example.v1.Example.DeprecatedExample();
     }
 
-    public static example.hello.v1.Example.Hello getDefaultInstance() {
+    public static example.v1.Example.DeprecatedExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Hello>
-        PARSER = new com.google.protobuf.AbstractParser<Hello>() {
+    private static final com.google.protobuf.Parser<DeprecatedExample>
+        PARSER = new com.google.protobuf.AbstractParser<DeprecatedExample>() {
       @java.lang.Override
-      public Hello parsePartialFrom(
+      public DeprecatedExample parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -527,542 +581,24 @@ public final class Example {
       }
     };
 
-    public static com.google.protobuf.Parser<Hello> parser() {
+    public static com.google.protobuf.Parser<DeprecatedExample> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Hello> getParserForType() {
+    public com.google.protobuf.Parser<DeprecatedExample> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.Hello getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface DisabledExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.DisabledExample)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-     * @return The val.
-     */
-    java.lang.String getVal();
-    /**
-     * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for val.
-     */
-    com.google.protobuf.ByteString
-        getValBytes();
-  }
-  /**
-   * <pre>
-   * メッセージ全体のバリデーションを無効にしたいとき
-   * </pre>
-   *
-   * Protobuf type {@code example.hello.v1.DisabledExample}
-   */
-  public static final class DisabledExample extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.DisabledExample)
-      DisabledExampleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 30,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        DisabledExample.class.getName());
-    }
-    // Use DisabledExample.newBuilder() to construct.
-    private DisabledExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private DisabledExample() {
-      val_ = "";
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DisabledExample_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DisabledExample_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.DisabledExample.class, example.hello.v1.Example.DisabledExample.Builder.class);
-    }
-
-    public static final int VAL_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object val_ = "";
-    /**
-     * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-     * @return The val.
-     */
-    @java.lang.Override
-    public java.lang.String getVal() {
-      java.lang.Object ref = val_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        val_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for val.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValBytes() {
-      java.lang.Object ref = val_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        val_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, val_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, val_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof example.hello.v1.Example.DisabledExample)) {
-        return super.equals(obj);
-      }
-      example.hello.v1.Example.DisabledExample other = (example.hello.v1.Example.DisabledExample) obj;
-
-      if (!getVal()
-          .equals(other.getVal())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VAL_FIELD_NUMBER;
-      hash = (53 * hash) + getVal().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static example.hello.v1.Example.DisabledExample parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static example.hello.v1.Example.DisabledExample parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static example.hello.v1.Example.DisabledExample parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(example.hello.v1.Example.DisabledExample prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * メッセージ全体のバリデーションを無効にしたいとき
-     * </pre>
-     *
-     * Protobuf type {@code example.hello.v1.DisabledExample}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.DisabledExample)
-        example.hello.v1.Example.DisabledExampleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DisabledExample_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DisabledExample_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.DisabledExample.class, example.hello.v1.Example.DisabledExample.Builder.class);
-      }
-
-      // Construct using example.hello.v1.Example.DisabledExample.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        val_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DisabledExample_descriptor;
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.DisabledExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.DisabledExample.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.DisabledExample build() {
-        example.hello.v1.Example.DisabledExample result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.DisabledExample buildPartial() {
-        example.hello.v1.Example.DisabledExample result = new example.hello.v1.Example.DisabledExample(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(example.hello.v1.Example.DisabledExample result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.val_ = val_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.DisabledExample) {
-          return mergeFrom((example.hello.v1.Example.DisabledExample)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(example.hello.v1.Example.DisabledExample other) {
-        if (other == example.hello.v1.Example.DisabledExample.getDefaultInstance()) return this;
-        if (!other.getVal().isEmpty()) {
-          val_ = other.val_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                val_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object val_ = "";
-      /**
-       * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-       * @return The val.
-       */
-      public java.lang.String getVal() {
-        java.lang.Object ref = val_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          val_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-       * @return The bytes for val.
-       */
-      public com.google.protobuf.ByteString
-          getValBytes() {
-        java.lang.Object ref = val_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          val_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-       * @param value The val to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVal(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        val_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVal() {
-        val_ = getDefaultInstance().getVal();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string val = 1 [json_name = "val", (.buf.validate.field) = { ... }</code>
-       * @param value The bytes for val to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        val_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.DisabledExample)
-    }
-
-    // @@protoc_insertion_point(class_scope:example.hello.v1.DisabledExample)
-    private static final example.hello.v1.Example.DisabledExample DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.DisabledExample();
-    }
-
-    public static example.hello.v1.Example.DisabledExample getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<DisabledExample>
-        PARSER = new com.google.protobuf.AbstractParser<DisabledExample>() {
-      @java.lang.Override
-      public DisabledExample parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<DisabledExample> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<DisabledExample> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public example.hello.v1.Example.DisabledExample getDefaultInstanceForType() {
+    public example.v1.Example.DeprecatedExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface OneofExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.OneofExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.OneofExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1099,18 +635,18 @@ public final class Example {
     com.google.protobuf.ByteString
         getVal2Bytes();
 
-    example.hello.v1.Example.OneofExample.UnionCase getUnionCase();
+    example.v1.Example.OneofExample.UnionCase getUnionCase();
   }
   /**
    * <pre>
    * oneofフィールドのうち、どれか一つは必須にしたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.OneofExample}
+   * Protobuf type {@code example.v1.OneofExample}
    */
   public static final class OneofExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.OneofExample)
+      // @@protoc_insertion_point(message_implements:example.v1.OneofExample)
       OneofExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -1131,15 +667,15 @@ public final class Example {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_OneofExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_OneofExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_OneofExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_OneofExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.OneofExample.class, example.hello.v1.Example.OneofExample.Builder.class);
+              example.v1.Example.OneofExample.class, example.v1.Example.OneofExample.Builder.class);
     }
 
     private int unionCase_ = 0;
@@ -1333,10 +869,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.OneofExample)) {
+      if (!(obj instanceof example.v1.Example.OneofExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.OneofExample other = (example.hello.v1.Example.OneofExample) obj;
+      example.v1.Example.OneofExample other = (example.v1.Example.OneofExample) obj;
 
       if (!getUnionCase().equals(other.getUnionCase())) return false;
       switch (unionCase_) {
@@ -1379,44 +915,44 @@ public final class Example {
       return hash;
     }
 
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(byte[] data)
+    public static example.v1.Example.OneofExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.OneofExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1424,26 +960,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.OneofExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.OneofExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.OneofExample parseDelimitedFrom(
+    public static example.v1.Example.OneofExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.OneofExample parseFrom(
+    public static example.v1.Example.OneofExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1456,7 +992,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.OneofExample prototype) {
+    public static Builder newBuilder(example.v1.Example.OneofExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1476,26 +1012,26 @@ public final class Example {
      * oneofフィールドのうち、どれか一つは必須にしたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.OneofExample}
+     * Protobuf type {@code example.v1.OneofExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.OneofExample)
-        example.hello.v1.Example.OneofExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.OneofExample)
+        example.v1.Example.OneofExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_OneofExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_OneofExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_OneofExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_OneofExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.OneofExample.class, example.hello.v1.Example.OneofExample.Builder.class);
+                example.v1.Example.OneofExample.class, example.v1.Example.OneofExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.OneofExample.newBuilder()
+      // Construct using example.v1.Example.OneofExample.newBuilder()
       private Builder() {
 
       }
@@ -1517,17 +1053,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_OneofExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_OneofExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.OneofExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.OneofExample.getDefaultInstance();
+      public example.v1.Example.OneofExample getDefaultInstanceForType() {
+        return example.v1.Example.OneofExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.OneofExample build() {
-        example.hello.v1.Example.OneofExample result = buildPartial();
+      public example.v1.Example.OneofExample build() {
+        example.v1.Example.OneofExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1535,35 +1071,35 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.OneofExample buildPartial() {
-        example.hello.v1.Example.OneofExample result = new example.hello.v1.Example.OneofExample(this);
+      public example.v1.Example.OneofExample buildPartial() {
+        example.v1.Example.OneofExample result = new example.v1.Example.OneofExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.OneofExample result) {
+      private void buildPartial0(example.v1.Example.OneofExample result) {
         int from_bitField0_ = bitField0_;
       }
 
-      private void buildPartialOneofs(example.hello.v1.Example.OneofExample result) {
+      private void buildPartialOneofs(example.v1.Example.OneofExample result) {
         result.unionCase_ = unionCase_;
         result.union_ = this.union_;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.OneofExample) {
-          return mergeFrom((example.hello.v1.Example.OneofExample)other);
+        if (other instanceof example.v1.Example.OneofExample) {
+          return mergeFrom((example.v1.Example.OneofExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.OneofExample other) {
-        if (other == example.hello.v1.Example.OneofExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.OneofExample other) {
+        if (other == example.v1.Example.OneofExample.getDefaultInstance()) return this;
         switch (other.getUnionCase()) {
           case VAL1: {
             unionCase_ = 1;
@@ -1837,16 +1373,16 @@ public final class Example {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.OneofExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.OneofExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.OneofExample)
-    private static final example.hello.v1.Example.OneofExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.OneofExample)
+    private static final example.v1.Example.OneofExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.OneofExample();
+      DEFAULT_INSTANCE = new example.v1.Example.OneofExample();
     }
 
-    public static example.hello.v1.Example.OneofExample getDefaultInstance() {
+    public static example.v1.Example.OneofExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1882,14 +1418,945 @@ public final class Example {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.OneofExample getDefaultInstanceForType() {
+    public example.v1.Example.OneofExample getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface IgnoreEmptyExampleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:example.v1.IgnoreEmptyExample)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+     * </pre>
+     *
+     * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+     * @return The val1.
+     */
+    java.lang.String getVal1();
+    /**
+     * <pre>
+     * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+     * </pre>
+     *
+     * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val1.
+     */
+    com.google.protobuf.ByteString
+        getVal1Bytes();
+
+    /**
+     * <pre>
+     * 常にバリデーションをスキップする
+     * </pre>
+     *
+     * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+     * @return The val2.
+     */
+    java.lang.String getVal2();
+    /**
+     * <pre>
+     * 常にバリデーションをスキップする
+     * </pre>
+     *
+     * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val2.
+     */
+    com.google.protobuf.ByteString
+        getVal2Bytes();
+
+    /**
+     * <pre>
+     * リクエストボディに値がないときだけバリデーションをスキップする
+     * ただし、リクエストボディに値がある場合はバリデーションを実行する
+     * </pre>
+     *
+     * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+     * @return The val3.
+     */
+    java.lang.String getVal3();
+    /**
+     * <pre>
+     * リクエストボディに値がないときだけバリデーションをスキップする
+     * ただし、リクエストボディに値がある場合はバリデーションを実行する
+     * </pre>
+     *
+     * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val3.
+     */
+    com.google.protobuf.ByteString
+        getVal3Bytes();
+  }
+  /**
+   * <pre>
+   * ignore_empty
+   * </pre>
+   *
+   * Protobuf type {@code example.v1.IgnoreEmptyExample}
+   */
+  public static final class IgnoreEmptyExample extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:example.v1.IgnoreEmptyExample)
+      IgnoreEmptyExampleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        IgnoreEmptyExample.class.getName());
+    }
+    // Use IgnoreEmptyExample.newBuilder() to construct.
+    private IgnoreEmptyExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private IgnoreEmptyExample() {
+      val1_ = "";
+      val2_ = "";
+      val3_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return example.v1.Example.internal_static_example_v1_IgnoreEmptyExample_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return example.v1.Example.internal_static_example_v1_IgnoreEmptyExample_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              example.v1.Example.IgnoreEmptyExample.class, example.v1.Example.IgnoreEmptyExample.Builder.class);
+    }
+
+    public static final int VAL1_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object val1_ = "";
+    /**
+     * <pre>
+     * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+     * </pre>
+     *
+     * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+     * @return The val1.
+     */
+    @java.lang.Override
+    public java.lang.String getVal1() {
+      java.lang.Object ref = val1_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        val1_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+     * </pre>
+     *
+     * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val1.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVal1Bytes() {
+      java.lang.Object ref = val1_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        val1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAL2_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object val2_ = "";
+    /**
+     * <pre>
+     * 常にバリデーションをスキップする
+     * </pre>
+     *
+     * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+     * @return The val2.
+     */
+    @java.lang.Override
+    public java.lang.String getVal2() {
+      java.lang.Object ref = val2_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        val2_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 常にバリデーションをスキップする
+     * </pre>
+     *
+     * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val2.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVal2Bytes() {
+      java.lang.Object ref = val2_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        val2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VAL3_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object val3_ = "";
+    /**
+     * <pre>
+     * リクエストボディに値がないときだけバリデーションをスキップする
+     * ただし、リクエストボディに値がある場合はバリデーションを実行する
+     * </pre>
+     *
+     * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+     * @return The val3.
+     */
+    @java.lang.Override
+    public java.lang.String getVal3() {
+      java.lang.Object ref = val3_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        val3_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * リクエストボディに値がないときだけバリデーションをスキップする
+     * ただし、リクエストボディに値がある場合はバリデーションを実行する
+     * </pre>
+     *
+     * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+     * @return The bytes for val3.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVal3Bytes() {
+      java.lang.Object ref = val3_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        val3_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val1_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, val1_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val2_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, val2_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val3_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, val3_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val1_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, val1_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val2_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, val2_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(val3_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, val3_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof example.v1.Example.IgnoreEmptyExample)) {
+        return super.equals(obj);
+      }
+      example.v1.Example.IgnoreEmptyExample other = (example.v1.Example.IgnoreEmptyExample) obj;
+
+      if (!getVal1()
+          .equals(other.getVal1())) return false;
+      if (!getVal2()
+          .equals(other.getVal2())) return false;
+      if (!getVal3()
+          .equals(other.getVal3())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VAL1_FIELD_NUMBER;
+      hash = (53 * hash) + getVal1().hashCode();
+      hash = (37 * hash) + VAL2_FIELD_NUMBER;
+      hash = (53 * hash) + getVal2().hashCode();
+      hash = (37 * hash) + VAL3_FIELD_NUMBER;
+      hash = (53 * hash) + getVal3().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static example.v1.Example.IgnoreEmptyExample parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static example.v1.Example.IgnoreEmptyExample parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.IgnoreEmptyExample parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(example.v1.Example.IgnoreEmptyExample prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ignore_empty
+     * </pre>
+     *
+     * Protobuf type {@code example.v1.IgnoreEmptyExample}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:example.v1.IgnoreEmptyExample)
+        example.v1.Example.IgnoreEmptyExampleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return example.v1.Example.internal_static_example_v1_IgnoreEmptyExample_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return example.v1.Example.internal_static_example_v1_IgnoreEmptyExample_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                example.v1.Example.IgnoreEmptyExample.class, example.v1.Example.IgnoreEmptyExample.Builder.class);
+      }
+
+      // Construct using example.v1.Example.IgnoreEmptyExample.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        val1_ = "";
+        val2_ = "";
+        val3_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return example.v1.Example.internal_static_example_v1_IgnoreEmptyExample_descriptor;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.IgnoreEmptyExample getDefaultInstanceForType() {
+        return example.v1.Example.IgnoreEmptyExample.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public example.v1.Example.IgnoreEmptyExample build() {
+        example.v1.Example.IgnoreEmptyExample result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.IgnoreEmptyExample buildPartial() {
+        example.v1.Example.IgnoreEmptyExample result = new example.v1.Example.IgnoreEmptyExample(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(example.v1.Example.IgnoreEmptyExample result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.val1_ = val1_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.val2_ = val2_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.val3_ = val3_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof example.v1.Example.IgnoreEmptyExample) {
+          return mergeFrom((example.v1.Example.IgnoreEmptyExample)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(example.v1.Example.IgnoreEmptyExample other) {
+        if (other == example.v1.Example.IgnoreEmptyExample.getDefaultInstance()) return this;
+        if (!other.getVal1().isEmpty()) {
+          val1_ = other.val1_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getVal2().isEmpty()) {
+          val2_ = other.val2_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVal3().isEmpty()) {
+          val3_ = other.val3_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                val1_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                val2_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                val3_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object val1_ = "";
+      /**
+       * <pre>
+       * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+       * </pre>
+       *
+       * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+       * @return The val1.
+       */
+      public java.lang.String getVal1() {
+        java.lang.Object ref = val1_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          val1_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+       * </pre>
+       *
+       * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+       * @return The bytes for val1.
+       */
+      public com.google.protobuf.ByteString
+          getVal1Bytes() {
+        java.lang.Object ref = val1_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          val1_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+       * </pre>
+       *
+       * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+       * @param value The val1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal1(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        val1_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+       * </pre>
+       *
+       * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal1() {
+        val1_ = getDefaultInstance().getVal1();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき
+       * </pre>
+       *
+       * <code>string val1 = 1 [json_name = "val1", (.buf.validate.field) = { ... }</code>
+       * @param value The bytes for val1 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal1Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        val1_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object val2_ = "";
+      /**
+       * <pre>
+       * 常にバリデーションをスキップする
+       * </pre>
+       *
+       * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+       * @return The val2.
+       */
+      public java.lang.String getVal2() {
+        java.lang.Object ref = val2_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          val2_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 常にバリデーションをスキップする
+       * </pre>
+       *
+       * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+       * @return The bytes for val2.
+       */
+      public com.google.protobuf.ByteString
+          getVal2Bytes() {
+        java.lang.Object ref = val2_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          val2_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 常にバリデーションをスキップする
+       * </pre>
+       *
+       * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+       * @param value The val2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal2(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        val2_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常にバリデーションをスキップする
+       * </pre>
+       *
+       * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal2() {
+        val2_ = getDefaultInstance().getVal2();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 常にバリデーションをスキップする
+       * </pre>
+       *
+       * <code>string val2 = 2 [json_name = "val2", (.buf.validate.field) = { ... }</code>
+       * @param value The bytes for val2 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal2Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        val2_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object val3_ = "";
+      /**
+       * <pre>
+       * リクエストボディに値がないときだけバリデーションをスキップする
+       * ただし、リクエストボディに値がある場合はバリデーションを実行する
+       * </pre>
+       *
+       * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+       * @return The val3.
+       */
+      public java.lang.String getVal3() {
+        java.lang.Object ref = val3_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          val3_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * リクエストボディに値がないときだけバリデーションをスキップする
+       * ただし、リクエストボディに値がある場合はバリデーションを実行する
+       * </pre>
+       *
+       * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+       * @return The bytes for val3.
+       */
+      public com.google.protobuf.ByteString
+          getVal3Bytes() {
+        java.lang.Object ref = val3_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          val3_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * リクエストボディに値がないときだけバリデーションをスキップする
+       * ただし、リクエストボディに値がある場合はバリデーションを実行する
+       * </pre>
+       *
+       * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+       * @param value The val3 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal3(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        val3_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエストボディに値がないときだけバリデーションをスキップする
+       * ただし、リクエストボディに値がある場合はバリデーションを実行する
+       * </pre>
+       *
+       * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVal3() {
+        val3_ = getDefaultInstance().getVal3();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエストボディに値がないときだけバリデーションをスキップする
+       * ただし、リクエストボディに値がある場合はバリデーションを実行する
+       * </pre>
+       *
+       * <code>string val3 = 3 [json_name = "val3", (.buf.validate.field) = { ... }</code>
+       * @param value The bytes for val3 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVal3Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        val3_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:example.v1.IgnoreEmptyExample)
+    }
+
+    // @@protoc_insertion_point(class_scope:example.v1.IgnoreEmptyExample)
+    private static final example.v1.Example.IgnoreEmptyExample DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new example.v1.Example.IgnoreEmptyExample();
+    }
+
+    public static example.v1.Example.IgnoreEmptyExample getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<IgnoreEmptyExample>
+        PARSER = new com.google.protobuf.AbstractParser<IgnoreEmptyExample>() {
+      @java.lang.Override
+      public IgnoreEmptyExample parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<IgnoreEmptyExample> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<IgnoreEmptyExample> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public example.v1.Example.IgnoreEmptyExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface StringValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.StringValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.StringValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -2497,11 +2964,11 @@ public final class Example {
    * 各種文字列バリデーションを試したいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.StringValidationExample}
+   * Protobuf type {@code example.v1.StringValidationExample}
    */
   public static final class StringValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.StringValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.StringValidationExample)
       StringValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -2554,15 +3021,15 @@ public final class Example {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_StringValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_StringValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_StringValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_StringValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.StringValidationExample.class, example.hello.v1.Example.StringValidationExample.Builder.class);
+              example.v1.Example.StringValidationExample.class, example.v1.Example.StringValidationExample.Builder.class);
     }
 
     public static final int CONST_VALUE_FIELD_NUMBER = 1;
@@ -4254,10 +4721,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.StringValidationExample)) {
+      if (!(obj instanceof example.v1.Example.StringValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.StringValidationExample other = (example.hello.v1.Example.StringValidationExample) obj;
+      example.v1.Example.StringValidationExample other = (example.v1.Example.StringValidationExample) obj;
 
       if (!getConstValue()
           .equals(other.getConstValue())) return false;
@@ -4403,44 +4870,44 @@ public final class Example {
       return hash;
     }
 
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.StringValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.StringValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4448,26 +4915,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.StringValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.StringValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.StringValidationExample parseDelimitedFrom(
+    public static example.v1.Example.StringValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.StringValidationExample parseFrom(
+    public static example.v1.Example.StringValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4480,7 +4947,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.StringValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.StringValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4500,26 +4967,26 @@ public final class Example {
      * 各種文字列バリデーションを試したいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.StringValidationExample}
+     * Protobuf type {@code example.v1.StringValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.StringValidationExample)
-        example.hello.v1.Example.StringValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.StringValidationExample)
+        example.v1.Example.StringValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_StringValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_StringValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_StringValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_StringValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.StringValidationExample.class, example.hello.v1.Example.StringValidationExample.Builder.class);
+                example.v1.Example.StringValidationExample.class, example.v1.Example.StringValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.StringValidationExample.newBuilder()
+      // Construct using example.v1.Example.StringValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -4571,17 +5038,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_StringValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_StringValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.StringValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.StringValidationExample.getDefaultInstance();
+      public example.v1.Example.StringValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.StringValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.StringValidationExample build() {
-        example.hello.v1.Example.StringValidationExample result = buildPartial();
+      public example.v1.Example.StringValidationExample build() {
+        example.v1.Example.StringValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4589,14 +5056,14 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.StringValidationExample buildPartial() {
-        example.hello.v1.Example.StringValidationExample result = new example.hello.v1.Example.StringValidationExample(this);
+      public example.v1.Example.StringValidationExample buildPartial() {
+        example.v1.Example.StringValidationExample result = new example.v1.Example.StringValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.StringValidationExample result) {
+      private void buildPartial0(example.v1.Example.StringValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.constValue_ = constValue_;
@@ -4698,16 +5165,16 @@ public final class Example {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.StringValidationExample) {
-          return mergeFrom((example.hello.v1.Example.StringValidationExample)other);
+        if (other instanceof example.v1.Example.StringValidationExample) {
+          return mergeFrom((example.v1.Example.StringValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.StringValidationExample other) {
-        if (other == example.hello.v1.Example.StringValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.StringValidationExample other) {
+        if (other == example.v1.Example.StringValidationExample.getDefaultInstance()) return this;
         if (!other.getConstValue().isEmpty()) {
           constValue_ = other.constValue_;
           bitField0_ |= 0x00000001;
@@ -7915,16 +8382,16 @@ public final class Example {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.StringValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.StringValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.StringValidationExample)
-    private static final example.hello.v1.Example.StringValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.StringValidationExample)
+    private static final example.v1.Example.StringValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.StringValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.StringValidationExample();
     }
 
-    public static example.hello.v1.Example.StringValidationExample getDefaultInstance() {
+    public static example.v1.Example.StringValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7960,17 +8427,21 @@ public final class Example {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.StringValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.StringValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface BoolValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.BoolValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.BoolValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 真偽値がtrueに限定されるとき
+     * </pre>
+     *
      * <code>bool true_value = 1 [json_name = "trueValue", (.buf.validate.field) = { ... }</code>
      * @return The trueValue.
      */
@@ -7988,14 +8459,14 @@ public final class Example {
   }
   /**
    * <pre>
-   * 真偽値がtrueに限定されるとき
+   * bool型の値を制限したいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.BoolValidationExample}
+   * Protobuf type {@code example.v1.BoolValidationExample}
    */
   public static final class BoolValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.BoolValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.BoolValidationExample)
       BoolValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -8016,20 +8487,24 @@ public final class Example {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_BoolValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_BoolValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_BoolValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_BoolValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.BoolValidationExample.class, example.hello.v1.Example.BoolValidationExample.Builder.class);
+              example.v1.Example.BoolValidationExample.class, example.v1.Example.BoolValidationExample.Builder.class);
     }
 
     public static final int TRUE_VALUE_FIELD_NUMBER = 1;
     private boolean trueValue_ = false;
     /**
+     * <pre>
+     * 真偽値がtrueに限定されるとき
+     * </pre>
+     *
      * <code>bool true_value = 1 [json_name = "trueValue", (.buf.validate.field) = { ... }</code>
      * @return The trueValue.
      */
@@ -8100,10 +8575,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.BoolValidationExample)) {
+      if (!(obj instanceof example.v1.Example.BoolValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.BoolValidationExample other = (example.hello.v1.Example.BoolValidationExample) obj;
+      example.v1.Example.BoolValidationExample other = (example.v1.Example.BoolValidationExample) obj;
 
       if (getTrueValue()
           != other.getTrueValue()) return false;
@@ -8131,44 +8606,44 @@ public final class Example {
       return hash;
     }
 
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.BoolValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.BoolValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8176,26 +8651,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.BoolValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.BoolValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.BoolValidationExample parseDelimitedFrom(
+    public static example.v1.Example.BoolValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.BoolValidationExample parseFrom(
+    public static example.v1.Example.BoolValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8208,7 +8683,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.BoolValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.BoolValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8225,29 +8700,29 @@ public final class Example {
     }
     /**
      * <pre>
-     * 真偽値がtrueに限定されるとき
+     * bool型の値を制限したいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.BoolValidationExample}
+     * Protobuf type {@code example.v1.BoolValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.BoolValidationExample)
-        example.hello.v1.Example.BoolValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.BoolValidationExample)
+        example.v1.Example.BoolValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BoolValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_BoolValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BoolValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_BoolValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.BoolValidationExample.class, example.hello.v1.Example.BoolValidationExample.Builder.class);
+                example.v1.Example.BoolValidationExample.class, example.v1.Example.BoolValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.BoolValidationExample.newBuilder()
+      // Construct using example.v1.Example.BoolValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -8269,17 +8744,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BoolValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_BoolValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BoolValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.BoolValidationExample.getDefaultInstance();
+      public example.v1.Example.BoolValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.BoolValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BoolValidationExample build() {
-        example.hello.v1.Example.BoolValidationExample result = buildPartial();
+      public example.v1.Example.BoolValidationExample build() {
+        example.v1.Example.BoolValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8287,14 +8762,14 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BoolValidationExample buildPartial() {
-        example.hello.v1.Example.BoolValidationExample result = new example.hello.v1.Example.BoolValidationExample(this);
+      public example.v1.Example.BoolValidationExample buildPartial() {
+        example.v1.Example.BoolValidationExample result = new example.v1.Example.BoolValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.BoolValidationExample result) {
+      private void buildPartial0(example.v1.Example.BoolValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.trueValue_ = trueValue_;
@@ -8306,16 +8781,16 @@ public final class Example {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.BoolValidationExample) {
-          return mergeFrom((example.hello.v1.Example.BoolValidationExample)other);
+        if (other instanceof example.v1.Example.BoolValidationExample) {
+          return mergeFrom((example.v1.Example.BoolValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.BoolValidationExample other) {
-        if (other == example.hello.v1.Example.BoolValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.BoolValidationExample other) {
+        if (other == example.v1.Example.BoolValidationExample.getDefaultInstance()) return this;
         if (other.getTrueValue() != false) {
           setTrueValue(other.getTrueValue());
         }
@@ -8377,6 +8852,10 @@ public final class Example {
 
       private boolean trueValue_ ;
       /**
+       * <pre>
+       * 真偽値がtrueに限定されるとき
+       * </pre>
+       *
        * <code>bool true_value = 1 [json_name = "trueValue", (.buf.validate.field) = { ... }</code>
        * @return The trueValue.
        */
@@ -8385,6 +8864,10 @@ public final class Example {
         return trueValue_;
       }
       /**
+       * <pre>
+       * 真偽値がtrueに限定されるとき
+       * </pre>
+       *
        * <code>bool true_value = 1 [json_name = "trueValue", (.buf.validate.field) = { ... }</code>
        * @param value The trueValue to set.
        * @return This builder for chaining.
@@ -8397,6 +8880,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 真偽値がtrueに限定されるとき
+       * </pre>
+       *
        * <code>bool true_value = 1 [json_name = "trueValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -8451,16 +8938,16 @@ public final class Example {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.BoolValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.BoolValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.BoolValidationExample)
-    private static final example.hello.v1.Example.BoolValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.BoolValidationExample)
+    private static final example.v1.Example.BoolValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.BoolValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.BoolValidationExample();
     }
 
-    public static example.hello.v1.Example.BoolValidationExample getDefaultInstance() {
+    public static example.v1.Example.BoolValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8496,14 +8983,14 @@ public final class Example {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.BoolValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.BoolValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface BytesValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.BytesValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.BytesValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -8641,11 +9128,11 @@ public final class Example {
    * バイナリデータの内容や長さを制限したいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.BytesValidationExample}
+   * Protobuf type {@code example.v1.BytesValidationExample}
    */
   public static final class BytesValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.BytesValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.BytesValidationExample)
       BytesValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -8679,15 +9166,15 @@ public final class Example {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_BytesValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_BytesValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_BytesValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_BytesValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.BytesValidationExample.class, example.hello.v1.Example.BytesValidationExample.Builder.class);
+              example.v1.Example.BytesValidationExample.class, example.v1.Example.BytesValidationExample.Builder.class);
     }
 
     public static final int CONST_VALUE_FIELD_NUMBER = 1;
@@ -9009,10 +9496,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.BytesValidationExample)) {
+      if (!(obj instanceof example.v1.Example.BytesValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.BytesValidationExample other = (example.hello.v1.Example.BytesValidationExample) obj;
+      example.v1.Example.BytesValidationExample other = (example.v1.Example.BytesValidationExample) obj;
 
       if (!getConstValue()
           .equals(other.getConstValue())) return false;
@@ -9082,44 +9569,44 @@ public final class Example {
       return hash;
     }
 
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.BytesValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.BytesValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9127,26 +9614,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.BytesValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.BytesValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.BytesValidationExample parseDelimitedFrom(
+    public static example.v1.Example.BytesValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.BytesValidationExample parseFrom(
+    public static example.v1.Example.BytesValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9159,7 +9646,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.BytesValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.BytesValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9179,26 +9666,26 @@ public final class Example {
      * バイナリデータの内容や長さを制限したいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.BytesValidationExample}
+     * Protobuf type {@code example.v1.BytesValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.BytesValidationExample)
-        example.hello.v1.Example.BytesValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.BytesValidationExample)
+        example.v1.Example.BytesValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BytesValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_BytesValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BytesValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_BytesValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.BytesValidationExample.class, example.hello.v1.Example.BytesValidationExample.Builder.class);
+                example.v1.Example.BytesValidationExample.class, example.v1.Example.BytesValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.BytesValidationExample.newBuilder()
+      // Construct using example.v1.Example.BytesValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -9231,17 +9718,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_BytesValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_BytesValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BytesValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.BytesValidationExample.getDefaultInstance();
+      public example.v1.Example.BytesValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.BytesValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BytesValidationExample build() {
-        example.hello.v1.Example.BytesValidationExample result = buildPartial();
+      public example.v1.Example.BytesValidationExample build() {
+        example.v1.Example.BytesValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9249,14 +9736,14 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.BytesValidationExample buildPartial() {
-        example.hello.v1.Example.BytesValidationExample result = new example.hello.v1.Example.BytesValidationExample(this);
+      public example.v1.Example.BytesValidationExample buildPartial() {
+        example.v1.Example.BytesValidationExample result = new example.v1.Example.BytesValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.BytesValidationExample result) {
+      private void buildPartial0(example.v1.Example.BytesValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.constValue_ = constValue_;
@@ -9301,16 +9788,16 @@ public final class Example {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.BytesValidationExample) {
-          return mergeFrom((example.hello.v1.Example.BytesValidationExample)other);
+        if (other instanceof example.v1.Example.BytesValidationExample) {
+          return mergeFrom((example.v1.Example.BytesValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.BytesValidationExample other) {
-        if (other == example.hello.v1.Example.BytesValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.BytesValidationExample other) {
+        if (other == example.v1.Example.BytesValidationExample.getDefaultInstance()) return this;
         if (!other.getConstValue().isEmpty()) {
           setConstValue(other.getConstValue());
         }
@@ -10030,16 +10517,16 @@ public final class Example {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.BytesValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.BytesValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.BytesValidationExample)
-    private static final example.hello.v1.Example.BytesValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.BytesValidationExample)
+    private static final example.v1.Example.BytesValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.BytesValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.BytesValidationExample();
     }
 
-    public static example.hello.v1.Example.BytesValidationExample getDefaultInstance() {
+    public static example.v1.Example.BytesValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10075,53 +10562,81 @@ public final class Example {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.BytesValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.BytesValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface DoubleValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.DoubleValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.DoubleValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 値が 42.0 である必要がある
+     * </pre>
+     *
      * <code>double const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
     double getConstValue();
 
     /**
+     * <pre>
+     * 10.0 より小さい値である必要がある（9.9など）
+     * </pre>
+     *
      * <code>double lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
     double getLtValue();
 
     /**
+     * <pre>
+     * 10.0 以下の値である必要がある（10.0もOK）
+     * </pre>
+     *
      * <code>double lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
     double getLteValue();
 
     /**
+     * <pre>
+     * 10.0 より大きい値である必要がある（10.1など）
+     * </pre>
+     *
      * <code>double gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
     double getGtValue();
 
     /**
+     * <pre>
+     * 10.0 以上の値である必要がある（10.0もOK）
+     * </pre>
+     *
      * <code>double gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
     double getGteValue();
 
     /**
+     * <pre>
+     * 10.0, 11.0, 12.0 のいずれかでなければならない
+     * </pre>
+     *
      * <code>double in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
     double getInValue();
 
     /**
+     * <pre>
+     * 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
+     * </pre>
+     *
      * <code>double not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
@@ -10129,7 +10644,7 @@ public final class Example {
 
     /**
      * <pre>
-     * 無限大やNaNを弾きたいとき
+     * 無限大や NaN を拒否したいとき（finite = true）
      * </pre>
      *
      * <code>double finite_value = 8 [json_name = "finiteValue", (.buf.validate.field) = { ... }</code>
@@ -10142,11 +10657,11 @@ public final class Example {
    * 数値（浮動小数点）の条件をつけたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.DoubleValidationExample}
+   * Protobuf type {@code example.v1.DoubleValidationExample}
    */
   public static final class DoubleValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.DoubleValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.DoubleValidationExample)
       DoubleValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -10167,20 +10682,24 @@ public final class Example {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DoubleValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_DoubleValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DoubleValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_DoubleValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.DoubleValidationExample.class, example.hello.v1.Example.DoubleValidationExample.Builder.class);
+              example.v1.Example.DoubleValidationExample.class, example.v1.Example.DoubleValidationExample.Builder.class);
     }
 
     public static final int CONST_VALUE_FIELD_NUMBER = 1;
     private double constValue_ = 0D;
     /**
+     * <pre>
+     * 値が 42.0 である必要がある
+     * </pre>
+     *
      * <code>double const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
@@ -10192,6 +10711,10 @@ public final class Example {
     public static final int LT_VALUE_FIELD_NUMBER = 2;
     private double ltValue_ = 0D;
     /**
+     * <pre>
+     * 10.0 より小さい値である必要がある（9.9など）
+     * </pre>
+     *
      * <code>double lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
@@ -10203,6 +10726,10 @@ public final class Example {
     public static final int LTE_VALUE_FIELD_NUMBER = 3;
     private double lteValue_ = 0D;
     /**
+     * <pre>
+     * 10.0 以下の値である必要がある（10.0もOK）
+     * </pre>
+     *
      * <code>double lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
@@ -10214,6 +10741,10 @@ public final class Example {
     public static final int GT_VALUE_FIELD_NUMBER = 4;
     private double gtValue_ = 0D;
     /**
+     * <pre>
+     * 10.0 より大きい値である必要がある（10.1など）
+     * </pre>
+     *
      * <code>double gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
@@ -10225,6 +10756,10 @@ public final class Example {
     public static final int GTE_VALUE_FIELD_NUMBER = 5;
     private double gteValue_ = 0D;
     /**
+     * <pre>
+     * 10.0 以上の値である必要がある（10.0もOK）
+     * </pre>
+     *
      * <code>double gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
@@ -10236,6 +10771,10 @@ public final class Example {
     public static final int IN_VALUE_FIELD_NUMBER = 6;
     private double inValue_ = 0D;
     /**
+     * <pre>
+     * 10.0, 11.0, 12.0 のいずれかでなければならない
+     * </pre>
+     *
      * <code>double in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
@@ -10247,6 +10786,10 @@ public final class Example {
     public static final int NOT_IN_VALUE_FIELD_NUMBER = 7;
     private double notInValue_ = 0D;
     /**
+     * <pre>
+     * 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
+     * </pre>
+     *
      * <code>double not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
@@ -10259,7 +10802,7 @@ public final class Example {
     private double finiteValue_ = 0D;
     /**
      * <pre>
-     * 無限大やNaNを弾きたいとき
+     * 無限大や NaN を拒否したいとき（finite = true）
      * </pre>
      *
      * <code>double finite_value = 8 [json_name = "finiteValue", (.buf.validate.field) = { ... }</code>
@@ -10359,10 +10902,10 @@ public final class Example {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.DoubleValidationExample)) {
+      if (!(obj instanceof example.v1.Example.DoubleValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.DoubleValidationExample other = (example.hello.v1.Example.DoubleValidationExample) obj;
+      example.v1.Example.DoubleValidationExample other = (example.v1.Example.DoubleValidationExample) obj;
 
       if (java.lang.Double.doubleToLongBits(getConstValue())
           != java.lang.Double.doubleToLongBits(
@@ -10428,44 +10971,44 @@ public final class Example {
       return hash;
     }
 
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.DoubleValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.DoubleValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10473,26 +11016,26 @@ public final class Example {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.DoubleValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.DoubleValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.DoubleValidationExample parseDelimitedFrom(
+    public static example.v1.Example.DoubleValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.DoubleValidationExample parseFrom(
+    public static example.v1.Example.DoubleValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10505,7 +11048,7 @@ public final class Example {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.DoubleValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.DoubleValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10525,26 +11068,26 @@ public final class Example {
      * 数値（浮動小数点）の条件をつけたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.DoubleValidationExample}
+     * Protobuf type {@code example.v1.DoubleValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.DoubleValidationExample)
-        example.hello.v1.Example.DoubleValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.DoubleValidationExample)
+        example.v1.Example.DoubleValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DoubleValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_DoubleValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DoubleValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_DoubleValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.DoubleValidationExample.class, example.hello.v1.Example.DoubleValidationExample.Builder.class);
+                example.v1.Example.DoubleValidationExample.class, example.v1.Example.DoubleValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.DoubleValidationExample.newBuilder()
+      // Construct using example.v1.Example.DoubleValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -10572,17 +11115,17 @@ public final class Example {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DoubleValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_DoubleValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DoubleValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.DoubleValidationExample.getDefaultInstance();
+      public example.v1.Example.DoubleValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.DoubleValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DoubleValidationExample build() {
-        example.hello.v1.Example.DoubleValidationExample result = buildPartial();
+      public example.v1.Example.DoubleValidationExample build() {
+        example.v1.Example.DoubleValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10590,14 +11133,14 @@ public final class Example {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DoubleValidationExample buildPartial() {
-        example.hello.v1.Example.DoubleValidationExample result = new example.hello.v1.Example.DoubleValidationExample(this);
+      public example.v1.Example.DoubleValidationExample buildPartial() {
+        example.v1.Example.DoubleValidationExample result = new example.v1.Example.DoubleValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.DoubleValidationExample result) {
+      private void buildPartial0(example.v1.Example.DoubleValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.constValue_ = constValue_;
@@ -10627,16 +11170,16 @@ public final class Example {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.DoubleValidationExample) {
-          return mergeFrom((example.hello.v1.Example.DoubleValidationExample)other);
+        if (other instanceof example.v1.Example.DoubleValidationExample) {
+          return mergeFrom((example.v1.Example.DoubleValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.DoubleValidationExample other) {
-        if (other == example.hello.v1.Example.DoubleValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.DoubleValidationExample other) {
+        if (other == example.v1.Example.DoubleValidationExample.getDefaultInstance()) return this;
         if (java.lang.Double.doubleToRawLongBits(other.getConstValue()) != 0) {
           setConstValue(other.getConstValue());
         }
@@ -10746,6 +11289,10 @@ public final class Example {
 
       private double constValue_ ;
       /**
+       * <pre>
+       * 値が 42.0 である必要がある
+       * </pre>
+       *
        * <code>double const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return The constValue.
        */
@@ -10754,6 +11301,10 @@ public final class Example {
         return constValue_;
       }
       /**
+       * <pre>
+       * 値が 42.0 である必要がある
+       * </pre>
+       *
        * <code>double const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @param value The constValue to set.
        * @return This builder for chaining.
@@ -10766,6 +11317,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 値が 42.0 である必要がある
+       * </pre>
+       *
        * <code>double const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10778,6 +11333,10 @@ public final class Example {
 
       private double ltValue_ ;
       /**
+       * <pre>
+       * 10.0 より小さい値である必要がある（9.9など）
+       * </pre>
+       *
        * <code>double lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return The ltValue.
        */
@@ -10786,6 +11345,10 @@ public final class Example {
         return ltValue_;
       }
       /**
+       * <pre>
+       * 10.0 より小さい値である必要がある（9.9など）
+       * </pre>
+       *
        * <code>double lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @param value The ltValue to set.
        * @return This builder for chaining.
@@ -10798,6 +11361,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0 より小さい値である必要がある（9.9など）
+       * </pre>
+       *
        * <code>double lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10810,6 +11377,10 @@ public final class Example {
 
       private double lteValue_ ;
       /**
+       * <pre>
+       * 10.0 以下の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return The lteValue.
        */
@@ -10818,6 +11389,10 @@ public final class Example {
         return lteValue_;
       }
       /**
+       * <pre>
+       * 10.0 以下の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @param value The lteValue to set.
        * @return This builder for chaining.
@@ -10830,6 +11405,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0 以下の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10842,6 +11421,10 @@ public final class Example {
 
       private double gtValue_ ;
       /**
+       * <pre>
+       * 10.0 より大きい値である必要がある（10.1など）
+       * </pre>
+       *
        * <code>double gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return The gtValue.
        */
@@ -10850,6 +11433,10 @@ public final class Example {
         return gtValue_;
       }
       /**
+       * <pre>
+       * 10.0 より大きい値である必要がある（10.1など）
+       * </pre>
+       *
        * <code>double gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @param value The gtValue to set.
        * @return This builder for chaining.
@@ -10862,6 +11449,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0 より大きい値である必要がある（10.1など）
+       * </pre>
+       *
        * <code>double gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10874,6 +11465,10 @@ public final class Example {
 
       private double gteValue_ ;
       /**
+       * <pre>
+       * 10.0 以上の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return The gteValue.
        */
@@ -10882,6 +11477,10 @@ public final class Example {
         return gteValue_;
       }
       /**
+       * <pre>
+       * 10.0 以上の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @param value The gteValue to set.
        * @return This builder for chaining.
@@ -10894,6 +11493,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0 以上の値である必要がある（10.0もOK）
+       * </pre>
+       *
        * <code>double gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10906,6 +11509,10 @@ public final class Example {
 
       private double inValue_ ;
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 のいずれかでなければならない
+       * </pre>
+       *
        * <code>double in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return The inValue.
        */
@@ -10914,6 +11521,10 @@ public final class Example {
         return inValue_;
       }
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 のいずれかでなければならない
+       * </pre>
+       *
        * <code>double in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @param value The inValue to set.
        * @return This builder for chaining.
@@ -10926,6 +11537,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 のいずれかでなければならない
+       * </pre>
+       *
        * <code>double in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10938,6 +11553,10 @@ public final class Example {
 
       private double notInValue_ ;
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
+       * </pre>
+       *
        * <code>double not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return The notInValue.
        */
@@ -10946,6 +11565,10 @@ public final class Example {
         return notInValue_;
       }
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
+       * </pre>
+       *
        * <code>double not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @param value The notInValue to set.
        * @return This builder for chaining.
@@ -10958,6 +11581,10 @@ public final class Example {
         return this;
       }
       /**
+       * <pre>
+       * 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK）
+       * </pre>
+       *
        * <code>double not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -10971,7 +11598,7 @@ public final class Example {
       private double finiteValue_ ;
       /**
        * <pre>
-       * 無限大やNaNを弾きたいとき
+       * 無限大や NaN を拒否したいとき（finite = true）
        * </pre>
        *
        * <code>double finite_value = 8 [json_name = "finiteValue", (.buf.validate.field) = { ... }</code>
@@ -10983,7 +11610,7 @@ public final class Example {
       }
       /**
        * <pre>
-       * 無限大やNaNを弾きたいとき
+       * 無限大や NaN を拒否したいとき（finite = true）
        * </pre>
        *
        * <code>double finite_value = 8 [json_name = "finiteValue", (.buf.validate.field) = { ... }</code>
@@ -10999,7 +11626,7 @@ public final class Example {
       }
       /**
        * <pre>
-       * 無限大やNaNを弾きたいとき
+       * 無限大や NaN を拒否したいとき（finite = true）
        * </pre>
        *
        * <code>double finite_value = 8 [json_name = "finiteValue", (.buf.validate.field) = { ... }</code>
@@ -11012,16 +11639,16 @@ public final class Example {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.DoubleValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.DoubleValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.DoubleValidationExample)
-    private static final example.hello.v1.Example.DoubleValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.DoubleValidationExample)
+    private static final example.v1.Example.DoubleValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.DoubleValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.DoubleValidationExample();
     }
 
-    public static example.hello.v1.Example.DoubleValidationExample getDefaultInstance() {
+    public static example.v1.Example.DoubleValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -11057,939 +11684,14 @@ public final class Example {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.DoubleValidationExample getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface EnumValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.EnumValidationExample)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for constValue.
-     */
-    int getConstValueValue();
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-     * @return The constValue.
-     */
-    example.hello.v1.Example.EnumValidationExample.MyEnum getConstValue();
-
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for definedOnlyValue.
-     */
-    int getDefinedOnlyValueValue();
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-     * @return The definedOnlyValue.
-     */
-    example.hello.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue();
-
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for inValue.
-     */
-    int getInValueValue();
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-     * @return The inValue.
-     */
-    example.hello.v1.Example.EnumValidationExample.MyEnum getInValue();
-
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for notInValue.
-     */
-    int getNotInValueValue();
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-     * @return The notInValue.
-     */
-    example.hello.v1.Example.EnumValidationExample.MyEnum getNotInValue();
-  }
-  /**
-   * <pre>
-   * 列挙型（enum）の値制限をしたいとき
-   * </pre>
-   *
-   * Protobuf type {@code example.hello.v1.EnumValidationExample}
-   */
-  public static final class EnumValidationExample extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.EnumValidationExample)
-      EnumValidationExampleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 30,
-        /* patch= */ 1,
-        /* suffix= */ "",
-        EnumValidationExample.class.getName());
-    }
-    // Use EnumValidationExample.newBuilder() to construct.
-    private EnumValidationExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private EnumValidationExample() {
-      constValue_ = 0;
-      definedOnlyValue_ = 0;
-      inValue_ = 0;
-      notInValue_ = 0;
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_EnumValidationExample_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_EnumValidationExample_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.EnumValidationExample.class, example.hello.v1.Example.EnumValidationExample.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code example.hello.v1.EnumValidationExample.MyEnum}
-     */
-    public enum MyEnum
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>MY_ENUM_UNSPECIFIED = 0;</code>
-       */
-      MY_ENUM_UNSPECIFIED(0),
-      /**
-       * <code>MY_ENUM_VALUE1 = 1;</code>
-       */
-      MY_ENUM_VALUE1(1),
-      /**
-       * <code>MY_ENUM_VALUE2 = 2;</code>
-       */
-      MY_ENUM_VALUE2(2),
-      /**
-       * <code>MY_ENUM_VALUE3 = 3;</code>
-       */
-      MY_ENUM_VALUE3(3),
-      UNRECOGNIZED(-1),
-      ;
-
-      static {
-        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 30,
-          /* patch= */ 1,
-          /* suffix= */ "",
-          MyEnum.class.getName());
-      }
-      /**
-       * <code>MY_ENUM_UNSPECIFIED = 0;</code>
-       */
-      public static final int MY_ENUM_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>MY_ENUM_VALUE1 = 1;</code>
-       */
-      public static final int MY_ENUM_VALUE1_VALUE = 1;
-      /**
-       * <code>MY_ENUM_VALUE2 = 2;</code>
-       */
-      public static final int MY_ENUM_VALUE2_VALUE = 2;
-      /**
-       * <code>MY_ENUM_VALUE3 = 3;</code>
-       */
-      public static final int MY_ENUM_VALUE3_VALUE = 3;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static MyEnum valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static MyEnum forNumber(int value) {
-        switch (value) {
-          case 0: return MY_ENUM_UNSPECIFIED;
-          case 1: return MY_ENUM_VALUE1;
-          case 2: return MY_ENUM_VALUE2;
-          case 3: return MY_ENUM_VALUE3;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<MyEnum>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          MyEnum> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<MyEnum>() {
-              public MyEnum findValueByNumber(int number) {
-                return MyEnum.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return example.hello.v1.Example.EnumValidationExample.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final MyEnum[] VALUES = values();
-
-      public static MyEnum valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private MyEnum(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:example.hello.v1.EnumValidationExample.MyEnum)
-    }
-
-    public static final int CONST_VALUE_FIELD_NUMBER = 1;
-    private int constValue_ = 0;
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for constValue.
-     */
-    @java.lang.Override public int getConstValueValue() {
-      return constValue_;
-    }
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-     * @return The constValue.
-     */
-    @java.lang.Override public example.hello.v1.Example.EnumValidationExample.MyEnum getConstValue() {
-      example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(constValue_);
-      return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-    }
-
-    public static final int DEFINED_ONLY_VALUE_FIELD_NUMBER = 2;
-    private int definedOnlyValue_ = 0;
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for definedOnlyValue.
-     */
-    @java.lang.Override public int getDefinedOnlyValueValue() {
-      return definedOnlyValue_;
-    }
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-     * @return The definedOnlyValue.
-     */
-    @java.lang.Override public example.hello.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue() {
-      example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(definedOnlyValue_);
-      return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-    }
-
-    public static final int IN_VALUE_FIELD_NUMBER = 3;
-    private int inValue_ = 0;
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for inValue.
-     */
-    @java.lang.Override public int getInValueValue() {
-      return inValue_;
-    }
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-     * @return The inValue.
-     */
-    @java.lang.Override public example.hello.v1.Example.EnumValidationExample.MyEnum getInValue() {
-      example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(inValue_);
-      return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-    }
-
-    public static final int NOT_IN_VALUE_FIELD_NUMBER = 4;
-    private int notInValue_ = 0;
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for notInValue.
-     */
-    @java.lang.Override public int getNotInValueValue() {
-      return notInValue_;
-    }
-    /**
-     * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-     * @return The notInValue.
-     */
-    @java.lang.Override public example.hello.v1.Example.EnumValidationExample.MyEnum getNotInValue() {
-      example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(notInValue_);
-      return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (constValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        output.writeEnum(1, constValue_);
-      }
-      if (definedOnlyValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, definedOnlyValue_);
-      }
-      if (inValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, inValue_);
-      }
-      if (notInValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        output.writeEnum(4, notInValue_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (constValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, constValue_);
-      }
-      if (definedOnlyValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, definedOnlyValue_);
-      }
-      if (inValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, inValue_);
-      }
-      if (notInValue_ != example.hello.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, notInValue_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof example.hello.v1.Example.EnumValidationExample)) {
-        return super.equals(obj);
-      }
-      example.hello.v1.Example.EnumValidationExample other = (example.hello.v1.Example.EnumValidationExample) obj;
-
-      if (constValue_ != other.constValue_) return false;
-      if (definedOnlyValue_ != other.definedOnlyValue_) return false;
-      if (inValue_ != other.inValue_) return false;
-      if (notInValue_ != other.notInValue_) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONST_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + constValue_;
-      hash = (37 * hash) + DEFINED_ONLY_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + definedOnlyValue_;
-      hash = (37 * hash) + IN_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + inValue_;
-      hash = (37 * hash) + NOT_IN_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + notInValue_;
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static example.hello.v1.Example.EnumValidationExample parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static example.hello.v1.Example.EnumValidationExample parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static example.hello.v1.Example.EnumValidationExample parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(example.hello.v1.Example.EnumValidationExample prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * 列挙型（enum）の値制限をしたいとき
-     * </pre>
-     *
-     * Protobuf type {@code example.hello.v1.EnumValidationExample}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.EnumValidationExample)
-        example.hello.v1.Example.EnumValidationExampleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_EnumValidationExample_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_EnumValidationExample_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.EnumValidationExample.class, example.hello.v1.Example.EnumValidationExample.Builder.class);
-      }
-
-      // Construct using example.hello.v1.Example.EnumValidationExample.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        constValue_ = 0;
-        definedOnlyValue_ = 0;
-        inValue_ = 0;
-        notInValue_ = 0;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_EnumValidationExample_descriptor;
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.EnumValidationExample.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample build() {
-        example.hello.v1.Example.EnumValidationExample result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample buildPartial() {
-        example.hello.v1.Example.EnumValidationExample result = new example.hello.v1.Example.EnumValidationExample(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(example.hello.v1.Example.EnumValidationExample result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.constValue_ = constValue_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.definedOnlyValue_ = definedOnlyValue_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.inValue_ = inValue_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.notInValue_ = notInValue_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.EnumValidationExample) {
-          return mergeFrom((example.hello.v1.Example.EnumValidationExample)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(example.hello.v1.Example.EnumValidationExample other) {
-        if (other == example.hello.v1.Example.EnumValidationExample.getDefaultInstance()) return this;
-        if (other.constValue_ != 0) {
-          setConstValueValue(other.getConstValueValue());
-        }
-        if (other.definedOnlyValue_ != 0) {
-          setDefinedOnlyValueValue(other.getDefinedOnlyValueValue());
-        }
-        if (other.inValue_ != 0) {
-          setInValueValue(other.getInValueValue());
-        }
-        if (other.notInValue_ != 0) {
-          setNotInValueValue(other.getNotInValueValue());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8: {
-                constValue_ = input.readEnum();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 8
-              case 16: {
-                definedOnlyValue_ = input.readEnum();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 16
-              case 24: {
-                inValue_ = input.readEnum();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 32: {
-                notInValue_ = input.readEnum();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int constValue_ = 0;
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-       * @return The enum numeric value on the wire for constValue.
-       */
-      @java.lang.Override public int getConstValueValue() {
-        return constValue_;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-       * @param value The enum numeric value on the wire for constValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConstValueValue(int value) {
-        constValue_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-       * @return The constValue.
-       */
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample.MyEnum getConstValue() {
-        example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(constValue_);
-        return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-       * @param value The constValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setConstValue(example.hello.v1.Example.EnumValidationExample.MyEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        constValue_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearConstValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        constValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int definedOnlyValue_ = 0;
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-       * @return The enum numeric value on the wire for definedOnlyValue.
-       */
-      @java.lang.Override public int getDefinedOnlyValueValue() {
-        return definedOnlyValue_;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-       * @param value The enum numeric value on the wire for definedOnlyValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDefinedOnlyValueValue(int value) {
-        definedOnlyValue_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-       * @return The definedOnlyValue.
-       */
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue() {
-        example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(definedOnlyValue_);
-        return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-       * @param value The definedOnlyValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setDefinedOnlyValue(example.hello.v1.Example.EnumValidationExample.MyEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000002;
-        definedOnlyValue_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearDefinedOnlyValue() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        definedOnlyValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int inValue_ = 0;
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-       * @return The enum numeric value on the wire for inValue.
-       */
-      @java.lang.Override public int getInValueValue() {
-        return inValue_;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-       * @param value The enum numeric value on the wire for inValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInValueValue(int value) {
-        inValue_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-       * @return The inValue.
-       */
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample.MyEnum getInValue() {
-        example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(inValue_);
-        return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-       * @param value The inValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setInValue(example.hello.v1.Example.EnumValidationExample.MyEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000004;
-        inValue_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearInValue() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        inValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int notInValue_ = 0;
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-       * @return The enum numeric value on the wire for notInValue.
-       */
-      @java.lang.Override public int getNotInValueValue() {
-        return notInValue_;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-       * @param value The enum numeric value on the wire for notInValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNotInValueValue(int value) {
-        notInValue_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-       * @return The notInValue.
-       */
-      @java.lang.Override
-      public example.hello.v1.Example.EnumValidationExample.MyEnum getNotInValue() {
-        example.hello.v1.Example.EnumValidationExample.MyEnum result = example.hello.v1.Example.EnumValidationExample.MyEnum.forNumber(notInValue_);
-        return result == null ? example.hello.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-       * @param value The notInValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setNotInValue(example.hello.v1.Example.EnumValidationExample.MyEnum value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000008;
-        notInValue_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearNotInValue() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        notInValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.EnumValidationExample)
-    }
-
-    // @@protoc_insertion_point(class_scope:example.hello.v1.EnumValidationExample)
-    private static final example.hello.v1.Example.EnumValidationExample DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.EnumValidationExample();
-    }
-
-    public static example.hello.v1.Example.EnumValidationExample getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<EnumValidationExample>
-        PARSER = new com.google.protobuf.AbstractParser<EnumValidationExample>() {
-      @java.lang.Override
-      public EnumValidationExample parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<EnumValidationExample> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<EnumValidationExample> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public example.hello.v1.Example.EnumValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.DoubleValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface MapValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.MapValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.MapValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -12133,11 +11835,11 @@ java.lang.String defaultValue);
    * Mapのサイズやキー・値の制約をしたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.MapValidationExample}
+   * Protobuf type {@code example.v1.MapValidationExample}
    */
   public static final class MapValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.MapValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.MapValidationExample)
       MapValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -12158,7 +11860,7 @@ java.lang.String defaultValue);
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_MapValidationExample_descriptor;
     }
 
     @SuppressWarnings({"rawtypes"})
@@ -12182,9 +11884,9 @@ java.lang.String defaultValue);
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_MapValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.MapValidationExample.class, example.hello.v1.Example.MapValidationExample.Builder.class);
+              example.v1.Example.MapValidationExample.class, example.v1.Example.MapValidationExample.Builder.class);
     }
 
     public static final int MIN_PAIRS_VALUE_FIELD_NUMBER = 1;
@@ -12193,7 +11895,7 @@ java.lang.String defaultValue);
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_descriptor, 
+                  example.v1.Example.internal_static_example_v1_MapValidationExample_MinPairsValueEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -12272,7 +11974,7 @@ java.lang.String defaultValue) {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_descriptor, 
+                  example.v1.Example.internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -12351,7 +12053,7 @@ java.lang.String defaultValue) {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_descriptor, 
+                  example.v1.Example.internal_static_example_v1_MapValidationExample_KeysValueEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -12430,7 +12132,7 @@ java.lang.String defaultValue) {
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_descriptor, 
+                  example.v1.Example.internal_static_example_v1_MapValidationExample_ValuesValueEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
@@ -12600,10 +12302,10 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.MapValidationExample)) {
+      if (!(obj instanceof example.v1.Example.MapValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.MapValidationExample other = (example.hello.v1.Example.MapValidationExample) obj;
+      example.v1.Example.MapValidationExample other = (example.v1.Example.MapValidationExample) obj;
 
       if (!internalGetMinPairsValue().equals(
           other.internalGetMinPairsValue())) return false;
@@ -12645,44 +12347,44 @@ java.lang.String defaultValue) {
       return hash;
     }
 
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.MapValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.MapValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12690,26 +12392,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.MapValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.MapValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.MapValidationExample parseDelimitedFrom(
+    public static example.v1.Example.MapValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.MapValidationExample parseFrom(
+    public static example.v1.Example.MapValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12722,7 +12424,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.MapValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.MapValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -12742,15 +12444,15 @@ java.lang.String defaultValue) {
      * Mapのサイズやキー・値の制約をしたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.MapValidationExample}
+     * Protobuf type {@code example.v1.MapValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.MapValidationExample)
-        example.hello.v1.Example.MapValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.MapValidationExample)
+        example.v1.Example.MapValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_MapValidationExample_descriptor;
       }
 
       @SuppressWarnings({"rawtypes"})
@@ -12790,12 +12492,12 @@ java.lang.String defaultValue) {
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_MapValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.MapValidationExample.class, example.hello.v1.Example.MapValidationExample.Builder.class);
+                example.v1.Example.MapValidationExample.class, example.v1.Example.MapValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.MapValidationExample.newBuilder()
+      // Construct using example.v1.Example.MapValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -12819,17 +12521,17 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_MapValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_MapValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.MapValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.MapValidationExample.getDefaultInstance();
+      public example.v1.Example.MapValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.MapValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.MapValidationExample build() {
-        example.hello.v1.Example.MapValidationExample result = buildPartial();
+      public example.v1.Example.MapValidationExample build() {
+        example.v1.Example.MapValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -12837,14 +12539,14 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.MapValidationExample buildPartial() {
-        example.hello.v1.Example.MapValidationExample result = new example.hello.v1.Example.MapValidationExample(this);
+      public example.v1.Example.MapValidationExample buildPartial() {
+        example.v1.Example.MapValidationExample result = new example.v1.Example.MapValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.MapValidationExample result) {
+      private void buildPartial0(example.v1.Example.MapValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.minPairsValue_ = internalGetMinPairsValue();
@@ -12866,16 +12568,16 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.MapValidationExample) {
-          return mergeFrom((example.hello.v1.Example.MapValidationExample)other);
+        if (other instanceof example.v1.Example.MapValidationExample) {
+          return mergeFrom((example.v1.Example.MapValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.MapValidationExample other) {
-        if (other == example.hello.v1.Example.MapValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.MapValidationExample other) {
+        if (other == example.v1.Example.MapValidationExample.getDefaultInstance()) return this;
         internalGetMutableMinPairsValue().mergeFrom(
             other.internalGetMinPairsValue());
         bitField0_ |= 0x00000001;
@@ -13475,16 +13177,16 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.MapValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.MapValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.MapValidationExample)
-    private static final example.hello.v1.Example.MapValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.MapValidationExample)
+    private static final example.v1.Example.MapValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.MapValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.MapValidationExample();
     }
 
-    public static example.hello.v1.Example.MapValidationExample getDefaultInstance() {
+    public static example.v1.Example.MapValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13520,34 +13222,50 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.MapValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.MapValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface RepeatedValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.RepeatedValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.RepeatedValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the minItemsValue.
      */
     java.util.List<java.lang.String>
         getMinItemsValueList();
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of minItemsValue.
      */
     int getMinItemsValueCount();
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The minItemsValue at the given index.
      */
     java.lang.String getMinItemsValue(int index);
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the minItemsValue at the given index.
@@ -13556,23 +13274,39 @@ java.lang.String defaultValue) {
         getMinItemsValueBytes(int index);
 
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the maxItemsValue.
      */
     java.util.List<java.lang.String>
         getMaxItemsValueList();
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of maxItemsValue.
      */
     int getMaxItemsValueCount();
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The maxItemsValue at the given index.
      */
     java.lang.String getMaxItemsValue(int index);
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the maxItemsValue at the given index.
@@ -13581,23 +13315,39 @@ java.lang.String defaultValue) {
         getMaxItemsValueBytes(int index);
 
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the uniqueValue.
      */
     java.util.List<java.lang.String>
         getUniqueValueList();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @return The count of uniqueValue.
      */
     int getUniqueValueCount();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The uniqueValue at the given index.
      */
     java.lang.String getUniqueValue(int index);
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the uniqueValue at the given index.
@@ -13606,23 +13356,39 @@ java.lang.String defaultValue) {
         getUniqueValueBytes(int index);
 
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the itemsValue.
      */
     java.util.List<java.lang.String>
         getItemsValueList();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of itemsValue.
      */
     int getItemsValueCount();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The itemsValue at the given index.
      */
     java.lang.String getItemsValue(int index);
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the itemsValue at the given index.
@@ -13635,11 +13401,11 @@ java.lang.String defaultValue) {
    * 繰り返しフィールドの制約をかけたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.RepeatedValidationExample}
+   * Protobuf type {@code example.v1.RepeatedValidationExample}
    */
   public static final class RepeatedValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.RepeatedValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.RepeatedValidationExample)
       RepeatedValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -13668,15 +13434,15 @@ java.lang.String defaultValue) {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_RepeatedValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_RepeatedValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_RepeatedValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_RepeatedValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.RepeatedValidationExample.class, example.hello.v1.Example.RepeatedValidationExample.Builder.class);
+              example.v1.Example.RepeatedValidationExample.class, example.v1.Example.RepeatedValidationExample.Builder.class);
     }
 
     public static final int MIN_ITEMS_VALUE_FIELD_NUMBER = 1;
@@ -13684,6 +13450,10 @@ java.lang.String defaultValue) {
     private com.google.protobuf.LazyStringArrayList minItemsValue_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the minItemsValue.
      */
@@ -13692,6 +13462,10 @@ java.lang.String defaultValue) {
       return minItemsValue_;
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of minItemsValue.
      */
@@ -13699,6 +13473,10 @@ java.lang.String defaultValue) {
       return minItemsValue_.size();
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The minItemsValue at the given index.
@@ -13707,6 +13485,10 @@ java.lang.String defaultValue) {
       return minItemsValue_.get(index);
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最小要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the minItemsValue at the given index.
@@ -13721,6 +13503,10 @@ java.lang.String defaultValue) {
     private com.google.protobuf.LazyStringArrayList maxItemsValue_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the maxItemsValue.
      */
@@ -13729,6 +13515,10 @@ java.lang.String defaultValue) {
       return maxItemsValue_;
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of maxItemsValue.
      */
@@ -13736,6 +13526,10 @@ java.lang.String defaultValue) {
       return maxItemsValue_.size();
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The maxItemsValue at the given index.
@@ -13744,6 +13538,10 @@ java.lang.String defaultValue) {
       return maxItemsValue_.get(index);
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの最大要素数を指定したいとき
+     * </pre>
+     *
      * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the maxItemsValue at the given index.
@@ -13758,6 +13556,10 @@ java.lang.String defaultValue) {
     private com.google.protobuf.LazyStringArrayList uniqueValue_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the uniqueValue.
      */
@@ -13766,6 +13568,10 @@ java.lang.String defaultValue) {
       return uniqueValue_;
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @return The count of uniqueValue.
      */
@@ -13773,6 +13579,10 @@ java.lang.String defaultValue) {
       return uniqueValue_.size();
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The uniqueValue at the given index.
@@ -13781,6 +13591,10 @@ java.lang.String defaultValue) {
       return uniqueValue_.get(index);
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+     * </pre>
+     *
      * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the uniqueValue at the given index.
@@ -13795,6 +13609,10 @@ java.lang.String defaultValue) {
     private com.google.protobuf.LazyStringArrayList itemsValue_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @return A list containing the itemsValue.
      */
@@ -13803,6 +13621,10 @@ java.lang.String defaultValue) {
       return itemsValue_;
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @return The count of itemsValue.
      */
@@ -13810,6 +13632,10 @@ java.lang.String defaultValue) {
       return itemsValue_.size();
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the element to return.
      * @return The itemsValue at the given index.
@@ -13818,6 +13644,10 @@ java.lang.String defaultValue) {
       return itemsValue_.get(index);
     }
     /**
+     * <pre>
+     * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+     * </pre>
+     *
      * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the itemsValue at the given index.
@@ -13904,10 +13734,10 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.RepeatedValidationExample)) {
+      if (!(obj instanceof example.v1.Example.RepeatedValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.RepeatedValidationExample other = (example.hello.v1.Example.RepeatedValidationExample) obj;
+      example.v1.Example.RepeatedValidationExample other = (example.v1.Example.RepeatedValidationExample) obj;
 
       if (!getMinItemsValueList()
           .equals(other.getMinItemsValueList())) return false;
@@ -13949,44 +13779,44 @@ java.lang.String defaultValue) {
       return hash;
     }
 
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.RepeatedValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.RepeatedValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13994,26 +13824,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.RepeatedValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.RepeatedValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.RepeatedValidationExample parseDelimitedFrom(
+    public static example.v1.Example.RepeatedValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.RepeatedValidationExample parseFrom(
+    public static example.v1.Example.RepeatedValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14026,7 +13856,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.RepeatedValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.RepeatedValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -14046,26 +13876,26 @@ java.lang.String defaultValue) {
      * 繰り返しフィールドの制約をかけたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.RepeatedValidationExample}
+     * Protobuf type {@code example.v1.RepeatedValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.RepeatedValidationExample)
-        example.hello.v1.Example.RepeatedValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.RepeatedValidationExample)
+        example.v1.Example.RepeatedValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_RepeatedValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_RepeatedValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_RepeatedValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_RepeatedValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.RepeatedValidationExample.class, example.hello.v1.Example.RepeatedValidationExample.Builder.class);
+                example.v1.Example.RepeatedValidationExample.class, example.v1.Example.RepeatedValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.RepeatedValidationExample.newBuilder()
+      // Construct using example.v1.Example.RepeatedValidationExample.newBuilder()
       private Builder() {
 
       }
@@ -14093,17 +13923,17 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_RepeatedValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_RepeatedValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.RepeatedValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.RepeatedValidationExample.getDefaultInstance();
+      public example.v1.Example.RepeatedValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.RepeatedValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.RepeatedValidationExample build() {
-        example.hello.v1.Example.RepeatedValidationExample result = buildPartial();
+      public example.v1.Example.RepeatedValidationExample build() {
+        example.v1.Example.RepeatedValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -14111,14 +13941,14 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.RepeatedValidationExample buildPartial() {
-        example.hello.v1.Example.RepeatedValidationExample result = new example.hello.v1.Example.RepeatedValidationExample(this);
+      public example.v1.Example.RepeatedValidationExample buildPartial() {
+        example.v1.Example.RepeatedValidationExample result = new example.v1.Example.RepeatedValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.RepeatedValidationExample result) {
+      private void buildPartial0(example.v1.Example.RepeatedValidationExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           minItemsValue_.makeImmutable();
@@ -14140,16 +13970,16 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.RepeatedValidationExample) {
-          return mergeFrom((example.hello.v1.Example.RepeatedValidationExample)other);
+        if (other instanceof example.v1.Example.RepeatedValidationExample) {
+          return mergeFrom((example.v1.Example.RepeatedValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.RepeatedValidationExample other) {
-        if (other == example.hello.v1.Example.RepeatedValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.RepeatedValidationExample other) {
+        if (other == example.v1.Example.RepeatedValidationExample.getDefaultInstance()) return this;
         if (!other.minItemsValue_.isEmpty()) {
           if (minItemsValue_.isEmpty()) {
             minItemsValue_ = other.minItemsValue_;
@@ -14266,6 +14096,10 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000001;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @return A list containing the minItemsValue.
        */
@@ -14275,6 +14109,10 @@ java.lang.String defaultValue) {
         return minItemsValue_;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @return The count of minItemsValue.
        */
@@ -14282,6 +14120,10 @@ java.lang.String defaultValue) {
         return minItemsValue_.size();
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the element to return.
        * @return The minItemsValue at the given index.
@@ -14290,6 +14132,10 @@ java.lang.String defaultValue) {
         return minItemsValue_.get(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the minItemsValue at the given index.
@@ -14299,6 +14145,10 @@ java.lang.String defaultValue) {
         return minItemsValue_.getByteString(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The minItemsValue to set.
@@ -14314,6 +14164,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The minItemsValue to add.
        * @return This builder for chaining.
@@ -14328,6 +14182,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param values The minItemsValue to add.
        * @return This builder for chaining.
@@ -14342,6 +14200,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14353,6 +14215,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最小要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string min_items_value = 1 [json_name = "minItemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The bytes of the minItemsValue to add.
        * @return This builder for chaining.
@@ -14377,6 +14243,10 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000002;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @return A list containing the maxItemsValue.
        */
@@ -14386,6 +14256,10 @@ java.lang.String defaultValue) {
         return maxItemsValue_;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @return The count of maxItemsValue.
        */
@@ -14393,6 +14267,10 @@ java.lang.String defaultValue) {
         return maxItemsValue_.size();
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the element to return.
        * @return The maxItemsValue at the given index.
@@ -14401,6 +14279,10 @@ java.lang.String defaultValue) {
         return maxItemsValue_.get(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the maxItemsValue at the given index.
@@ -14410,6 +14292,10 @@ java.lang.String defaultValue) {
         return maxItemsValue_.getByteString(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The maxItemsValue to set.
@@ -14425,6 +14311,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The maxItemsValue to add.
        * @return This builder for chaining.
@@ -14439,6 +14329,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param values The maxItemsValue to add.
        * @return This builder for chaining.
@@ -14453,6 +14347,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14464,6 +14362,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの最大要素数を指定したいとき
+       * </pre>
+       *
        * <code>repeated string max_items_value = 2 [json_name = "maxItemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The bytes of the maxItemsValue to add.
        * @return This builder for chaining.
@@ -14488,6 +14390,10 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000004;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @return A list containing the uniqueValue.
        */
@@ -14497,6 +14403,10 @@ java.lang.String defaultValue) {
         return uniqueValue_;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @return The count of uniqueValue.
        */
@@ -14504,6 +14414,10 @@ java.lang.String defaultValue) {
         return uniqueValue_.size();
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the element to return.
        * @return The uniqueValue at the given index.
@@ -14512,6 +14426,10 @@ java.lang.String defaultValue) {
         return uniqueValue_.get(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the uniqueValue at the given index.
@@ -14521,6 +14439,10 @@ java.lang.String defaultValue) {
         return uniqueValue_.getByteString(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The uniqueValue to set.
@@ -14536,6 +14458,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param value The uniqueValue to add.
        * @return This builder for chaining.
@@ -14550,6 +14476,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param values The uniqueValue to add.
        * @return This builder for chaining.
@@ -14564,6 +14494,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14575,6 +14509,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき
+       * </pre>
+       *
        * <code>repeated string unique_value = 3 [json_name = "uniqueValue", (.buf.validate.field) = { ... }</code>
        * @param value The bytes of the uniqueValue to add.
        * @return This builder for chaining.
@@ -14599,6 +14537,10 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000008;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @return A list containing the itemsValue.
        */
@@ -14608,6 +14550,10 @@ java.lang.String defaultValue) {
         return itemsValue_;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @return The count of itemsValue.
        */
@@ -14615,6 +14561,10 @@ java.lang.String defaultValue) {
         return itemsValue_.size();
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the element to return.
        * @return The itemsValue at the given index.
@@ -14623,6 +14573,10 @@ java.lang.String defaultValue) {
         return itemsValue_.get(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the itemsValue at the given index.
@@ -14632,6 +14586,10 @@ java.lang.String defaultValue) {
         return itemsValue_.getByteString(index);
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The itemsValue to set.
@@ -14647,6 +14605,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The itemsValue to add.
        * @return This builder for chaining.
@@ -14661,6 +14623,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param values The itemsValue to add.
        * @return This builder for chaining.
@@ -14675,6 +14641,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -14686,6 +14656,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 繰り返しフィールドの要素に対して、特定の長さを要求したいとき
+       * </pre>
+       *
        * <code>repeated string items_value = 4 [json_name = "itemsValue", (.buf.validate.field) = { ... }</code>
        * @param value The bytes of the itemsValue to add.
        * @return This builder for chaining.
@@ -14701,16 +14675,16 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.RepeatedValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.RepeatedValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.RepeatedValidationExample)
-    private static final example.hello.v1.Example.RepeatedValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.RepeatedValidationExample)
+    private static final example.v1.Example.RepeatedValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.RepeatedValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.RepeatedValidationExample();
     }
 
-    public static example.hello.v1.Example.RepeatedValidationExample getDefaultInstance() {
+    public static example.v1.Example.RepeatedValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -14746,42 +14720,72 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.RepeatedValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.RepeatedValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface AnyValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.AnyValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.AnyValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the inValue field is set.
      */
     boolean hasInValue();
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
     com.google.protobuf.Any getInValue();
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.AnyOrBuilder getInValueOrBuilder();
 
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the notInValue field is set.
      */
     boolean hasNotInValue();
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
     com.google.protobuf.Any getNotInValue();
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.AnyOrBuilder getNotInValueOrBuilder();
@@ -14791,11 +14795,11 @@ java.lang.String defaultValue) {
    * Any型のタイプを制限したいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.AnyValidationExample}
+   * Protobuf type {@code example.v1.AnyValidationExample}
    */
   public static final class AnyValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.AnyValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.AnyValidationExample)
       AnyValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -14816,21 +14820,26 @@ java.lang.String defaultValue) {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_AnyValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_AnyValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_AnyValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_AnyValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.AnyValidationExample.class, example.hello.v1.Example.AnyValidationExample.Builder.class);
+              example.v1.Example.AnyValidationExample.class, example.v1.Example.AnyValidationExample.Builder.class);
     }
 
     private int bitField0_;
     public static final int IN_VALUE_FIELD_NUMBER = 1;
     private com.google.protobuf.Any inValue_;
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the inValue field is set.
      */
@@ -14839,6 +14848,11 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
@@ -14847,6 +14861,11 @@ java.lang.String defaultValue) {
       return inValue_ == null ? com.google.protobuf.Any.getDefaultInstance() : inValue_;
     }
     /**
+     * <pre>
+     * int32やstringのAny型を許可したいとき
+     * ただし、Any型の中身はint32やstringである必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -14857,6 +14876,11 @@ java.lang.String defaultValue) {
     public static final int NOT_IN_VALUE_FIELD_NUMBER = 2;
     private com.google.protobuf.Any notInValue_;
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the notInValue field is set.
      */
@@ -14865,6 +14889,11 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
@@ -14873,6 +14902,11 @@ java.lang.String defaultValue) {
       return notInValue_ == null ? com.google.protobuf.Any.getDefaultInstance() : notInValue_;
     }
     /**
+     * <pre>
+     * int32やstringのAny型を許可したくないとき
+     * ただし、Any型の中身はint32やstring 以外である必要がある
+     * </pre>
+     *
      * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -14927,10 +14961,10 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.AnyValidationExample)) {
+      if (!(obj instanceof example.v1.Example.AnyValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.AnyValidationExample other = (example.hello.v1.Example.AnyValidationExample) obj;
+      example.v1.Example.AnyValidationExample other = (example.v1.Example.AnyValidationExample) obj;
 
       if (hasInValue() != other.hasInValue()) return false;
       if (hasInValue()) {
@@ -14966,44 +15000,44 @@ java.lang.String defaultValue) {
       return hash;
     }
 
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.AnyValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.AnyValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15011,26 +15045,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.AnyValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.AnyValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.AnyValidationExample parseDelimitedFrom(
+    public static example.v1.Example.AnyValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.AnyValidationExample parseFrom(
+    public static example.v1.Example.AnyValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15043,7 +15077,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.AnyValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.AnyValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -15063,26 +15097,26 @@ java.lang.String defaultValue) {
      * Any型のタイプを制限したいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.AnyValidationExample}
+     * Protobuf type {@code example.v1.AnyValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.AnyValidationExample)
-        example.hello.v1.Example.AnyValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.AnyValidationExample)
+        example.v1.Example.AnyValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_AnyValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_AnyValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_AnyValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_AnyValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.AnyValidationExample.class, example.hello.v1.Example.AnyValidationExample.Builder.class);
+                example.v1.Example.AnyValidationExample.class, example.v1.Example.AnyValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.AnyValidationExample.newBuilder()
+      // Construct using example.v1.Example.AnyValidationExample.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15119,17 +15153,17 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_AnyValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_AnyValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.AnyValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.AnyValidationExample.getDefaultInstance();
+      public example.v1.Example.AnyValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.AnyValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.AnyValidationExample build() {
-        example.hello.v1.Example.AnyValidationExample result = buildPartial();
+      public example.v1.Example.AnyValidationExample build() {
+        example.v1.Example.AnyValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -15137,14 +15171,14 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.AnyValidationExample buildPartial() {
-        example.hello.v1.Example.AnyValidationExample result = new example.hello.v1.Example.AnyValidationExample(this);
+      public example.v1.Example.AnyValidationExample buildPartial() {
+        example.v1.Example.AnyValidationExample result = new example.v1.Example.AnyValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.AnyValidationExample result) {
+      private void buildPartial0(example.v1.Example.AnyValidationExample result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -15164,16 +15198,16 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.AnyValidationExample) {
-          return mergeFrom((example.hello.v1.Example.AnyValidationExample)other);
+        if (other instanceof example.v1.Example.AnyValidationExample) {
+          return mergeFrom((example.v1.Example.AnyValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.AnyValidationExample other) {
-        if (other == example.hello.v1.Example.AnyValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.AnyValidationExample other) {
+        if (other == example.v1.Example.AnyValidationExample.getDefaultInstance()) return this;
         if (other.hasInValue()) {
           mergeInValue(other.getInValue());
         }
@@ -15241,6 +15275,11 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> inValueBuilder_;
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the inValue field is set.
        */
@@ -15248,6 +15287,11 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return The inValue.
        */
@@ -15259,6 +15303,11 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setInValue(com.google.protobuf.Any value) {
@@ -15275,6 +15324,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setInValue(
@@ -15289,6 +15343,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeInValue(com.google.protobuf.Any value) {
@@ -15310,6 +15369,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearInValue() {
@@ -15323,6 +15387,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Any.Builder getInValueBuilder() {
@@ -15331,6 +15400,11 @@ java.lang.String defaultValue) {
         return internalGetInValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.AnyOrBuilder getInValueOrBuilder() {
@@ -15342,6 +15416,11 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したいとき
+       * ただし、Any型の中身はint32やstringである必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any in_value = 1 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -15362,6 +15441,11 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> notInValueBuilder_;
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the notInValue field is set.
        */
@@ -15369,6 +15453,11 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return The notInValue.
        */
@@ -15380,6 +15469,11 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setNotInValue(com.google.protobuf.Any value) {
@@ -15396,6 +15490,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setNotInValue(
@@ -15410,6 +15509,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeNotInValue(com.google.protobuf.Any value) {
@@ -15431,6 +15535,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearNotInValue() {
@@ -15444,6 +15553,11 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Any.Builder getNotInValueBuilder() {
@@ -15452,6 +15566,11 @@ java.lang.String defaultValue) {
         return internalGetNotInValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.AnyOrBuilder getNotInValueOrBuilder() {
@@ -15463,6 +15582,11 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * int32やstringのAny型を許可したくないとき
+       * ただし、Any型の中身はint32やstring 以外である必要がある
+       * </pre>
+       *
        * <code>.google.protobuf.Any not_in_value = 2 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -15479,16 +15603,16 @@ java.lang.String defaultValue) {
         return notInValueBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.AnyValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.AnyValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.AnyValidationExample)
-    private static final example.hello.v1.Example.AnyValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.AnyValidationExample)
+    private static final example.v1.Example.AnyValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.AnyValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.AnyValidationExample();
     }
 
-    public static example.hello.v1.Example.AnyValidationExample getDefaultInstance() {
+    public static example.v1.Example.AnyValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -15524,117 +15648,201 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.AnyValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.AnyValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface DurationValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.DurationValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.DurationValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the constValue field is set.
      */
     boolean hasConstValue();
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
     com.google.protobuf.Duration getConstValue();
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getConstValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltValue field is set.
      */
     boolean hasLtValue();
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
     com.google.protobuf.Duration getLtValue();
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getLtValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the lteValue field is set.
      */
     boolean hasLteValue();
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
     com.google.protobuf.Duration getLteValue();
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getLteValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtValue field is set.
      */
     boolean hasGtValue();
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
     com.google.protobuf.Duration getGtValue();
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getGtValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gteValue field is set.
      */
     boolean hasGteValue();
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
     com.google.protobuf.Duration getGteValue();
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getGteValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the inValue field is set.
      */
     boolean hasInValue();
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
     com.google.protobuf.Duration getInValue();
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getInValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the notInValue field is set.
      */
     boolean hasNotInValue();
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
     com.google.protobuf.Duration getNotInValue();
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.DurationOrBuilder getNotInValueOrBuilder();
@@ -15642,13 +15850,14 @@ java.lang.String defaultValue) {
   /**
    * <pre>
    * Durationの比較をしたいとき
+   * Durationの比較をしたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.DurationValidationExample}
+   * Protobuf type {@code example.v1.DurationValidationExample}
    */
   public static final class DurationValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.DurationValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.DurationValidationExample)
       DurationValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -15669,21 +15878,25 @@ java.lang.String defaultValue) {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DurationValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_DurationValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_DurationValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_DurationValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.DurationValidationExample.class, example.hello.v1.Example.DurationValidationExample.Builder.class);
+              example.v1.Example.DurationValidationExample.class, example.v1.Example.DurationValidationExample.Builder.class);
     }
 
     private int bitField0_;
     public static final int CONST_VALUE_FIELD_NUMBER = 1;
     private com.google.protobuf.Duration constValue_;
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the constValue field is set.
      */
@@ -15692,6 +15905,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
@@ -15700,6 +15917,10 @@ java.lang.String defaultValue) {
       return constValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : constValue_;
     }
     /**
+     * <pre>
+     * 指定された秒数と正確に一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15710,6 +15931,10 @@ java.lang.String defaultValue) {
     public static final int LT_VALUE_FIELD_NUMBER = 2;
     private com.google.protobuf.Duration ltValue_;
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltValue field is set.
      */
@@ -15718,6 +15943,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
@@ -15726,6 +15955,10 @@ java.lang.String defaultValue) {
       return ltValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : ltValue_;
     }
     /**
+     * <pre>
+     * 指定された秒数より短い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15736,6 +15969,10 @@ java.lang.String defaultValue) {
     public static final int LTE_VALUE_FIELD_NUMBER = 3;
     private com.google.protobuf.Duration lteValue_;
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the lteValue field is set.
      */
@@ -15744,6 +15981,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
@@ -15752,6 +15993,10 @@ java.lang.String defaultValue) {
       return lteValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : lteValue_;
     }
     /**
+     * <pre>
+     * 指定された秒数以下である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15762,6 +16007,10 @@ java.lang.String defaultValue) {
     public static final int GT_VALUE_FIELD_NUMBER = 4;
     private com.google.protobuf.Duration gtValue_;
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtValue field is set.
      */
@@ -15770,6 +16019,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
@@ -15778,6 +16031,10 @@ java.lang.String defaultValue) {
       return gtValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : gtValue_;
     }
     /**
+     * <pre>
+     * 指定された秒数より長い必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15788,6 +16045,10 @@ java.lang.String defaultValue) {
     public static final int GTE_VALUE_FIELD_NUMBER = 5;
     private com.google.protobuf.Duration gteValue_;
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gteValue field is set.
      */
@@ -15796,6 +16057,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
@@ -15804,6 +16069,10 @@ java.lang.String defaultValue) {
       return gteValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : gteValue_;
     }
     /**
+     * <pre>
+     * 指定された秒数以上である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15814,6 +16083,10 @@ java.lang.String defaultValue) {
     public static final int IN_VALUE_FIELD_NUMBER = 6;
     private com.google.protobuf.Duration inValue_;
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the inValue field is set.
      */
@@ -15822,6 +16095,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      * @return The inValue.
      */
@@ -15830,6 +16107,10 @@ java.lang.String defaultValue) {
       return inValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : inValue_;
     }
     /**
+     * <pre>
+     * 指定された複数の候補の中のいずれかに一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15840,6 +16121,10 @@ java.lang.String defaultValue) {
     public static final int NOT_IN_VALUE_FIELD_NUMBER = 7;
     private com.google.protobuf.Duration notInValue_;
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the notInValue field is set.
      */
@@ -15848,6 +16133,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      * @return The notInValue.
      */
@@ -15856,6 +16145,10 @@ java.lang.String defaultValue) {
       return notInValue_ == null ? com.google.protobuf.Duration.getDefaultInstance() : notInValue_;
     }
     /**
+     * <pre>
+     * 指定された複数の値以外でなければならないとき
+     * </pre>
+     *
      * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -15945,10 +16238,10 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.DurationValidationExample)) {
+      if (!(obj instanceof example.v1.Example.DurationValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.DurationValidationExample other = (example.hello.v1.Example.DurationValidationExample) obj;
+      example.v1.Example.DurationValidationExample other = (example.v1.Example.DurationValidationExample) obj;
 
       if (hasConstValue() != other.hasConstValue()) return false;
       if (hasConstValue()) {
@@ -16029,44 +16322,44 @@ java.lang.String defaultValue) {
       return hash;
     }
 
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.DurationValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.DurationValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16074,26 +16367,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.DurationValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.DurationValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.DurationValidationExample parseDelimitedFrom(
+    public static example.v1.Example.DurationValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.DurationValidationExample parseFrom(
+    public static example.v1.Example.DurationValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16106,7 +16399,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.DurationValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.DurationValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -16124,28 +16417,29 @@ java.lang.String defaultValue) {
     /**
      * <pre>
      * Durationの比較をしたいとき
+     * Durationの比較をしたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.DurationValidationExample}
+     * Protobuf type {@code example.v1.DurationValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.DurationValidationExample)
-        example.hello.v1.Example.DurationValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.DurationValidationExample)
+        example.v1.Example.DurationValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DurationValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_DurationValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DurationValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_DurationValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.DurationValidationExample.class, example.hello.v1.Example.DurationValidationExample.Builder.class);
+                example.v1.Example.DurationValidationExample.class, example.v1.Example.DurationValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.DurationValidationExample.newBuilder()
+      // Construct using example.v1.Example.DurationValidationExample.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16212,17 +16506,17 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_DurationValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_DurationValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DurationValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.DurationValidationExample.getDefaultInstance();
+      public example.v1.Example.DurationValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.DurationValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DurationValidationExample build() {
-        example.hello.v1.Example.DurationValidationExample result = buildPartial();
+      public example.v1.Example.DurationValidationExample build() {
+        example.v1.Example.DurationValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -16230,14 +16524,14 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.DurationValidationExample buildPartial() {
-        example.hello.v1.Example.DurationValidationExample result = new example.hello.v1.Example.DurationValidationExample(this);
+      public example.v1.Example.DurationValidationExample buildPartial() {
+        example.v1.Example.DurationValidationExample result = new example.v1.Example.DurationValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.DurationValidationExample result) {
+      private void buildPartial0(example.v1.Example.DurationValidationExample result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -16287,16 +16581,16 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.DurationValidationExample) {
-          return mergeFrom((example.hello.v1.Example.DurationValidationExample)other);
+        if (other instanceof example.v1.Example.DurationValidationExample) {
+          return mergeFrom((example.v1.Example.DurationValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.DurationValidationExample other) {
-        if (other == example.hello.v1.Example.DurationValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.DurationValidationExample other) {
+        if (other == example.v1.Example.DurationValidationExample.getDefaultInstance()) return this;
         if (other.hasConstValue()) {
           mergeConstValue(other.getConstValue());
         }
@@ -16414,6 +16708,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> constValueBuilder_;
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the constValue field is set.
        */
@@ -16421,6 +16719,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return The constValue.
        */
@@ -16432,6 +16734,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setConstValue(com.google.protobuf.Duration value) {
@@ -16448,6 +16754,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setConstValue(
@@ -16462,6 +16772,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeConstValue(com.google.protobuf.Duration value) {
@@ -16483,6 +16797,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearConstValue() {
@@ -16496,6 +16814,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getConstValueBuilder() {
@@ -16504,6 +16826,10 @@ java.lang.String defaultValue) {
         return internalGetConstValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getConstValueOrBuilder() {
@@ -16515,6 +16841,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数と正確に一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -16535,6 +16865,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> ltValueBuilder_;
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the ltValue field is set.
        */
@@ -16542,6 +16876,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return The ltValue.
        */
@@ -16553,6 +16891,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtValue(com.google.protobuf.Duration value) {
@@ -16569,6 +16911,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtValue(
@@ -16583,6 +16929,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeLtValue(com.google.protobuf.Duration value) {
@@ -16604,6 +16954,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearLtValue() {
@@ -16617,6 +16971,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getLtValueBuilder() {
@@ -16625,6 +16983,10 @@ java.lang.String defaultValue) {
         return internalGetLtValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getLtValueOrBuilder() {
@@ -16636,6 +16998,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数より短い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -16656,6 +17022,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> lteValueBuilder_;
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the lteValue field is set.
        */
@@ -16663,6 +17033,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return The lteValue.
        */
@@ -16674,6 +17048,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLteValue(com.google.protobuf.Duration value) {
@@ -16690,6 +17068,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLteValue(
@@ -16704,6 +17086,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeLteValue(com.google.protobuf.Duration value) {
@@ -16725,6 +17111,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearLteValue() {
@@ -16738,6 +17128,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getLteValueBuilder() {
@@ -16746,6 +17140,10 @@ java.lang.String defaultValue) {
         return internalGetLteValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getLteValueOrBuilder() {
@@ -16757,6 +17155,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数以下である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -16777,6 +17179,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> gtValueBuilder_;
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the gtValue field is set.
        */
@@ -16784,6 +17190,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return The gtValue.
        */
@@ -16795,6 +17205,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtValue(com.google.protobuf.Duration value) {
@@ -16811,6 +17225,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtValue(
@@ -16825,6 +17243,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeGtValue(com.google.protobuf.Duration value) {
@@ -16846,6 +17268,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearGtValue() {
@@ -16859,6 +17285,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getGtValueBuilder() {
@@ -16867,6 +17297,10 @@ java.lang.String defaultValue) {
         return internalGetGtValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getGtValueOrBuilder() {
@@ -16878,6 +17312,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数より長い必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gt_value = 4 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -16898,6 +17336,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> gteValueBuilder_;
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the gteValue field is set.
        */
@@ -16905,6 +17347,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return The gteValue.
        */
@@ -16916,6 +17362,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGteValue(com.google.protobuf.Duration value) {
@@ -16932,6 +17382,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGteValue(
@@ -16946,6 +17400,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeGteValue(com.google.protobuf.Duration value) {
@@ -16967,6 +17425,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearGteValue() {
@@ -16980,6 +17442,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getGteValueBuilder() {
@@ -16988,6 +17454,10 @@ java.lang.String defaultValue) {
         return internalGetGteValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getGteValueOrBuilder() {
@@ -16999,6 +17469,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された秒数以上である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration gte_value = 5 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -17019,6 +17493,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> inValueBuilder_;
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the inValue field is set.
        */
@@ -17026,6 +17504,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        * @return The inValue.
        */
@@ -17037,6 +17519,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setInValue(com.google.protobuf.Duration value) {
@@ -17053,6 +17539,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setInValue(
@@ -17067,6 +17557,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeInValue(com.google.protobuf.Duration value) {
@@ -17088,6 +17582,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearInValue() {
@@ -17101,6 +17599,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getInValueBuilder() {
@@ -17109,6 +17611,10 @@ java.lang.String defaultValue) {
         return internalGetInValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getInValueOrBuilder() {
@@ -17120,6 +17626,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された複数の候補の中のいずれかに一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration in_value = 6 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -17140,6 +17650,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> notInValueBuilder_;
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the notInValue field is set.
        */
@@ -17147,6 +17661,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        * @return The notInValue.
        */
@@ -17158,6 +17676,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setNotInValue(com.google.protobuf.Duration value) {
@@ -17174,6 +17696,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setNotInValue(
@@ -17188,6 +17714,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeNotInValue(com.google.protobuf.Duration value) {
@@ -17209,6 +17739,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearNotInValue() {
@@ -17222,6 +17756,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Duration.Builder getNotInValueBuilder() {
@@ -17230,6 +17768,10 @@ java.lang.String defaultValue) {
         return internalGetNotInValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.DurationOrBuilder getNotInValueOrBuilder() {
@@ -17241,6 +17783,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された複数の値以外でなければならないとき
+       * </pre>
+       *
        * <code>.google.protobuf.Duration not_in_value = 7 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -17257,16 +17803,16 @@ java.lang.String defaultValue) {
         return notInValueBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.DurationValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.DurationValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.DurationValidationExample)
-    private static final example.hello.v1.Example.DurationValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.DurationValidationExample)
+    private static final example.v1.Example.DurationValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.DurationValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.DurationValidationExample();
     }
 
-    public static example.hello.v1.Example.DurationValidationExample getDefaultInstance() {
+    public static example.v1.Example.DurationValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17302,132 +17848,1333 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.DurationValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.DurationValidationExample getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EnumValidationExampleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:example.v1.EnumValidationExample)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 特定の値だけを許可
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for constValue.
+     */
+    int getConstValueValue();
+    /**
+     * <pre>
+     * 特定の値だけを許可
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+     * @return The constValue.
+     */
+    example.v1.Example.EnumValidationExample.MyEnum getConstValue();
+
+    /**
+     * <pre>
+     * enumに定義された値のみ許可（未定義の数値はエラー）
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for definedOnlyValue.
+     */
+    int getDefinedOnlyValueValue();
+    /**
+     * <pre>
+     * enumに定義された値のみ許可（未定義の数値はエラー）
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+     * @return The definedOnlyValue.
+     */
+    example.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue();
+
+    /**
+     * <pre>
+     * 指定した値（1または2）のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for inValue.
+     */
+    int getInValueValue();
+    /**
+     * <pre>
+     * 指定した値（1または2）のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+     * @return The inValue.
+     */
+    example.v1.Example.EnumValidationExample.MyEnum getInValue();
+
+    /**
+     * <pre>
+     * 指定した値（1と2）以外のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for notInValue.
+     */
+    int getNotInValueValue();
+    /**
+     * <pre>
+     * 指定した値（1と2）以外のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+     * @return The notInValue.
+     */
+    example.v1.Example.EnumValidationExample.MyEnum getNotInValue();
+  }
+  /**
+   * <pre>
+   * 列挙型（enum）の値制限をしたいとき
+   * </pre>
+   *
+   * Protobuf type {@code example.v1.EnumValidationExample}
+   */
+  public static final class EnumValidationExample extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:example.v1.EnumValidationExample)
+      EnumValidationExampleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        EnumValidationExample.class.getName());
+    }
+    // Use EnumValidationExample.newBuilder() to construct.
+    private EnumValidationExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private EnumValidationExample() {
+      constValue_ = 0;
+      definedOnlyValue_ = 0;
+      inValue_ = 0;
+      notInValue_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return example.v1.Example.internal_static_example_v1_EnumValidationExample_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return example.v1.Example.internal_static_example_v1_EnumValidationExample_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              example.v1.Example.EnumValidationExample.class, example.v1.Example.EnumValidationExample.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * 列挙型の定義
+     * </pre>
+     *
+     * Protobuf enum {@code example.v1.EnumValidationExample.MyEnum}
+     */
+    public enum MyEnum
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * 未指定（デフォルト）
+       * </pre>
+       *
+       * <code>MY_ENUM_UNSPECIFIED = 0;</code>
+       */
+      MY_ENUM_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * 値1
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE1 = 1;</code>
+       */
+      MY_ENUM_VALUE1(1),
+      /**
+       * <pre>
+       * 値2
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE2 = 2;</code>
+       */
+      MY_ENUM_VALUE2(2),
+      /**
+       * <pre>
+       * 値3
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE3 = 3;</code>
+       */
+      MY_ENUM_VALUE3(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 30,
+          /* patch= */ 1,
+          /* suffix= */ "",
+          MyEnum.class.getName());
+      }
+      /**
+       * <pre>
+       * 未指定（デフォルト）
+       * </pre>
+       *
+       * <code>MY_ENUM_UNSPECIFIED = 0;</code>
+       */
+      public static final int MY_ENUM_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * 値1
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE1 = 1;</code>
+       */
+      public static final int MY_ENUM_VALUE1_VALUE = 1;
+      /**
+       * <pre>
+       * 値2
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE2 = 2;</code>
+       */
+      public static final int MY_ENUM_VALUE2_VALUE = 2;
+      /**
+       * <pre>
+       * 値3
+       * </pre>
+       *
+       * <code>MY_ENUM_VALUE3 = 3;</code>
+       */
+      public static final int MY_ENUM_VALUE3_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MyEnum valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MyEnum forNumber(int value) {
+        switch (value) {
+          case 0: return MY_ENUM_UNSPECIFIED;
+          case 1: return MY_ENUM_VALUE1;
+          case 2: return MY_ENUM_VALUE2;
+          case 3: return MY_ENUM_VALUE3;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MyEnum>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MyEnum> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MyEnum>() {
+              public MyEnum findValueByNumber(int number) {
+                return MyEnum.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return example.v1.Example.EnumValidationExample.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final MyEnum[] VALUES = values();
+
+      public static MyEnum valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MyEnum(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:example.v1.EnumValidationExample.MyEnum)
+    }
+
+    public static final int CONST_VALUE_FIELD_NUMBER = 1;
+    private int constValue_ = 0;
+    /**
+     * <pre>
+     * 特定の値だけを許可
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for constValue.
+     */
+    @java.lang.Override public int getConstValueValue() {
+      return constValue_;
+    }
+    /**
+     * <pre>
+     * 特定の値だけを許可
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+     * @return The constValue.
+     */
+    @java.lang.Override public example.v1.Example.EnumValidationExample.MyEnum getConstValue() {
+      example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(constValue_);
+      return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int DEFINED_ONLY_VALUE_FIELD_NUMBER = 2;
+    private int definedOnlyValue_ = 0;
+    /**
+     * <pre>
+     * enumに定義された値のみ許可（未定義の数値はエラー）
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for definedOnlyValue.
+     */
+    @java.lang.Override public int getDefinedOnlyValueValue() {
+      return definedOnlyValue_;
+    }
+    /**
+     * <pre>
+     * enumに定義された値のみ許可（未定義の数値はエラー）
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+     * @return The definedOnlyValue.
+     */
+    @java.lang.Override public example.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue() {
+      example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(definedOnlyValue_);
+      return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int IN_VALUE_FIELD_NUMBER = 3;
+    private int inValue_ = 0;
+    /**
+     * <pre>
+     * 指定した値（1または2）のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for inValue.
+     */
+    @java.lang.Override public int getInValueValue() {
+      return inValue_;
+    }
+    /**
+     * <pre>
+     * 指定した値（1または2）のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+     * @return The inValue.
+     */
+    @java.lang.Override public example.v1.Example.EnumValidationExample.MyEnum getInValue() {
+      example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(inValue_);
+      return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+    }
+
+    public static final int NOT_IN_VALUE_FIELD_NUMBER = 4;
+    private int notInValue_ = 0;
+    /**
+     * <pre>
+     * 指定した値（1と2）以外のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+     * @return The enum numeric value on the wire for notInValue.
+     */
+    @java.lang.Override public int getNotInValueValue() {
+      return notInValue_;
+    }
+    /**
+     * <pre>
+     * 指定した値（1と2）以外のみ許容
+     * </pre>
+     *
+     * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+     * @return The notInValue.
+     */
+    @java.lang.Override public example.v1.Example.EnumValidationExample.MyEnum getNotInValue() {
+      example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(notInValue_);
+      return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (constValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, constValue_);
+      }
+      if (definedOnlyValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, definedOnlyValue_);
+      }
+      if (inValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        output.writeEnum(3, inValue_);
+      }
+      if (notInValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, notInValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (constValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, constValue_);
+      }
+      if (definedOnlyValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, definedOnlyValue_);
+      }
+      if (inValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, inValue_);
+      }
+      if (notInValue_ != example.v1.Example.EnumValidationExample.MyEnum.MY_ENUM_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, notInValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof example.v1.Example.EnumValidationExample)) {
+        return super.equals(obj);
+      }
+      example.v1.Example.EnumValidationExample other = (example.v1.Example.EnumValidationExample) obj;
+
+      if (constValue_ != other.constValue_) return false;
+      if (definedOnlyValue_ != other.definedOnlyValue_) return false;
+      if (inValue_ != other.inValue_) return false;
+      if (notInValue_ != other.notInValue_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONST_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + constValue_;
+      hash = (37 * hash) + DEFINED_ONLY_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + definedOnlyValue_;
+      hash = (37 * hash) + IN_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + inValue_;
+      hash = (37 * hash) + NOT_IN_VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + notInValue_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static example.v1.Example.EnumValidationExample parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static example.v1.Example.EnumValidationExample parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.EnumValidationExample parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(example.v1.Example.EnumValidationExample prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 列挙型（enum）の値制限をしたいとき
+     * </pre>
+     *
+     * Protobuf type {@code example.v1.EnumValidationExample}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:example.v1.EnumValidationExample)
+        example.v1.Example.EnumValidationExampleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return example.v1.Example.internal_static_example_v1_EnumValidationExample_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return example.v1.Example.internal_static_example_v1_EnumValidationExample_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                example.v1.Example.EnumValidationExample.class, example.v1.Example.EnumValidationExample.Builder.class);
+      }
+
+      // Construct using example.v1.Example.EnumValidationExample.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        constValue_ = 0;
+        definedOnlyValue_ = 0;
+        inValue_ = 0;
+        notInValue_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return example.v1.Example.internal_static_example_v1_EnumValidationExample_descriptor;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.EnumValidationExample.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample build() {
+        example.v1.Example.EnumValidationExample result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample buildPartial() {
+        example.v1.Example.EnumValidationExample result = new example.v1.Example.EnumValidationExample(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(example.v1.Example.EnumValidationExample result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.constValue_ = constValue_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.definedOnlyValue_ = definedOnlyValue_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.inValue_ = inValue_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.notInValue_ = notInValue_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof example.v1.Example.EnumValidationExample) {
+          return mergeFrom((example.v1.Example.EnumValidationExample)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(example.v1.Example.EnumValidationExample other) {
+        if (other == example.v1.Example.EnumValidationExample.getDefaultInstance()) return this;
+        if (other.constValue_ != 0) {
+          setConstValueValue(other.getConstValueValue());
+        }
+        if (other.definedOnlyValue_ != 0) {
+          setDefinedOnlyValueValue(other.getDefinedOnlyValueValue());
+        }
+        if (other.inValue_ != 0) {
+          setInValueValue(other.getInValueValue());
+        }
+        if (other.notInValue_ != 0) {
+          setNotInValueValue(other.getNotInValueValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                constValue_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                definedOnlyValue_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                inValue_ = input.readEnum();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                notInValue_ = input.readEnum();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int constValue_ = 0;
+      /**
+       * <pre>
+       * 特定の値だけを許可
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+       * @return The enum numeric value on the wire for constValue.
+       */
+      @java.lang.Override public int getConstValueValue() {
+        return constValue_;
+      }
+      /**
+       * <pre>
+       * 特定の値だけを許可
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+       * @param value The enum numeric value on the wire for constValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConstValueValue(int value) {
+        constValue_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 特定の値だけを許可
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+       * @return The constValue.
+       */
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample.MyEnum getConstValue() {
+        example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(constValue_);
+        return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 特定の値だけを許可
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+       * @param value The constValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConstValue(example.v1.Example.EnumValidationExample.MyEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        constValue_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 特定の値だけを許可
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConstValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        constValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int definedOnlyValue_ = 0;
+      /**
+       * <pre>
+       * enumに定義された値のみ許可（未定義の数値はエラー）
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+       * @return The enum numeric value on the wire for definedOnlyValue.
+       */
+      @java.lang.Override public int getDefinedOnlyValueValue() {
+        return definedOnlyValue_;
+      }
+      /**
+       * <pre>
+       * enumに定義された値のみ許可（未定義の数値はエラー）
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+       * @param value The enum numeric value on the wire for definedOnlyValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefinedOnlyValueValue(int value) {
+        definedOnlyValue_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enumに定義された値のみ許可（未定義の数値はエラー）
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+       * @return The definedOnlyValue.
+       */
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample.MyEnum getDefinedOnlyValue() {
+        example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(definedOnlyValue_);
+        return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * enumに定義された値のみ許可（未定義の数値はエラー）
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+       * @param value The definedOnlyValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefinedOnlyValue(example.v1.Example.EnumValidationExample.MyEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        definedOnlyValue_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * enumに定義された値のみ許可（未定義の数値はエラー）
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum defined_only_value = 2 [json_name = "definedOnlyValue", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefinedOnlyValue() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        definedOnlyValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int inValue_ = 0;
+      /**
+       * <pre>
+       * 指定した値（1または2）のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+       * @return The enum numeric value on the wire for inValue.
+       */
+      @java.lang.Override public int getInValueValue() {
+        return inValue_;
+      }
+      /**
+       * <pre>
+       * 指定した値（1または2）のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+       * @param value The enum numeric value on the wire for inValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInValueValue(int value) {
+        inValue_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 指定した値（1または2）のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+       * @return The inValue.
+       */
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample.MyEnum getInValue() {
+        example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(inValue_);
+        return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 指定した値（1または2）のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+       * @param value The inValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInValue(example.v1.Example.EnumValidationExample.MyEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        inValue_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 指定した値（1または2）のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum in_value = 3 [json_name = "inValue", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        inValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int notInValue_ = 0;
+      /**
+       * <pre>
+       * 指定した値（1と2）以外のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+       * @return The enum numeric value on the wire for notInValue.
+       */
+      @java.lang.Override public int getNotInValueValue() {
+        return notInValue_;
+      }
+      /**
+       * <pre>
+       * 指定した値（1と2）以外のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+       * @param value The enum numeric value on the wire for notInValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotInValueValue(int value) {
+        notInValue_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 指定した値（1と2）以外のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+       * @return The notInValue.
+       */
+      @java.lang.Override
+      public example.v1.Example.EnumValidationExample.MyEnum getNotInValue() {
+        example.v1.Example.EnumValidationExample.MyEnum result = example.v1.Example.EnumValidationExample.MyEnum.forNumber(notInValue_);
+        return result == null ? example.v1.Example.EnumValidationExample.MyEnum.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * 指定した値（1と2）以外のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+       * @param value The notInValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNotInValue(example.v1.Example.EnumValidationExample.MyEnum value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        notInValue_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 指定した値（1と2）以外のみ許容
+       * </pre>
+       *
+       * <code>.example.v1.EnumValidationExample.MyEnum not_in_value = 4 [json_name = "notInValue", (.buf.validate.field) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNotInValue() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        notInValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:example.v1.EnumValidationExample)
+    }
+
+    // @@protoc_insertion_point(class_scope:example.v1.EnumValidationExample)
+    private static final example.v1.Example.EnumValidationExample DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new example.v1.Example.EnumValidationExample();
+    }
+
+    public static example.v1.Example.EnumValidationExample getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnumValidationExample>
+        PARSER = new com.google.protobuf.AbstractParser<EnumValidationExample>() {
+      @java.lang.Override
+      public EnumValidationExample parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnumValidationExample> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnumValidationExample> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public example.v1.Example.EnumValidationExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface TimestampValidationExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.TimestampValidationExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.TimestampValidationExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the constValue field is set.
      */
     boolean hasConstValue();
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
     com.google.protobuf.Timestamp getConstValue();
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getConstValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltValue field is set.
      */
     boolean hasLtValue();
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
     com.google.protobuf.Timestamp getLtValue();
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getLtValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the lteValue field is set.
      */
     boolean hasLteValue();
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
     com.google.protobuf.Timestamp getLteValue();
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getLteValueOrBuilder();
 
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltNowValue field is set.
      */
     boolean hasLtNowValue();
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      * @return The ltNowValue.
      */
     com.google.protobuf.Timestamp getLtNowValue();
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getLtNowValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtValue field is set.
      */
     boolean hasGtValue();
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
     com.google.protobuf.Timestamp getGtValue();
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getGtValueOrBuilder();
 
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gteValue field is set.
      */
     boolean hasGteValue();
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
     com.google.protobuf.Timestamp getGteValue();
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getGteValueOrBuilder();
 
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtNowValue field is set.
      */
     boolean hasGtNowValue();
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      * @return The gtNowValue.
      */
     com.google.protobuf.Timestamp getGtNowValue();
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getGtNowValueOrBuilder();
 
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the withinValue field is set.
      */
     boolean hasWithinValue();
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      * @return The withinValue.
      */
     com.google.protobuf.Timestamp getWithinValue();
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      */
     com.google.protobuf.TimestampOrBuilder getWithinValueOrBuilder();
@@ -17437,11 +19184,11 @@ java.lang.String defaultValue) {
    * Timestampの比較をしたいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.TimestampValidationExample}
+   * Protobuf type {@code example.v1.TimestampValidationExample}
    */
   public static final class TimestampValidationExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.TimestampValidationExample)
+      // @@protoc_insertion_point(message_implements:example.v1.TimestampValidationExample)
       TimestampValidationExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -17462,21 +19209,25 @@ java.lang.String defaultValue) {
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_TimestampValidationExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_TimestampValidationExample_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_TimestampValidationExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_TimestampValidationExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.TimestampValidationExample.class, example.hello.v1.Example.TimestampValidationExample.Builder.class);
+              example.v1.Example.TimestampValidationExample.class, example.v1.Example.TimestampValidationExample.Builder.class);
     }
 
     private int bitField0_;
     public static final int CONST_VALUE_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp constValue_;
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the constValue field is set.
      */
@@ -17485,6 +19236,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      * @return The constValue.
      */
@@ -17493,6 +19248,10 @@ java.lang.String defaultValue) {
       return constValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : constValue_;
     }
     /**
+     * <pre>
+     * 指定された時刻と一致している必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17503,6 +19262,10 @@ java.lang.String defaultValue) {
     public static final int LT_VALUE_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp ltValue_;
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltValue field is set.
      */
@@ -17511,6 +19274,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      * @return The ltValue.
      */
@@ -17519,6 +19286,10 @@ java.lang.String defaultValue) {
       return ltValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ltValue_;
     }
     /**
+     * <pre>
+     * 指定された時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17529,6 +19300,10 @@ java.lang.String defaultValue) {
     public static final int LTE_VALUE_FIELD_NUMBER = 3;
     private com.google.protobuf.Timestamp lteValue_;
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the lteValue field is set.
      */
@@ -17537,6 +19312,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      * @return The lteValue.
      */
@@ -17545,6 +19324,10 @@ java.lang.String defaultValue) {
       return lteValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : lteValue_;
     }
     /**
+     * <pre>
+     * 指定された時刻以前（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17555,6 +19338,10 @@ java.lang.String defaultValue) {
     public static final int LT_NOW_VALUE_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp ltNowValue_;
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the ltNowValue field is set.
      */
@@ -17563,6 +19350,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      * @return The ltNowValue.
      */
@@ -17571,6 +19362,10 @@ java.lang.String defaultValue) {
       return ltNowValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : ltNowValue_;
     }
     /**
+     * <pre>
+     * 現在時刻よりも前である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17581,6 +19376,10 @@ java.lang.String defaultValue) {
     public static final int GT_VALUE_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp gtValue_;
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtValue field is set.
      */
@@ -17589,6 +19388,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      * @return The gtValue.
      */
@@ -17597,6 +19400,10 @@ java.lang.String defaultValue) {
       return gtValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : gtValue_;
     }
     /**
+     * <pre>
+     * 指定された時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17607,6 +19414,10 @@ java.lang.String defaultValue) {
     public static final int GTE_VALUE_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp gteValue_;
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gteValue field is set.
      */
@@ -17615,6 +19426,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      * @return The gteValue.
      */
@@ -17623,6 +19438,10 @@ java.lang.String defaultValue) {
       return gteValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : gteValue_;
     }
     /**
+     * <pre>
+     * 指定された時刻以降（同じでもOK）である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17633,6 +19452,10 @@ java.lang.String defaultValue) {
     public static final int GT_NOW_VALUE_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp gtNowValue_;
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the gtNowValue field is set.
      */
@@ -17641,6 +19464,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000040) != 0);
     }
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      * @return The gtNowValue.
      */
@@ -17649,6 +19476,10 @@ java.lang.String defaultValue) {
       return gtNowValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : gtNowValue_;
     }
     /**
+     * <pre>
+     * 現在時刻よりも後である必要があるとき
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17659,6 +19490,10 @@ java.lang.String defaultValue) {
     public static final int WITHIN_VALUE_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp withinValue_;
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      * @return Whether the withinValue field is set.
      */
@@ -17667,6 +19502,10 @@ java.lang.String defaultValue) {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      * @return The withinValue.
      */
@@ -17675,6 +19514,10 @@ java.lang.String defaultValue) {
       return withinValue_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : withinValue_;
     }
     /**
+     * <pre>
+     * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
      */
     @java.lang.Override
@@ -17771,10 +19614,10 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.TimestampValidationExample)) {
+      if (!(obj instanceof example.v1.Example.TimestampValidationExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.TimestampValidationExample other = (example.hello.v1.Example.TimestampValidationExample) obj;
+      example.v1.Example.TimestampValidationExample other = (example.v1.Example.TimestampValidationExample) obj;
 
       if (hasConstValue() != other.hasConstValue()) return false;
       if (hasConstValue()) {
@@ -17864,44 +19707,44 @@ java.lang.String defaultValue) {
       return hash;
     }
 
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(byte[] data)
+    public static example.v1.Example.TimestampValidationExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.TimestampValidationExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17909,26 +19752,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.TimestampValidationExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.TimestampValidationExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.TimestampValidationExample parseDelimitedFrom(
+    public static example.v1.Example.TimestampValidationExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.TimestampValidationExample parseFrom(
+    public static example.v1.Example.TimestampValidationExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17941,7 +19784,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.TimestampValidationExample prototype) {
+    public static Builder newBuilder(example.v1.Example.TimestampValidationExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -17961,26 +19804,26 @@ java.lang.String defaultValue) {
      * Timestampの比較をしたいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.TimestampValidationExample}
+     * Protobuf type {@code example.v1.TimestampValidationExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.TimestampValidationExample)
-        example.hello.v1.Example.TimestampValidationExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.TimestampValidationExample)
+        example.v1.Example.TimestampValidationExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_TimestampValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_TimestampValidationExample_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_TimestampValidationExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_TimestampValidationExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.TimestampValidationExample.class, example.hello.v1.Example.TimestampValidationExample.Builder.class);
+                example.v1.Example.TimestampValidationExample.class, example.v1.Example.TimestampValidationExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.TimestampValidationExample.newBuilder()
+      // Construct using example.v1.Example.TimestampValidationExample.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18053,17 +19896,17 @@ java.lang.String defaultValue) {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_TimestampValidationExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_TimestampValidationExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.TimestampValidationExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.TimestampValidationExample.getDefaultInstance();
+      public example.v1.Example.TimestampValidationExample getDefaultInstanceForType() {
+        return example.v1.Example.TimestampValidationExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.TimestampValidationExample build() {
-        example.hello.v1.Example.TimestampValidationExample result = buildPartial();
+      public example.v1.Example.TimestampValidationExample build() {
+        example.v1.Example.TimestampValidationExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -18071,14 +19914,14 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.TimestampValidationExample buildPartial() {
-        example.hello.v1.Example.TimestampValidationExample result = new example.hello.v1.Example.TimestampValidationExample(this);
+      public example.v1.Example.TimestampValidationExample buildPartial() {
+        example.v1.Example.TimestampValidationExample result = new example.v1.Example.TimestampValidationExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.TimestampValidationExample result) {
+      private void buildPartial0(example.v1.Example.TimestampValidationExample result) {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
@@ -18134,16 +19977,16 @@ java.lang.String defaultValue) {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.TimestampValidationExample) {
-          return mergeFrom((example.hello.v1.Example.TimestampValidationExample)other);
+        if (other instanceof example.v1.Example.TimestampValidationExample) {
+          return mergeFrom((example.v1.Example.TimestampValidationExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.TimestampValidationExample other) {
-        if (other == example.hello.v1.Example.TimestampValidationExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.TimestampValidationExample other) {
+        if (other == example.v1.Example.TimestampValidationExample.getDefaultInstance()) return this;
         if (other.hasConstValue()) {
           mergeConstValue(other.getConstValue());
         }
@@ -18271,6 +20114,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> constValueBuilder_;
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the constValue field is set.
        */
@@ -18278,6 +20125,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        * @return The constValue.
        */
@@ -18289,6 +20140,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setConstValue(com.google.protobuf.Timestamp value) {
@@ -18305,6 +20160,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setConstValue(
@@ -18319,6 +20178,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeConstValue(com.google.protobuf.Timestamp value) {
@@ -18340,6 +20203,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearConstValue() {
@@ -18353,6 +20220,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getConstValueBuilder() {
@@ -18361,6 +20232,10 @@ java.lang.String defaultValue) {
         return internalGetConstValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getConstValueOrBuilder() {
@@ -18372,6 +20247,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻と一致している必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp const_value = 1 [json_name = "constValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18392,6 +20271,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ltValueBuilder_;
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the ltValue field is set.
        */
@@ -18399,6 +20282,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        * @return The ltValue.
        */
@@ -18410,6 +20297,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtValue(com.google.protobuf.Timestamp value) {
@@ -18426,6 +20317,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtValue(
@@ -18440,6 +20335,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeLtValue(com.google.protobuf.Timestamp value) {
@@ -18461,6 +20360,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearLtValue() {
@@ -18474,6 +20377,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getLtValueBuilder() {
@@ -18482,6 +20389,10 @@ java.lang.String defaultValue) {
         return internalGetLtValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLtValueOrBuilder() {
@@ -18493,6 +20404,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_value = 2 [json_name = "ltValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18513,6 +20428,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> lteValueBuilder_;
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the lteValue field is set.
        */
@@ -18520,6 +20439,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        * @return The lteValue.
        */
@@ -18531,6 +20454,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLteValue(com.google.protobuf.Timestamp value) {
@@ -18547,6 +20474,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLteValue(
@@ -18561,6 +20492,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeLteValue(com.google.protobuf.Timestamp value) {
@@ -18582,6 +20517,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearLteValue() {
@@ -18595,6 +20534,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getLteValueBuilder() {
@@ -18603,6 +20546,10 @@ java.lang.String defaultValue) {
         return internalGetLteValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLteValueOrBuilder() {
@@ -18614,6 +20561,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻以前（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lte_value = 3 [json_name = "lteValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18634,6 +20585,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> ltNowValueBuilder_;
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the ltNowValue field is set.
        */
@@ -18641,6 +20596,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        * @return The ltNowValue.
        */
@@ -18652,6 +20611,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtNowValue(com.google.protobuf.Timestamp value) {
@@ -18668,6 +20631,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setLtNowValue(
@@ -18682,6 +20649,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeLtNowValue(com.google.protobuf.Timestamp value) {
@@ -18703,6 +20674,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearLtNowValue() {
@@ -18716,6 +20691,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getLtNowValueBuilder() {
@@ -18724,6 +20703,10 @@ java.lang.String defaultValue) {
         return internalGetLtNowValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getLtNowValueOrBuilder() {
@@ -18735,6 +20718,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻よりも前である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp lt_now_value = 4 [json_name = "ltNowValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18755,6 +20742,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> gtValueBuilder_;
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the gtValue field is set.
        */
@@ -18762,6 +20753,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        * @return The gtValue.
        */
@@ -18773,6 +20768,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtValue(com.google.protobuf.Timestamp value) {
@@ -18789,6 +20788,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtValue(
@@ -18803,6 +20806,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeGtValue(com.google.protobuf.Timestamp value) {
@@ -18824,6 +20831,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearGtValue() {
@@ -18837,6 +20848,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getGtValueBuilder() {
@@ -18845,6 +20860,10 @@ java.lang.String defaultValue) {
         return internalGetGtValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getGtValueOrBuilder() {
@@ -18856,6 +20875,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_value = 5 [json_name = "gtValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18876,6 +20899,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> gteValueBuilder_;
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the gteValue field is set.
        */
@@ -18883,6 +20910,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        * @return The gteValue.
        */
@@ -18894,6 +20925,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGteValue(com.google.protobuf.Timestamp value) {
@@ -18910,6 +20945,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGteValue(
@@ -18924,6 +20963,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeGteValue(com.google.protobuf.Timestamp value) {
@@ -18945,6 +20988,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearGteValue() {
@@ -18958,6 +21005,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getGteValueBuilder() {
@@ -18966,6 +21017,10 @@ java.lang.String defaultValue) {
         return internalGetGteValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getGteValueOrBuilder() {
@@ -18977,6 +21032,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 指定された時刻以降（同じでもOK）である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gte_value = 6 [json_name = "gteValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -18997,6 +21056,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> gtNowValueBuilder_;
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the gtNowValue field is set.
        */
@@ -19004,6 +21067,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        * @return The gtNowValue.
        */
@@ -19015,6 +21082,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtNowValue(com.google.protobuf.Timestamp value) {
@@ -19031,6 +21102,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setGtNowValue(
@@ -19045,6 +21120,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeGtNowValue(com.google.protobuf.Timestamp value) {
@@ -19066,6 +21145,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearGtNowValue() {
@@ -19079,6 +21162,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getGtNowValueBuilder() {
@@ -19087,6 +21174,10 @@ java.lang.String defaultValue) {
         return internalGetGtNowValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getGtNowValueOrBuilder() {
@@ -19098,6 +21189,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻よりも後である必要があるとき
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp gt_now_value = 7 [json_name = "gtNowValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -19118,6 +21213,10 @@ java.lang.String defaultValue) {
       private com.google.protobuf.SingleFieldBuilder<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> withinValueBuilder_;
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        * @return Whether the withinValue field is set.
        */
@@ -19125,6 +21224,10 @@ java.lang.String defaultValue) {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        * @return The withinValue.
        */
@@ -19136,6 +21239,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setWithinValue(com.google.protobuf.Timestamp value) {
@@ -19152,6 +21259,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder setWithinValue(
@@ -19166,6 +21277,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder mergeWithinValue(com.google.protobuf.Timestamp value) {
@@ -19187,6 +21302,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public Builder clearWithinValue() {
@@ -19200,6 +21319,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.Timestamp.Builder getWithinValueBuilder() {
@@ -19208,6 +21331,10 @@ java.lang.String defaultValue) {
         return internalGetWithinValueFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       public com.google.protobuf.TimestampOrBuilder getWithinValueOrBuilder() {
@@ -19219,6 +21346,10 @@ java.lang.String defaultValue) {
         }
       }
       /**
+       * <pre>
+       * 現在時刻の前後N秒以内である必要があるとき（この例では±1時間）
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp within_value = 8 [json_name = "withinValue", (.buf.validate.field) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
@@ -19235,16 +21366,16 @@ java.lang.String defaultValue) {
         return withinValueBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.TimestampValidationExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.TimestampValidationExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.TimestampValidationExample)
-    private static final example.hello.v1.Example.TimestampValidationExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.TimestampValidationExample)
+    private static final example.v1.Example.TimestampValidationExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.TimestampValidationExample();
+      DEFAULT_INSTANCE = new example.v1.Example.TimestampValidationExample();
     }
 
-    public static example.hello.v1.Example.TimestampValidationExample getDefaultInstance() {
+    public static example.v1.Example.TimestampValidationExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -19280,147 +21411,1446 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.TimestampValidationExample getDefaultInstanceForType() {
+    public example.v1.Example.TimestampValidationExample getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GoogleApiFieldExampleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:example.v1.GoogleApiFieldExample)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the requiredAt field is set.
+     */
+    boolean hasRequiredAt();
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The requiredAt.
+     */
+    com.google.protobuf.Timestamp getRequiredAt();
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getRequiredAtOrBuilder();
+
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the optionalAt field is set.
+     */
+    boolean hasOptionalAt();
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The optionalAt.
+     */
+    com.google.protobuf.Timestamp getOptionalAt();
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getOptionalAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code example.v1.GoogleApiFieldExample}
+   */
+  public static final class GoogleApiFieldExample extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:example.v1.GoogleApiFieldExample)
+      GoogleApiFieldExampleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 1,
+        /* suffix= */ "",
+        GoogleApiFieldExample.class.getName());
+    }
+    // Use GoogleApiFieldExample.newBuilder() to construct.
+    private GoogleApiFieldExample(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private GoogleApiFieldExample() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return example.v1.Example.internal_static_example_v1_GoogleApiFieldExample_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return example.v1.Example.internal_static_example_v1_GoogleApiFieldExample_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              example.v1.Example.GoogleApiFieldExample.class, example.v1.Example.GoogleApiFieldExample.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CREATED_AT_FIELD_NUMBER = 1;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <pre>
+     * クライアントからの入力専用フィールド（レスポンスには含まれない）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+
+    public static final int REQUIRED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp requiredAt_;
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return Whether the requiredAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasRequiredAt() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The requiredAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getRequiredAt() {
+      return requiredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requiredAt_;
+    }
+    /**
+     * <pre>
+     * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getRequiredAtOrBuilder() {
+      return requiredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requiredAt_;
+    }
+
+    public static final int OPTIONAL_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp optionalAt_;
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the optionalAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasOptionalAt() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The optionalAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getOptionalAt() {
+      return optionalAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : optionalAt_;
+    }
+    /**
+     * <pre>
+     * 明示的にオプション（省略可能）であることを示すフィールド
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getOptionalAtOrBuilder() {
+      return optionalAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : optionalAt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getCreatedAt());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getUpdatedAt());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getRequiredAt());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getOptionalAt());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCreatedAt());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdatedAt());
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRequiredAt());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getOptionalAt());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof example.v1.Example.GoogleApiFieldExample)) {
+        return super.equals(obj);
+      }
+      example.v1.Example.GoogleApiFieldExample other = (example.v1.Example.GoogleApiFieldExample) obj;
+
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (hasRequiredAt() != other.hasRequiredAt()) return false;
+      if (hasRequiredAt()) {
+        if (!getRequiredAt()
+            .equals(other.getRequiredAt())) return false;
+      }
+      if (hasOptionalAt() != other.hasOptionalAt()) return false;
+      if (hasOptionalAt()) {
+        if (!getOptionalAt()
+            .equals(other.getOptionalAt())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      if (hasRequiredAt()) {
+        hash = (37 * hash) + REQUIRED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getRequiredAt().hashCode();
+      }
+      if (hasOptionalAt()) {
+        hash = (37 * hash) + OPTIONAL_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getOptionalAt().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static example.v1.Example.GoogleApiFieldExample parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static example.v1.Example.GoogleApiFieldExample parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static example.v1.Example.GoogleApiFieldExample parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(example.v1.Example.GoogleApiFieldExample prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code example.v1.GoogleApiFieldExample}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:example.v1.GoogleApiFieldExample)
+        example.v1.Example.GoogleApiFieldExampleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return example.v1.Example.internal_static_example_v1_GoogleApiFieldExample_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return example.v1.Example.internal_static_example_v1_GoogleApiFieldExample_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                example.v1.Example.GoogleApiFieldExample.class, example.v1.Example.GoogleApiFieldExample.Builder.class);
+      }
+
+      // Construct using example.v1.Example.GoogleApiFieldExample.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          internalGetCreatedAtFieldBuilder();
+          internalGetUpdatedAtFieldBuilder();
+          internalGetRequiredAtFieldBuilder();
+          internalGetOptionalAtFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
+          updatedAtBuilder_ = null;
+        }
+        requiredAt_ = null;
+        if (requiredAtBuilder_ != null) {
+          requiredAtBuilder_.dispose();
+          requiredAtBuilder_ = null;
+        }
+        optionalAt_ = null;
+        if (optionalAtBuilder_ != null) {
+          optionalAtBuilder_.dispose();
+          optionalAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return example.v1.Example.internal_static_example_v1_GoogleApiFieldExample_descriptor;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.GoogleApiFieldExample getDefaultInstanceForType() {
+        return example.v1.Example.GoogleApiFieldExample.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public example.v1.Example.GoogleApiFieldExample build() {
+        example.v1.Example.GoogleApiFieldExample result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public example.v1.Example.GoogleApiFieldExample buildPartial() {
+        example.v1.Example.GoogleApiFieldExample result = new example.v1.Example.GoogleApiFieldExample(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(example.v1.Example.GoogleApiFieldExample result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.updatedAt_ = updatedAtBuilder_ == null
+              ? updatedAt_
+              : updatedAtBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.requiredAt_ = requiredAtBuilder_ == null
+              ? requiredAt_
+              : requiredAtBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.optionalAt_ = optionalAtBuilder_ == null
+              ? optionalAt_
+              : optionalAtBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof example.v1.Example.GoogleApiFieldExample) {
+          return mergeFrom((example.v1.Example.GoogleApiFieldExample)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(example.v1.Example.GoogleApiFieldExample other) {
+        if (other == example.v1.Example.GoogleApiFieldExample.getDefaultInstance()) return this;
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (other.hasRequiredAt()) {
+          mergeRequiredAt(other.getRequiredAt());
+        }
+        if (other.hasOptionalAt()) {
+          mergeOptionalAt(other.getOptionalAt());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    internalGetCreatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    internalGetUpdatedAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    internalGetRequiredAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    internalGetOptionalAtFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
+          } else {
+            createdAt_ = value;
+          }
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+        if (createdAt_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearCreatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
+          createdAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return internalGetCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * サーバーからの出力専用フィールド（リクエストに含めても無視される）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          internalGetCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            updatedAt_ != null &&
+            updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedAtBuilder().mergeFrom(value);
+          } else {
+            updatedAt_ = value;
+          }
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+        if (updatedAt_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public Builder clearUpdatedAt() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
+          updatedAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return internalGetUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * クライアントからの入力専用フィールド（レスポンスには含まれない）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp updated_at = 2 [json_name = "updatedAt", (.google.api.field_behavior) = INPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          internalGetUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp requiredAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> requiredAtBuilder_;
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return Whether the requiredAt field is set.
+       */
+      public boolean hasRequiredAt() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       * @return The requiredAt.
+       */
+      public com.google.protobuf.Timestamp getRequiredAt() {
+        if (requiredAtBuilder_ == null) {
+          return requiredAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : requiredAt_;
+        } else {
+          return requiredAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public Builder setRequiredAt(com.google.protobuf.Timestamp value) {
+        if (requiredAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          requiredAt_ = value;
+        } else {
+          requiredAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public Builder setRequiredAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (requiredAtBuilder_ == null) {
+          requiredAt_ = builderForValue.build();
+        } else {
+          requiredAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public Builder mergeRequiredAt(com.google.protobuf.Timestamp value) {
+        if (requiredAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            requiredAt_ != null &&
+            requiredAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getRequiredAtBuilder().mergeFrom(value);
+          } else {
+            requiredAt_ = value;
+          }
+        } else {
+          requiredAtBuilder_.mergeFrom(value);
+        }
+        if (requiredAt_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public Builder clearRequiredAt() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        requiredAt_ = null;
+        if (requiredAtBuilder_ != null) {
+          requiredAtBuilder_.dispose();
+          requiredAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getRequiredAtBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return internalGetRequiredAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getRequiredAtOrBuilder() {
+        if (requiredAtBuilder_ != null) {
+          return requiredAtBuilder_.getMessageOrBuilder();
+        } else {
+          return requiredAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : requiredAt_;
+        }
+      }
+      /**
+       * <pre>
+       * リクエスト時に必須のフィールド（未指定ならバリデーションエラー）
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp required_at = 3 [json_name = "requiredAt", (.google.api.field_behavior) = REQUIRED];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          internalGetRequiredAtFieldBuilder() {
+        if (requiredAtBuilder_ == null) {
+          requiredAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getRequiredAt(),
+                  getParentForChildren(),
+                  isClean());
+          requiredAt_ = null;
+        }
+        return requiredAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp optionalAt_;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> optionalAtBuilder_;
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return Whether the optionalAt field is set.
+       */
+      public boolean hasOptionalAt() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       * @return The optionalAt.
+       */
+      public com.google.protobuf.Timestamp getOptionalAt() {
+        if (optionalAtBuilder_ == null) {
+          return optionalAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : optionalAt_;
+        } else {
+          return optionalAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setOptionalAt(com.google.protobuf.Timestamp value) {
+        if (optionalAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          optionalAt_ = value;
+        } else {
+          optionalAtBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder setOptionalAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (optionalAtBuilder_ == null) {
+          optionalAt_ = builderForValue.build();
+        } else {
+          optionalAtBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder mergeOptionalAt(com.google.protobuf.Timestamp value) {
+        if (optionalAtBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            optionalAt_ != null &&
+            optionalAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getOptionalAtBuilder().mergeFrom(value);
+          } else {
+            optionalAt_ = value;
+          }
+        } else {
+          optionalAtBuilder_.mergeFrom(value);
+        }
+        if (optionalAt_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public Builder clearOptionalAt() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        optionalAt_ = null;
+        if (optionalAtBuilder_ != null) {
+          optionalAtBuilder_.dispose();
+          optionalAtBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getOptionalAtBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return internalGetOptionalAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getOptionalAtOrBuilder() {
+        if (optionalAtBuilder_ != null) {
+          return optionalAtBuilder_.getMessageOrBuilder();
+        } else {
+          return optionalAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : optionalAt_;
+        }
+      }
+      /**
+       * <pre>
+       * 明示的にオプション（省略可能）であることを示すフィールド
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp optional_at = 4 [json_name = "optionalAt", (.google.api.field_behavior) = OPTIONAL];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          internalGetOptionalAtFieldBuilder() {
+        if (optionalAtBuilder_ == null) {
+          optionalAtBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getOptionalAt(),
+                  getParentForChildren(),
+                  isClean());
+          optionalAt_ = null;
+        }
+        return optionalAtBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:example.v1.GoogleApiFieldExample)
+    }
+
+    // @@protoc_insertion_point(class_scope:example.v1.GoogleApiFieldExample)
+    private static final example.v1.Example.GoogleApiFieldExample DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new example.v1.Example.GoogleApiFieldExample();
+    }
+
+    public static example.v1.Example.GoogleApiFieldExample getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GoogleApiFieldExample>
+        PARSER = new com.google.protobuf.AbstractParser<GoogleApiFieldExample>() {
+      @java.lang.Override
+      public GoogleApiFieldExample parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GoogleApiFieldExample> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GoogleApiFieldExample> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public example.v1.Example.GoogleApiFieldExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface FieldConstraintsExampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:example.hello.v1.FieldConstraintsExample)
+      // @@protoc_insertion_point(interface_extends:example.v1.FieldConstraintsExample)
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 偶数であることを検証するCEL式
+     * </pre>
+     *
      * <code>int32 even_value = 1 [json_name = "evenValue", (.buf.validate.field) = { ... }</code>
      * @return The evenValue.
      */
     int getEvenValue();
-
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     * @return Whether the requiredMessageValue field is set.
-     */
-    boolean hasRequiredMessageValue();
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredMessageValue.
-     */
-    example.hello.v1.Example.FieldConstraintsExample.MyValue getRequiredMessageValue();
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     */
-    example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder getRequiredMessageValueOrBuilder();
-
-    /**
-     * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredStringValue.
-     */
-    java.lang.String getRequiredStringValue();
-    /**
-     * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for requiredStringValue.
-     */
-    com.google.protobuf.ByteString
-        getRequiredStringValueBytes();
-
-    /**
-     * <code>int32 required_int32_value = 4 [json_name = "requiredInt32Value", (.buf.validate.field) = { ... }</code>
-     * @return The requiredInt32Value.
-     */
-    int getRequiredInt32Value();
-
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for requiredEnumValue.
-     */
-    int getRequiredEnumValueValue();
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredEnumValue.
-     */
-    example.hello.v1.Example.FieldConstraintsExample.Status getRequiredEnumValue();
-
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @return A list containing the requiredRepeatedValue.
-     */
-    java.util.List<java.lang.String>
-        getRequiredRepeatedValueList();
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @return The count of requiredRepeatedValue.
-     */
-    int getRequiredRepeatedValueCount();
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The requiredRepeatedValue at the given index.
-     */
-    java.lang.String getRequiredRepeatedValue(int index);
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the requiredRepeatedValue at the given index.
-     */
-    com.google.protobuf.ByteString
-        getRequiredRepeatedValueBytes(int index);
-
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    int getRequiredMapValueCount();
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    boolean containsRequiredMapValue(
-        java.lang.String key);
-    /**
-     * Use {@link #getRequiredMapValueMap()} instead.
-     */
-    @java.lang.Deprecated
-    java.util.Map<java.lang.String, java.lang.String>
-    getRequiredMapValue();
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    java.util.Map<java.lang.String, java.lang.String>
-    getRequiredMapValueMap();
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    /* nullable */
-java.lang.String getRequiredMapValueOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue);
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    java.lang.String getRequiredMapValueOrThrow(
-        java.lang.String key);
-
-    /**
-     * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-     * @return The ignoreValue.
-     */
-    java.lang.String getIgnoreValue();
-    /**
-     * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for ignoreValue.
-     */
-    com.google.protobuf.ByteString
-        getIgnoreValueBytes();
   }
   /**
    * <pre>
    * CEL式で柔軟なルールを定義したいとき
    * </pre>
    *
-   * Protobuf type {@code example.hello.v1.FieldConstraintsExample}
+   * Protobuf type {@code example.v1.FieldConstraintsExample}
    */
   public static final class FieldConstraintsExample extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:example.hello.v1.FieldConstraintsExample)
+      // @@protoc_insertion_point(message_implements:example.v1.FieldConstraintsExample)
       FieldConstraintsExampleOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
@@ -19437,848 +22867,34 @@ java.lang.String defaultValue);
       super(builder);
     }
     private FieldConstraintsExample() {
-      requiredStringValue_ = "";
-      requiredEnumValue_ = 0;
-      requiredRepeatedValue_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      ignoreValue_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_descriptor;
+      return example.v1.Example.internal_static_example_v1_FieldConstraintsExample_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    @java.lang.Override
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 7:
-          return internalGetRequiredMapValue();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_fieldAccessorTable
+      return example.v1.Example.internal_static_example_v1_FieldConstraintsExample_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              example.hello.v1.Example.FieldConstraintsExample.class, example.hello.v1.Example.FieldConstraintsExample.Builder.class);
+              example.v1.Example.FieldConstraintsExample.class, example.v1.Example.FieldConstraintsExample.Builder.class);
     }
 
-    /**
-     * Protobuf enum {@code example.hello.v1.FieldConstraintsExample.Status}
-     */
-    public enum Status
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>STATUS_UNSPECIFIED = 0;</code>
-       */
-      STATUS_UNSPECIFIED(0),
-      /**
-       * <code>STATUS_OK = 1;</code>
-       */
-      STATUS_OK(1),
-      UNRECOGNIZED(-1),
-      ;
-
-      static {
-        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 30,
-          /* patch= */ 1,
-          /* suffix= */ "",
-          Status.class.getName());
-      }
-      /**
-       * <code>STATUS_UNSPECIFIED = 0;</code>
-       */
-      public static final int STATUS_UNSPECIFIED_VALUE = 0;
-      /**
-       * <code>STATUS_OK = 1;</code>
-       */
-      public static final int STATUS_OK_VALUE = 1;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Status valueOf(int value) {
-        return forNumber(value);
-      }
-
-      /**
-       * @param value The numeric wire value of the corresponding enum entry.
-       * @return The enum associated with the given numeric wire value.
-       */
-      public static Status forNumber(int value) {
-        switch (value) {
-          case 0: return STATUS_UNSPECIFIED;
-          case 1: return STATUS_OK;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Status>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Status> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
-              public Status findValueByNumber(int number) {
-                return Status.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalStateException(
-              "Can't get the descriptor of an unrecognized enum value.");
-        }
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return example.hello.v1.Example.FieldConstraintsExample.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Status[] VALUES = values();
-
-      public static Status valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Status(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:example.hello.v1.FieldConstraintsExample.Status)
-    }
-
-    public interface MyValueOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:example.hello.v1.FieldConstraintsExample.MyValue)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>int32 value = 1 [json_name = "value"];</code>
-       * @return The value.
-       */
-      int getValue();
-    }
-    /**
-     * Protobuf type {@code example.hello.v1.FieldConstraintsExample.MyValue}
-     */
-    public static final class MyValue extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:example.hello.v1.FieldConstraintsExample.MyValue)
-        MyValueOrBuilder {
-    private static final long serialVersionUID = 0L;
-      static {
-        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-          /* major= */ 4,
-          /* minor= */ 30,
-          /* patch= */ 1,
-          /* suffix= */ "",
-          MyValue.class.getName());
-      }
-      // Use MyValue.newBuilder() to construct.
-      private MyValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-      }
-      private MyValue() {
-      }
-
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_MyValue_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.FieldConstraintsExample.MyValue.class, example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder.class);
-      }
-
-      public static final int VALUE_FIELD_NUMBER = 1;
-      private int value_ = 0;
-      /**
-       * <code>int32 value = 1 [json_name = "value"];</code>
-       * @return The value.
-       */
-      @java.lang.Override
-      public int getValue() {
-        return value_;
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (value_ != 0) {
-          output.writeInt32(1, value_);
-        }
-        getUnknownFields().writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (value_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, value_);
-        }
-        size += getUnknownFields().getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof example.hello.v1.Example.FieldConstraintsExample.MyValue)) {
-          return super.equals(obj);
-        }
-        example.hello.v1.Example.FieldConstraintsExample.MyValue other = (example.hello.v1.Example.FieldConstraintsExample.MyValue) obj;
-
-        if (getValue()
-            != other.getValue()) return false;
-        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-        return true;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue();
-        hash = (29 * hash) + getUnknownFields().hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseWithIOException(PARSER, input);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseWithIOException(PARSER, input);
-      }
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessage
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(example.hello.v1.Example.FieldConstraintsExample.MyValue prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code example.hello.v1.FieldConstraintsExample.MyValue}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:example.hello.v1.FieldConstraintsExample.MyValue)
-          example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_MyValue_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  example.hello.v1.Example.FieldConstraintsExample.MyValue.class, example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder.class);
-        }
-
-        // Construct using example.hello.v1.Example.FieldConstraintsExample.MyValue.newBuilder()
-        private Builder() {
-
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          bitField0_ = 0;
-          value_ = 0;
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor;
-        }
-
-        @java.lang.Override
-        public example.hello.v1.Example.FieldConstraintsExample.MyValue getDefaultInstanceForType() {
-          return example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public example.hello.v1.Example.FieldConstraintsExample.MyValue build() {
-          example.hello.v1.Example.FieldConstraintsExample.MyValue result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public example.hello.v1.Example.FieldConstraintsExample.MyValue buildPartial() {
-          example.hello.v1.Example.FieldConstraintsExample.MyValue result = new example.hello.v1.Example.FieldConstraintsExample.MyValue(this);
-          if (bitField0_ != 0) { buildPartial0(result); }
-          onBuilt();
-          return result;
-        }
-
-        private void buildPartial0(example.hello.v1.Example.FieldConstraintsExample.MyValue result) {
-          int from_bitField0_ = bitField0_;
-          if (((from_bitField0_ & 0x00000001) != 0)) {
-            result.value_ = value_;
-          }
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof example.hello.v1.Example.FieldConstraintsExample.MyValue) {
-            return mergeFrom((example.hello.v1.Example.FieldConstraintsExample.MyValue)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(example.hello.v1.Example.FieldConstraintsExample.MyValue other) {
-          if (other == example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance()) return this;
-          if (other.getValue() != 0) {
-            setValue(other.getValue());
-          }
-          this.mergeUnknownFields(other.getUnknownFields());
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          if (extensionRegistry == null) {
-            throw new java.lang.NullPointerException();
-          }
-          try {
-            boolean done = false;
-            while (!done) {
-              int tag = input.readTag();
-              switch (tag) {
-                case 0:
-                  done = true;
-                  break;
-                case 8: {
-                  value_ = input.readInt32();
-                  bitField0_ |= 0x00000001;
-                  break;
-                } // case 8
-                default: {
-                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                    done = true; // was an endgroup tag
-                  }
-                  break;
-                } // default:
-              } // switch (tag)
-            } // while (!done)
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.unwrapIOException();
-          } finally {
-            onChanged();
-          } // finally
-          return this;
-        }
-        private int bitField0_;
-
-        private int value_ ;
-        /**
-         * <code>int32 value = 1 [json_name = "value"];</code>
-         * @return The value.
-         */
-        @java.lang.Override
-        public int getValue() {
-          return value_;
-        }
-        /**
-         * <code>int32 value = 1 [json_name = "value"];</code>
-         * @param value The value to set.
-         * @return This builder for chaining.
-         */
-        public Builder setValue(int value) {
-
-          value_ = value;
-          bitField0_ |= 0x00000001;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>int32 value = 1 [json_name = "value"];</code>
-         * @return This builder for chaining.
-         */
-        public Builder clearValue() {
-          bitField0_ = (bitField0_ & ~0x00000001);
-          value_ = 0;
-          onChanged();
-          return this;
-        }
-
-        // @@protoc_insertion_point(builder_scope:example.hello.v1.FieldConstraintsExample.MyValue)
-      }
-
-      // @@protoc_insertion_point(class_scope:example.hello.v1.FieldConstraintsExample.MyValue)
-      private static final example.hello.v1.Example.FieldConstraintsExample.MyValue DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new example.hello.v1.Example.FieldConstraintsExample.MyValue();
-      }
-
-      public static example.hello.v1.Example.FieldConstraintsExample.MyValue getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<MyValue>
-          PARSER = new com.google.protobuf.AbstractParser<MyValue>() {
-        @java.lang.Override
-        public MyValue parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          Builder builder = newBuilder();
-          try {
-            builder.mergeFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            throw e.setUnfinishedMessage(builder.buildPartial());
-          } catch (com.google.protobuf.UninitializedMessageException e) {
-            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-          } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(e)
-                .setUnfinishedMessage(builder.buildPartial());
-          }
-          return builder.buildPartial();
-        }
-      };
-
-      public static com.google.protobuf.Parser<MyValue> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<MyValue> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public example.hello.v1.Example.FieldConstraintsExample.MyValue getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    private int bitField0_;
     public static final int EVEN_VALUE_FIELD_NUMBER = 1;
     private int evenValue_ = 0;
     /**
+     * <pre>
+     * 偶数であることを検証するCEL式
+     * </pre>
+     *
      * <code>int32 even_value = 1 [json_name = "evenValue", (.buf.validate.field) = { ... }</code>
      * @return The evenValue.
      */
     @java.lang.Override
     public int getEvenValue() {
       return evenValue_;
-    }
-
-    public static final int REQUIRED_MESSAGE_VALUE_FIELD_NUMBER = 2;
-    private example.hello.v1.Example.FieldConstraintsExample.MyValue requiredMessageValue_;
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     * @return Whether the requiredMessageValue field is set.
-     */
-    @java.lang.Override
-    public boolean hasRequiredMessageValue() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredMessageValue.
-     */
-    @java.lang.Override
-    public example.hello.v1.Example.FieldConstraintsExample.MyValue getRequiredMessageValue() {
-      return requiredMessageValue_ == null ? example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance() : requiredMessageValue_;
-    }
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-     */
-    @java.lang.Override
-    public example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder getRequiredMessageValueOrBuilder() {
-      return requiredMessageValue_ == null ? example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance() : requiredMessageValue_;
-    }
-
-    public static final int REQUIRED_STRING_VALUE_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object requiredStringValue_ = "";
-    /**
-     * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredStringValue.
-     */
-    @java.lang.Override
-    public java.lang.String getRequiredStringValue() {
-      java.lang.Object ref = requiredStringValue_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        requiredStringValue_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for requiredStringValue.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getRequiredStringValueBytes() {
-      java.lang.Object ref = requiredStringValue_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        requiredStringValue_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int REQUIRED_INT32_VALUE_FIELD_NUMBER = 4;
-    private int requiredInt32Value_ = 0;
-    /**
-     * <code>int32 required_int32_value = 4 [json_name = "requiredInt32Value", (.buf.validate.field) = { ... }</code>
-     * @return The requiredInt32Value.
-     */
-    @java.lang.Override
-    public int getRequiredInt32Value() {
-      return requiredInt32Value_;
-    }
-
-    public static final int REQUIRED_ENUM_VALUE_FIELD_NUMBER = 5;
-    private int requiredEnumValue_ = 0;
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-     * @return The enum numeric value on the wire for requiredEnumValue.
-     */
-    @java.lang.Override public int getRequiredEnumValueValue() {
-      return requiredEnumValue_;
-    }
-    /**
-     * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-     * @return The requiredEnumValue.
-     */
-    @java.lang.Override public example.hello.v1.Example.FieldConstraintsExample.Status getRequiredEnumValue() {
-      example.hello.v1.Example.FieldConstraintsExample.Status result = example.hello.v1.Example.FieldConstraintsExample.Status.forNumber(requiredEnumValue_);
-      return result == null ? example.hello.v1.Example.FieldConstraintsExample.Status.UNRECOGNIZED : result;
-    }
-
-    public static final int REQUIRED_REPEATED_VALUE_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringArrayList requiredRepeatedValue_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @return A list containing the requiredRepeatedValue.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getRequiredRepeatedValueList() {
-      return requiredRepeatedValue_;
-    }
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @return The count of requiredRepeatedValue.
-     */
-    public int getRequiredRepeatedValueCount() {
-      return requiredRepeatedValue_.size();
-    }
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @param index The index of the element to return.
-     * @return The requiredRepeatedValue at the given index.
-     */
-    public java.lang.String getRequiredRepeatedValue(int index) {
-      return requiredRepeatedValue_.get(index);
-    }
-    /**
-     * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the requiredRepeatedValue at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getRequiredRepeatedValueBytes(int index) {
-      return requiredRepeatedValue_.getByteString(index);
-    }
-
-    public static final int REQUIRED_MAP_VALUE_FIELD_NUMBER = 7;
-    private static final class RequiredMapValueDefaultEntryHolder {
-      static final com.google.protobuf.MapEntry<
-          java.lang.String, java.lang.String> defaultEntry =
-              com.google.protobuf.MapEntry
-              .<java.lang.String, java.lang.String>newDefaultInstance(
-                  example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_descriptor, 
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "",
-                  com.google.protobuf.WireFormat.FieldType.STRING,
-                  "");
-    }
-    @SuppressWarnings("serial")
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> requiredMapValue_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetRequiredMapValue() {
-      if (requiredMapValue_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            RequiredMapValueDefaultEntryHolder.defaultEntry);
-      }
-      return requiredMapValue_;
-    }
-    public int getRequiredMapValueCount() {
-      return internalGetRequiredMapValue().getMap().size();
-    }
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    @java.lang.Override
-    public boolean containsRequiredMapValue(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetRequiredMapValue().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getRequiredMapValueMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getRequiredMapValue() {
-      return getRequiredMapValueMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getRequiredMapValueMap() {
-      return internalGetRequiredMapValue().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getRequiredMapValueOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRequiredMapValue().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-     */
-    @java.lang.Override
-    public java.lang.String getRequiredMapValueOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetRequiredMapValue().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-
-    public static final int IGNORE_VALUE_FIELD_NUMBER = 8;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object ignoreValue_ = "";
-    /**
-     * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-     * @return The ignoreValue.
-     */
-    @java.lang.Override
-    public java.lang.String getIgnoreValue() {
-      java.lang.Object ref = ignoreValue_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        ignoreValue_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-     * @return The bytes for ignoreValue.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getIgnoreValueBytes() {
-      java.lang.Object ref = ignoreValue_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        ignoreValue_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -20298,30 +22914,6 @@ java.lang.String defaultValue) {
       if (evenValue_ != 0) {
         output.writeInt32(1, evenValue_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        output.writeMessage(2, getRequiredMessageValue());
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requiredStringValue_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, requiredStringValue_);
-      }
-      if (requiredInt32Value_ != 0) {
-        output.writeInt32(4, requiredInt32Value_);
-      }
-      if (requiredEnumValue_ != example.hello.v1.Example.FieldConstraintsExample.Status.STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(5, requiredEnumValue_);
-      }
-      for (int i = 0; i < requiredRepeatedValue_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 6, requiredRepeatedValue_.getRaw(i));
-      }
-      com.google.protobuf.GeneratedMessage
-        .serializeStringMapTo(
-          output,
-          internalGetRequiredMapValue(),
-          RequiredMapValueDefaultEntryHolder.defaultEntry,
-          7);
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ignoreValue_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, ignoreValue_);
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -20335,42 +22927,6 @@ java.lang.String defaultValue) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, evenValue_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getRequiredMessageValue());
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(requiredStringValue_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, requiredStringValue_);
-      }
-      if (requiredInt32Value_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, requiredInt32Value_);
-      }
-      if (requiredEnumValue_ != example.hello.v1.Example.FieldConstraintsExample.Status.STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(5, requiredEnumValue_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < requiredRepeatedValue_.size(); i++) {
-          dataSize += computeStringSizeNoTag(requiredRepeatedValue_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getRequiredRepeatedValueList().size();
-      }
-      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetRequiredMapValue().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        requiredMapValue__ = RequiredMapValueDefaultEntryHolder.defaultEntry.newBuilderForType()
-            .setKey(entry.getKey())
-            .setValue(entry.getValue())
-            .build();
-        size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, requiredMapValue__);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ignoreValue_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, ignoreValue_);
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -20381,29 +22937,13 @@ java.lang.String defaultValue) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof example.hello.v1.Example.FieldConstraintsExample)) {
+      if (!(obj instanceof example.v1.Example.FieldConstraintsExample)) {
         return super.equals(obj);
       }
-      example.hello.v1.Example.FieldConstraintsExample other = (example.hello.v1.Example.FieldConstraintsExample) obj;
+      example.v1.Example.FieldConstraintsExample other = (example.v1.Example.FieldConstraintsExample) obj;
 
       if (getEvenValue()
           != other.getEvenValue()) return false;
-      if (hasRequiredMessageValue() != other.hasRequiredMessageValue()) return false;
-      if (hasRequiredMessageValue()) {
-        if (!getRequiredMessageValue()
-            .equals(other.getRequiredMessageValue())) return false;
-      }
-      if (!getRequiredStringValue()
-          .equals(other.getRequiredStringValue())) return false;
-      if (getRequiredInt32Value()
-          != other.getRequiredInt32Value()) return false;
-      if (requiredEnumValue_ != other.requiredEnumValue_) return false;
-      if (!getRequiredRepeatedValueList()
-          .equals(other.getRequiredRepeatedValueList())) return false;
-      if (!internalGetRequiredMapValue().equals(
-          other.internalGetRequiredMapValue())) return false;
-      if (!getIgnoreValue()
-          .equals(other.getIgnoreValue())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -20417,69 +22957,49 @@ java.lang.String defaultValue) {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + EVEN_VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getEvenValue();
-      if (hasRequiredMessageValue()) {
-        hash = (37 * hash) + REQUIRED_MESSAGE_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getRequiredMessageValue().hashCode();
-      }
-      hash = (37 * hash) + REQUIRED_STRING_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getRequiredStringValue().hashCode();
-      hash = (37 * hash) + REQUIRED_INT32_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getRequiredInt32Value();
-      hash = (37 * hash) + REQUIRED_ENUM_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + requiredEnumValue_;
-      if (getRequiredRepeatedValueCount() > 0) {
-        hash = (37 * hash) + REQUIRED_REPEATED_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getRequiredRepeatedValueList().hashCode();
-      }
-      if (!internalGetRequiredMapValue().getMap().isEmpty()) {
-        hash = (37 * hash) + REQUIRED_MAP_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetRequiredMapValue().hashCode();
-      }
-      hash = (37 * hash) + IGNORE_VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getIgnoreValue().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(byte[] data)
+    public static example.v1.Example.FieldConstraintsExample parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(java.io.InputStream input)
+    public static example.v1.Example.FieldConstraintsExample parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20487,26 +23007,26 @@ java.lang.String defaultValue) {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static example.hello.v1.Example.FieldConstraintsExample parseDelimitedFrom(java.io.InputStream input)
+    public static example.v1.Example.FieldConstraintsExample parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static example.hello.v1.Example.FieldConstraintsExample parseDelimitedFrom(
+    public static example.v1.Example.FieldConstraintsExample parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static example.hello.v1.Example.FieldConstraintsExample parseFrom(
+    public static example.v1.Example.FieldConstraintsExample parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20519,7 +23039,7 @@ java.lang.String defaultValue) {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(example.hello.v1.Example.FieldConstraintsExample prototype) {
+    public static Builder newBuilder(example.v1.Example.FieldConstraintsExample prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -20539,97 +23059,57 @@ java.lang.String defaultValue) {
      * CEL式で柔軟なルールを定義したいとき
      * </pre>
      *
-     * Protobuf type {@code example.hello.v1.FieldConstraintsExample}
+     * Protobuf type {@code example.v1.FieldConstraintsExample}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:example.hello.v1.FieldConstraintsExample)
-        example.hello.v1.Example.FieldConstraintsExampleOrBuilder {
+        // @@protoc_insertion_point(builder_implements:example.v1.FieldConstraintsExample)
+        example.v1.Example.FieldConstraintsExampleOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_FieldConstraintsExample_descriptor;
       }
 
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 7:
-            return internalGetRequiredMapValue();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
-      @SuppressWarnings({"rawtypes"})
-      protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-          int number) {
-        switch (number) {
-          case 7:
-            return internalGetMutableRequiredMapValue();
-          default:
-            throw new RuntimeException(
-                "Invalid map field number: " + number);
-        }
-      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_fieldAccessorTable
+        return example.v1.Example.internal_static_example_v1_FieldConstraintsExample_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                example.hello.v1.Example.FieldConstraintsExample.class, example.hello.v1.Example.FieldConstraintsExample.Builder.class);
+                example.v1.Example.FieldConstraintsExample.class, example.v1.Example.FieldConstraintsExample.Builder.class);
       }
 
-      // Construct using example.hello.v1.Example.FieldConstraintsExample.newBuilder()
+      // Construct using example.v1.Example.FieldConstraintsExample.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage
-                .alwaysUseFieldBuilders) {
-          internalGetRequiredMessageValueFieldBuilder();
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
         evenValue_ = 0;
-        requiredMessageValue_ = null;
-        if (requiredMessageValueBuilder_ != null) {
-          requiredMessageValueBuilder_.dispose();
-          requiredMessageValueBuilder_ = null;
-        }
-        requiredStringValue_ = "";
-        requiredInt32Value_ = 0;
-        requiredEnumValue_ = 0;
-        requiredRepeatedValue_ =
-            com.google.protobuf.LazyStringArrayList.emptyList();
-        internalGetMutableRequiredMapValue().clear();
-        ignoreValue_ = "";
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return example.hello.v1.Example.internal_static_example_hello_v1_FieldConstraintsExample_descriptor;
+        return example.v1.Example.internal_static_example_v1_FieldConstraintsExample_descriptor;
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.FieldConstraintsExample getDefaultInstanceForType() {
-        return example.hello.v1.Example.FieldConstraintsExample.getDefaultInstance();
+      public example.v1.Example.FieldConstraintsExample getDefaultInstanceForType() {
+        return example.v1.Example.FieldConstraintsExample.getDefaultInstance();
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.FieldConstraintsExample build() {
-        example.hello.v1.Example.FieldConstraintsExample result = buildPartial();
+      public example.v1.Example.FieldConstraintsExample build() {
+        example.v1.Example.FieldConstraintsExample result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -20637,94 +23117,34 @@ java.lang.String defaultValue) {
       }
 
       @java.lang.Override
-      public example.hello.v1.Example.FieldConstraintsExample buildPartial() {
-        example.hello.v1.Example.FieldConstraintsExample result = new example.hello.v1.Example.FieldConstraintsExample(this);
+      public example.v1.Example.FieldConstraintsExample buildPartial() {
+        example.v1.Example.FieldConstraintsExample result = new example.v1.Example.FieldConstraintsExample(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(example.hello.v1.Example.FieldConstraintsExample result) {
+      private void buildPartial0(example.v1.Example.FieldConstraintsExample result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.evenValue_ = evenValue_;
         }
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.requiredMessageValue_ = requiredMessageValueBuilder_ == null
-              ? requiredMessageValue_
-              : requiredMessageValueBuilder_.build();
-          to_bitField0_ |= 0x00000001;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.requiredStringValue_ = requiredStringValue_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.requiredInt32Value_ = requiredInt32Value_;
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.requiredEnumValue_ = requiredEnumValue_;
-        }
-        if (((from_bitField0_ & 0x00000020) != 0)) {
-          requiredRepeatedValue_.makeImmutable();
-          result.requiredRepeatedValue_ = requiredRepeatedValue_;
-        }
-        if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.requiredMapValue_ = internalGetRequiredMapValue();
-          result.requiredMapValue_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.ignoreValue_ = ignoreValue_;
-        }
-        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof example.hello.v1.Example.FieldConstraintsExample) {
-          return mergeFrom((example.hello.v1.Example.FieldConstraintsExample)other);
+        if (other instanceof example.v1.Example.FieldConstraintsExample) {
+          return mergeFrom((example.v1.Example.FieldConstraintsExample)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(example.hello.v1.Example.FieldConstraintsExample other) {
-        if (other == example.hello.v1.Example.FieldConstraintsExample.getDefaultInstance()) return this;
+      public Builder mergeFrom(example.v1.Example.FieldConstraintsExample other) {
+        if (other == example.v1.Example.FieldConstraintsExample.getDefaultInstance()) return this;
         if (other.getEvenValue() != 0) {
           setEvenValue(other.getEvenValue());
-        }
-        if (other.hasRequiredMessageValue()) {
-          mergeRequiredMessageValue(other.getRequiredMessageValue());
-        }
-        if (!other.getRequiredStringValue().isEmpty()) {
-          requiredStringValue_ = other.requiredStringValue_;
-          bitField0_ |= 0x00000004;
-          onChanged();
-        }
-        if (other.getRequiredInt32Value() != 0) {
-          setRequiredInt32Value(other.getRequiredInt32Value());
-        }
-        if (other.requiredEnumValue_ != 0) {
-          setRequiredEnumValueValue(other.getRequiredEnumValueValue());
-        }
-        if (!other.requiredRepeatedValue_.isEmpty()) {
-          if (requiredRepeatedValue_.isEmpty()) {
-            requiredRepeatedValue_ = other.requiredRepeatedValue_;
-            bitField0_ |= 0x00000020;
-          } else {
-            ensureRequiredRepeatedValueIsMutable();
-            requiredRepeatedValue_.addAll(other.requiredRepeatedValue_);
-          }
-          onChanged();
-        }
-        internalGetMutableRequiredMapValue().mergeFrom(
-            other.internalGetRequiredMapValue());
-        bitField0_ |= 0x00000040;
-        if (!other.getIgnoreValue().isEmpty()) {
-          ignoreValue_ = other.ignoreValue_;
-          bitField0_ |= 0x00000080;
-          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -20757,48 +23177,6 @@ java.lang.String defaultValue) {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 8
-              case 18: {
-                input.readMessage(
-                    internalGetRequiredMessageValueFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 18
-              case 26: {
-                requiredStringValue_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 26
-              case 32: {
-                requiredInt32Value_ = input.readInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 32
-              case 40: {
-                requiredEnumValue_ = input.readEnum();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 40
-              case 50: {
-                java.lang.String s = input.readStringRequireUtf8();
-                ensureRequiredRepeatedValueIsMutable();
-                requiredRepeatedValue_.add(s);
-                break;
-              } // case 50
-              case 58: {
-                com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-                requiredMapValue__ = input.readMessage(
-                    RequiredMapValueDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutableRequiredMapValue().getMutableMap().put(
-                    requiredMapValue__.getKey(), requiredMapValue__.getValue());
-                bitField0_ |= 0x00000040;
-                break;
-              } // case 58
-              case 66: {
-                ignoreValue_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -20818,6 +23196,10 @@ java.lang.String defaultValue) {
 
       private int evenValue_ ;
       /**
+       * <pre>
+       * 偶数であることを検証するCEL式
+       * </pre>
+       *
        * <code>int32 even_value = 1 [json_name = "evenValue", (.buf.validate.field) = { ... }</code>
        * @return The evenValue.
        */
@@ -20826,6 +23208,10 @@ java.lang.String defaultValue) {
         return evenValue_;
       }
       /**
+       * <pre>
+       * 偶数であることを検証するCEL式
+       * </pre>
+       *
        * <code>int32 even_value = 1 [json_name = "evenValue", (.buf.validate.field) = { ... }</code>
        * @param value The evenValue to set.
        * @return This builder for chaining.
@@ -20838,6 +23224,10 @@ java.lang.String defaultValue) {
         return this;
       }
       /**
+       * <pre>
+       * 偶数であることを検証するCEL式
+       * </pre>
+       *
        * <code>int32 even_value = 1 [json_name = "evenValue", (.buf.validate.field) = { ... }</code>
        * @return This builder for chaining.
        */
@@ -20848,604 +23238,16 @@ java.lang.String defaultValue) {
         return this;
       }
 
-      private example.hello.v1.Example.FieldConstraintsExample.MyValue requiredMessageValue_;
-      private com.google.protobuf.SingleFieldBuilder<
-          example.hello.v1.Example.FieldConstraintsExample.MyValue, example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder, example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder> requiredMessageValueBuilder_;
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       * @return Whether the requiredMessageValue field is set.
-       */
-      public boolean hasRequiredMessageValue() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       * @return The requiredMessageValue.
-       */
-      public example.hello.v1.Example.FieldConstraintsExample.MyValue getRequiredMessageValue() {
-        if (requiredMessageValueBuilder_ == null) {
-          return requiredMessageValue_ == null ? example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance() : requiredMessageValue_;
-        } else {
-          return requiredMessageValueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder setRequiredMessageValue(example.hello.v1.Example.FieldConstraintsExample.MyValue value) {
-        if (requiredMessageValueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          requiredMessageValue_ = value;
-        } else {
-          requiredMessageValueBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder setRequiredMessageValue(
-          example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder builderForValue) {
-        if (requiredMessageValueBuilder_ == null) {
-          requiredMessageValue_ = builderForValue.build();
-        } else {
-          requiredMessageValueBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder mergeRequiredMessageValue(example.hello.v1.Example.FieldConstraintsExample.MyValue value) {
-        if (requiredMessageValueBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            requiredMessageValue_ != null &&
-            requiredMessageValue_ != example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance()) {
-            getRequiredMessageValueBuilder().mergeFrom(value);
-          } else {
-            requiredMessageValue_ = value;
-          }
-        } else {
-          requiredMessageValueBuilder_.mergeFrom(value);
-        }
-        if (requiredMessageValue_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder clearRequiredMessageValue() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        requiredMessageValue_ = null;
-        if (requiredMessageValueBuilder_ != null) {
-          requiredMessageValueBuilder_.dispose();
-          requiredMessageValueBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder getRequiredMessageValueBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return internalGetRequiredMessageValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      public example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder getRequiredMessageValueOrBuilder() {
-        if (requiredMessageValueBuilder_ != null) {
-          return requiredMessageValueBuilder_.getMessageOrBuilder();
-        } else {
-          return requiredMessageValue_ == null ?
-              example.hello.v1.Example.FieldConstraintsExample.MyValue.getDefaultInstance() : requiredMessageValue_;
-        }
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.MyValue required_message_value = 2 [json_name = "requiredMessageValue", (.buf.validate.field) = { ... }</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          example.hello.v1.Example.FieldConstraintsExample.MyValue, example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder, example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder> 
-          internalGetRequiredMessageValueFieldBuilder() {
-        if (requiredMessageValueBuilder_ == null) {
-          requiredMessageValueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              example.hello.v1.Example.FieldConstraintsExample.MyValue, example.hello.v1.Example.FieldConstraintsExample.MyValue.Builder, example.hello.v1.Example.FieldConstraintsExample.MyValueOrBuilder>(
-                  getRequiredMessageValue(),
-                  getParentForChildren(),
-                  isClean());
-          requiredMessageValue_ = null;
-        }
-        return requiredMessageValueBuilder_;
-      }
-
-      private java.lang.Object requiredStringValue_ = "";
-      /**
-       * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-       * @return The requiredStringValue.
-       */
-      public java.lang.String getRequiredStringValue() {
-        java.lang.Object ref = requiredStringValue_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          requiredStringValue_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-       * @return The bytes for requiredStringValue.
-       */
-      public com.google.protobuf.ByteString
-          getRequiredStringValueBytes() {
-        java.lang.Object ref = requiredStringValue_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          requiredStringValue_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-       * @param value The requiredStringValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredStringValue(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        requiredStringValue_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRequiredStringValue() {
-        requiredStringValue_ = getDefaultInstance().getRequiredStringValue();
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string required_string_value = 3 [json_name = "requiredStringValue", (.buf.validate.field) = { ... }</code>
-       * @param value The bytes for requiredStringValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredStringValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        requiredStringValue_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-
-      private int requiredInt32Value_ ;
-      /**
-       * <code>int32 required_int32_value = 4 [json_name = "requiredInt32Value", (.buf.validate.field) = { ... }</code>
-       * @return The requiredInt32Value.
-       */
-      @java.lang.Override
-      public int getRequiredInt32Value() {
-        return requiredInt32Value_;
-      }
-      /**
-       * <code>int32 required_int32_value = 4 [json_name = "requiredInt32Value", (.buf.validate.field) = { ... }</code>
-       * @param value The requiredInt32Value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredInt32Value(int value) {
-
-        requiredInt32Value_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 required_int32_value = 4 [json_name = "requiredInt32Value", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRequiredInt32Value() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        requiredInt32Value_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int requiredEnumValue_ = 0;
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-       * @return The enum numeric value on the wire for requiredEnumValue.
-       */
-      @java.lang.Override public int getRequiredEnumValueValue() {
-        return requiredEnumValue_;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-       * @param value The enum numeric value on the wire for requiredEnumValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredEnumValueValue(int value) {
-        requiredEnumValue_ = value;
-        bitField0_ |= 0x00000010;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-       * @return The requiredEnumValue.
-       */
-      @java.lang.Override
-      public example.hello.v1.Example.FieldConstraintsExample.Status getRequiredEnumValue() {
-        example.hello.v1.Example.FieldConstraintsExample.Status result = example.hello.v1.Example.FieldConstraintsExample.Status.forNumber(requiredEnumValue_);
-        return result == null ? example.hello.v1.Example.FieldConstraintsExample.Status.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-       * @param value The requiredEnumValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredEnumValue(example.hello.v1.Example.FieldConstraintsExample.Status value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000010;
-        requiredEnumValue_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.example.hello.v1.FieldConstraintsExample.Status required_enum_value = 5 [json_name = "requiredEnumValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRequiredEnumValue() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        requiredEnumValue_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringArrayList requiredRepeatedValue_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-      private void ensureRequiredRepeatedValueIsMutable() {
-        if (!requiredRepeatedValue_.isModifiable()) {
-          requiredRepeatedValue_ = new com.google.protobuf.LazyStringArrayList(requiredRepeatedValue_);
-        }
-        bitField0_ |= 0x00000020;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @return A list containing the requiredRepeatedValue.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getRequiredRepeatedValueList() {
-        requiredRepeatedValue_.makeImmutable();
-        return requiredRepeatedValue_;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @return The count of requiredRepeatedValue.
-       */
-      public int getRequiredRepeatedValueCount() {
-        return requiredRepeatedValue_.size();
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param index The index of the element to return.
-       * @return The requiredRepeatedValue at the given index.
-       */
-      public java.lang.String getRequiredRepeatedValue(int index) {
-        return requiredRepeatedValue_.get(index);
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the requiredRepeatedValue at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getRequiredRepeatedValueBytes(int index) {
-        return requiredRepeatedValue_.getByteString(index);
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param index The index to set the value at.
-       * @param value The requiredRepeatedValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setRequiredRepeatedValue(
-          int index, java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRequiredRepeatedValueIsMutable();
-        requiredRepeatedValue_.set(index, value);
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param value The requiredRepeatedValue to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRequiredRepeatedValue(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ensureRequiredRepeatedValueIsMutable();
-        requiredRepeatedValue_.add(value);
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param values The requiredRepeatedValue to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllRequiredRepeatedValue(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureRequiredRepeatedValueIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, requiredRepeatedValue_);
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearRequiredRepeatedValue() {
-        requiredRepeatedValue_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string required_repeated_value = 6 [json_name = "requiredRepeatedValue", (.buf.validate.field) = { ... }</code>
-       * @param value The bytes of the requiredRepeatedValue to add.
-       * @return This builder for chaining.
-       */
-      public Builder addRequiredRepeatedValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ensureRequiredRepeatedValueIsMutable();
-        requiredRepeatedValue_.add(value);
-        bitField0_ |= 0x00000020;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> requiredMapValue_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetRequiredMapValue() {
-        if (requiredMapValue_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              RequiredMapValueDefaultEntryHolder.defaultEntry);
-        }
-        return requiredMapValue_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableRequiredMapValue() {
-        if (requiredMapValue_ == null) {
-          requiredMapValue_ = com.google.protobuf.MapField.newMapField(
-              RequiredMapValueDefaultEntryHolder.defaultEntry);
-        }
-        if (!requiredMapValue_.isMutable()) {
-          requiredMapValue_ = requiredMapValue_.copy();
-        }
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return requiredMapValue_;
-      }
-      public int getRequiredMapValueCount() {
-        return internalGetRequiredMapValue().getMap().size();
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      @java.lang.Override
-      public boolean containsRequiredMapValue(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        return internalGetRequiredMapValue().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getRequiredMapValueMap()} instead.
-       */
-      @java.lang.Override
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getRequiredMapValue() {
-        return getRequiredMapValueMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      @java.lang.Override
-      public java.util.Map<java.lang.String, java.lang.String> getRequiredMapValueMap() {
-        return internalGetRequiredMapValue().getMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      @java.lang.Override
-      public /* nullable */
-java.lang.String getRequiredMapValueOrDefault(
-          java.lang.String key,
-          /* nullable */
-java.lang.String defaultValue) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetRequiredMapValue().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      @java.lang.Override
-      public java.lang.String getRequiredMapValueOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetRequiredMapValue().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-      public Builder clearRequiredMapValue() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        internalGetMutableRequiredMapValue().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder removeRequiredMapValue(
-          java.lang.String key) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        internalGetMutableRequiredMapValue().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-          getMutableRequiredMapValue() {
-        bitField0_ |= 0x00000040;
-        return internalGetMutableRequiredMapValue().getMutableMap();
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder putRequiredMapValue(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) { throw new NullPointerException("map value"); }
-        internalGetMutableRequiredMapValue().getMutableMap()
-            .put(key, value);
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-      /**
-       * <code>map&lt;string, string&gt; required_map_value = 7 [json_name = "requiredMapValue", (.buf.validate.field) = { ... }</code>
-       */
-      public Builder putAllRequiredMapValue(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableRequiredMapValue().getMutableMap()
-            .putAll(values);
-        bitField0_ |= 0x00000040;
-        return this;
-      }
-
-      private java.lang.Object ignoreValue_ = "";
-      /**
-       * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-       * @return The ignoreValue.
-       */
-      public java.lang.String getIgnoreValue() {
-        java.lang.Object ref = ignoreValue_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          ignoreValue_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-       * @return The bytes for ignoreValue.
-       */
-      public com.google.protobuf.ByteString
-          getIgnoreValueBytes() {
-        java.lang.Object ref = ignoreValue_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          ignoreValue_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-       * @param value The ignoreValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIgnoreValue(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        ignoreValue_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIgnoreValue() {
-        ignoreValue_ = getDefaultInstance().getIgnoreValue();
-        bitField0_ = (bitField0_ & ~0x00000080);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string ignore_value = 8 [json_name = "ignoreValue", (.buf.validate.field) = { ... }</code>
-       * @param value The bytes for ignoreValue to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIgnoreValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        ignoreValue_ = value;
-        bitField0_ |= 0x00000080;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:example.hello.v1.FieldConstraintsExample)
+      // @@protoc_insertion_point(builder_scope:example.v1.FieldConstraintsExample)
     }
 
-    // @@protoc_insertion_point(class_scope:example.hello.v1.FieldConstraintsExample)
-    private static final example.hello.v1.Example.FieldConstraintsExample DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:example.v1.FieldConstraintsExample)
+    private static final example.v1.Example.FieldConstraintsExample DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new example.hello.v1.Example.FieldConstraintsExample();
+      DEFAULT_INSTANCE = new example.v1.Example.FieldConstraintsExample();
     }
 
-    public static example.hello.v1.Example.FieldConstraintsExample getDefaultInstance() {
+    public static example.v1.Example.FieldConstraintsExample getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -21481,112 +23283,107 @@ java.lang.String defaultValue) {
     }
 
     @java.lang.Override
-    public example.hello.v1.Example.FieldConstraintsExample getDefaultInstanceForType() {
+    public example.v1.Example.FieldConstraintsExample getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_Hello_descriptor;
+    internal_static_example_v1_DeprecatedExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_Hello_fieldAccessorTable;
+      internal_static_example_v1_DeprecatedExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_DisabledExample_descriptor;
+    internal_static_example_v1_OneofExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_DisabledExample_fieldAccessorTable;
+      internal_static_example_v1_OneofExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_OneofExample_descriptor;
+    internal_static_example_v1_IgnoreEmptyExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_OneofExample_fieldAccessorTable;
+      internal_static_example_v1_IgnoreEmptyExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_StringValidationExample_descriptor;
+    internal_static_example_v1_StringValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_StringValidationExample_fieldAccessorTable;
+      internal_static_example_v1_StringValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_BoolValidationExample_descriptor;
+    internal_static_example_v1_BoolValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_BoolValidationExample_fieldAccessorTable;
+      internal_static_example_v1_BoolValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_BytesValidationExample_descriptor;
+    internal_static_example_v1_BytesValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_BytesValidationExample_fieldAccessorTable;
+      internal_static_example_v1_BytesValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_DoubleValidationExample_descriptor;
+    internal_static_example_v1_DoubleValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_DoubleValidationExample_fieldAccessorTable;
+      internal_static_example_v1_DoubleValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_EnumValidationExample_descriptor;
+    internal_static_example_v1_MapValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_EnumValidationExample_fieldAccessorTable;
+      internal_static_example_v1_MapValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_MapValidationExample_descriptor;
+    internal_static_example_v1_MapValidationExample_MinPairsValueEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_MapValidationExample_fieldAccessorTable;
+      internal_static_example_v1_MapValidationExample_MinPairsValueEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_descriptor;
+    internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_fieldAccessorTable;
+      internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_descriptor;
+    internal_static_example_v1_MapValidationExample_KeysValueEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_fieldAccessorTable;
+      internal_static_example_v1_MapValidationExample_KeysValueEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_descriptor;
+    internal_static_example_v1_MapValidationExample_ValuesValueEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_fieldAccessorTable;
+      internal_static_example_v1_MapValidationExample_ValuesValueEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_descriptor;
+    internal_static_example_v1_RepeatedValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_fieldAccessorTable;
+      internal_static_example_v1_RepeatedValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_RepeatedValidationExample_descriptor;
+    internal_static_example_v1_AnyValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_RepeatedValidationExample_fieldAccessorTable;
+      internal_static_example_v1_AnyValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_AnyValidationExample_descriptor;
+    internal_static_example_v1_DurationValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_AnyValidationExample_fieldAccessorTable;
+      internal_static_example_v1_DurationValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_DurationValidationExample_descriptor;
+    internal_static_example_v1_EnumValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_DurationValidationExample_fieldAccessorTable;
+      internal_static_example_v1_EnumValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_TimestampValidationExample_descriptor;
+    internal_static_example_v1_TimestampValidationExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_TimestampValidationExample_fieldAccessorTable;
+      internal_static_example_v1_TimestampValidationExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_FieldConstraintsExample_descriptor;
+    internal_static_example_v1_GoogleApiFieldExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_FieldConstraintsExample_fieldAccessorTable;
+      internal_static_example_v1_GoogleApiFieldExample_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor;
+    internal_static_example_v1_FieldConstraintsExample_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_FieldConstraintsExample_MyValue_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_fieldAccessorTable;
+      internal_static_example_v1_FieldConstraintsExample_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -21596,317 +23393,308 @@ java.lang.String defaultValue) {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020v1/example.proto\022\020example.hello.v1\032\033bu" +
-      "f/validate/validate.proto\032\031google/protob" +
-      "uf/any.proto\032\036google/protobuf/duration.p" +
-      "roto\032\037google/protobuf/timestamp.proto\"&\n" +
-      "\005Hello\022\035\n\005hello\030\001 \001(\tB\007\272H\004r\002\020\001R\005hello\"3\n" +
-      "\017DisabledExample\022\031\n\003val\030\001 \001(\tB\007\272H\004r\002\020\001R\003" +
-      "val:\005\272H\002\010\001\"J\n\014OneofExample\022\024\n\004val1\030\001 \001(\t" +
-      "H\000R\004val1\022\024\n\004val2\030\002 \001(\tH\000R\004val2B\016\n\005union\022" +
-      "\005\272H\002\010\001\"\340\014\n\027StringValidationExample\022-\n\013co" +
-      "nst_value\030\001 \001(\tB\014\272H\tr\007\n\005constR\nconstValu" +
-      "e\022%\n\tlen_value\030\002 \001(\tB\010\272H\005r\003\230\001\005R\010lenValue" +
-      "\022+\n\rmin_len_value\030\003 \001(\tB\007\272H\004r\002\020\005R\013minLen" +
-      "Value\022+\n\rmax_len_value\030\004 \001(\tB\007\272H\004r\002\030\005R\013m" +
-      "axLenValue\0220\n\017len_bytes_value\030\005 \001(\tB\010\272H\005" +
-      "r\003\240\001\002R\rlenBytesValue\022/\n\017min_bytes_value\030" +
-      "\006 \001(\tB\007\272H\004r\002 \002R\rminBytesValue\022/\n\017max_byt" +
-      "es_value\030\007 \001(\tB\007\272H\004r\002(\002R\rmaxBytesValue\0227" +
-      "\n\rpattern_value\030\010 \001(\tB\022\272H\017r\r2\013^hello, .*" +
-      "$R\014patternValue\022/\n\014prefix_value\030\t \001(\tB\014\272" +
-      "H\tr\007:\005HelloR\013prefixValue\022/\n\014suffix_value" +
-      "\030\n \001(\tB\014\272H\tr\007B\005WorldR\013suffixValue\0224\n\016con" +
-      "tains_value\030\013 \001(\tB\r\272H\nr\010J\006bananaR\rcontai" +
-      "nsValue\022<\n\022not_contains_value\030\014 \001(\tB\016\272H\013" +
-      "r\t\272\001\006bananaR\020notContainsValue\0222\n\010in_valu" +
-      "e\030\r \001(\tB\027\272H\024r\022R\004JavaR\006KotlinR\002GoR\007inValu" +
-      "e\0229\n\014not_in_value\030\016 \001(\tB\027\272H\024r\022Z\004JavaZ\006Ko" +
-      "tlinZ\002GoR\nnotInValue\022(\n\013email_value\030\017 \001(" +
-      "\tB\007\272H\004r\002`\001R\nemailValue\022.\n\016hostname_value" +
-      "\030\020 \001(\tB\007\272H\004r\002h\001R\rhostnameValue\022\"\n\010ip_val" +
-      "ue\030\021 \001(\tB\007\272H\004r\002p\001R\007ipValue\022&\n\nipv4_value" +
-      "\030\022 \001(\tB\007\272H\004r\002x\001R\tipv4Value\022\'\n\nipv6_value" +
-      "\030\023 \001(\tB\010\272H\005r\003\200\001\001R\tipv6Value\022%\n\turi_value" +
-      "\030\024 \001(\tB\010\272H\005r\003\210\001\001R\010uriValue\022,\n\ruri_ref_va" +
-      "lue\030\025 \001(\tB\010\272H\005r\003\220\001\001R\013uriRefValue\022-\n\raddr" +
-      "ess_value\030\026 \001(\tB\010\272H\005r\003\250\001\001R\014addressValue\022" +
-      "\'\n\nuuid_value\030\027 \001(\tB\010\272H\005r\003\260\001\001R\tuuidValue" +
-      "\022)\n\013tuuid_value\030\030 \001(\tB\010\272H\005r\003\210\002\001R\ntuuidVa" +
-      "lue\022?\n\027ip_with_preifxlen_value\030\031 \001(\tB\010\272H" +
-      "\005r\003\320\001\001R\024ipWithPreifxlenValue\022C\n\031ipv4_wit" +
-      "h_preifxlen_value\030\032 \001(\tB\010\272H\005r\003\330\001\001R\026ipv4W" +
-      "ithPreifxlenValue\022C\n\031ipv6_with_preifxlen" +
-      "_value\030\033 \001(\tB\010\272H\005r\003\340\001\001R\026ipv6WithPreifxle" +
-      "nValue\0220\n\017ip_prefix_value\030\034 \001(\tB\010\272H\005r\003\350\001" +
-      "\001R\ripPrefixValue\0222\n\020ip4_prefix_value\030\035 \001" +
-      "(\tB\010\272H\005r\003\360\001\001R\016ip4PrefixValue\0222\n\020ip6_pref" +
-      "ix_value\030\036 \001(\tB\010\272H\005r\003\370\001\001R\016ip6PrefixValue" +
-      "\0227\n\023host_and_port_value\030\037 \001(\tB\010\272H\005r\003\200\002\001R" +
-      "\020hostAndPortValue\022>\n\025well_kown_regex_val" +
-      "ue\030  \001(\tB\013\272H\010r\006\300\001\001\310\001\001R\022wellKownRegexValu" +
-      "e\"i\n\025BoolValidationExample\022&\n\ntrue_value" +
-      "\030\001 \001(\010B\007\272H\004j\002\010\001R\ttrueValue\022(\n\013false_valu" +
-      "e\030\002 \001(\010B\007\272H\004j\002\010\000R\nfalseValue\"\346\004\n\026BytesVa" +
-      "lidationExample\022,\n\013const_value\030\001 \001(\014B\013\272H" +
-      "\010z\006\n\004\001\002\003\004R\nconstValue\022$\n\tlen_value\030\002 \001(\014" +
-      "B\007\272H\004z\002h\004R\010lenValue\022+\n\rmin_len_value\030\003 \001" +
-      "(\014B\007\272H\004z\002\020\002R\013minLenValue\022+\n\rmax_len_valu" +
-      "e\030\004 \001(\014B\007\272H\004z\002\030\002R\013maxLenValue\022:\n\rpattern" +
-      "_value\030\005 \001(\014B\025\272H\022z\020\"\016^[a-zA-Z0-9]+$R\014pat" +
-      "ternValue\022,\n\014prefix_value\030\006 \001(\014B\t\272H\006z\004*\002" +
-      "\001\002R\013prefixValue\022,\n\014suffix_value\030\007 \001(\014B\t\272" +
-      "H\006z\0042\002\002\003R\013suffixValue\022/\n\016contains_value\030" +
-      "\010 \001(\014B\010\272H\005z\003:\001\002R\rcontainsValue\022,\n\010in_val" +
-      "ue\030\t \001(\014B\021\272H\016z\014B\002\001\002B\002\002\003B\002\003\004R\007inValue\0223\n\014" +
-      "not_in_value\030\n \001(\014B\021\272H\016z\014J\002\001\002J\002\002\003J\002\003\004R\nn" +
-      "otInValue\022\"\n\010ip_value\030\013 \001(\014B\007\272H\004z\002P\001R\007ip" +
-      "Value\022&\n\nipv4_value\030\014 \001(\014B\007\272H\004z\002X\001R\tipv4" +
-      "Value\022&\n\nipv6_value\030\r \001(\014B\007\272H\004z\002`\001R\tipv6" +
-      "Value\"\247\003\n\027DoubleValidationExample\022/\n\013con" +
-      "st_value\030\001 \001(\001B\016\272H\013\022\t\t\000\000\000\000\000\000E@R\nconstVal" +
-      "ue\022)\n\010lt_value\030\002 \001(\001B\016\272H\013\022\t\021\000\000\000\000\000\000$@R\007lt" +
-      "Value\022+\n\tlte_value\030\003 \001(\001B\016\272H\013\022\t\031\000\000\000\000\000\000$@" +
-      "R\010lteValue\022)\n\010gt_value\030\004 \001(\001B\016\272H\013\022\t!\000\000\000\000" +
-      "\000\000$@R\007gtValue\022+\n\tgte_value\030\005 \001(\001B\016\272H\013\022\t)" +
-      "\000\000\000\000\000\000$@R\010gteValue\022;\n\010in_value\030\006 \001(\001B \272H" +
-      "\035\022\0331\000\000\000\000\000\000$@1\000\000\000\000\000\000&@1\000\000\000\000\000\000(@R\007inValue\022" +
-      "B\n\014not_in_value\030\007 \001(\001B \272H\035\022\0339\000\000\000\000\000\000$@9\000\000" +
-      "\000\000\000\000&@9\000\000\000\000\000\000(@R\nnotInValue\022*\n\014finite_va" +
-      "lue\030\010 \001(\001B\007\272H\004\022\002@\001R\013finiteValue\"\356\003\n\025Enum" +
-      "ValidationExample\022Y\n\013const_value\030\001 \001(\0162." +
-      ".example.hello.v1.EnumValidationExample." +
-      "MyEnumB\010\272H\005\202\001\002\010\001R\nconstValue\022f\n\022defined_" +
-      "only_value\030\002 \001(\0162..example.hello.v1.Enum" +
-      "ValidationExample.MyEnumB\010\272H\005\202\001\002\020\001R\020defi" +
-      "nedOnlyValue\022U\n\010in_value\030\003 \001(\0162..example" +
-      ".hello.v1.EnumValidationExample.MyEnumB\n" +
-      "\272H\007\202\001\004\030\001\030\002R\007inValue\022\\\n\014not_in_value\030\004 \001(" +
-      "\0162..example.hello.v1.EnumValidationExamp" +
-      "le.MyEnumB\n\272H\007\202\001\004 \001 \002R\nnotInValue\"]\n\006MyE" +
-      "num\022\027\n\023MY_ENUM_UNSPECIFIED\020\000\022\022\n\016MY_ENUM_" +
-      "VALUE1\020\001\022\022\n\016MY_ENUM_VALUE2\020\002\022\022\n\016MY_ENUM_" +
-      "VALUE3\020\003\"\304\005\n\024MapValidationExample\022k\n\017min" +
-      "_pairs_value\030\001 \003(\01329.example.hello.v1.Ma" +
-      "pValidationExample.MinPairsValueEntryB\010\272" +
-      "H\005\232\001\002\010\002R\rminPairsValue\022k\n\017max_pairs_valu" +
-      "e\030\002 \003(\01329.example.hello.v1.MapValidation" +
-      "Example.MaxPairsValueEntryB\010\272H\005\232\001\002\020\002R\rma" +
-      "xPairsValue\022d\n\nkeys_value\030\003 \003(\01325.exampl" +
-      "e.hello.v1.MapValidationExample.KeysValu" +
-      "eEntryB\016\272H\013\232\001\010\"\006r\004\020\003\030\nR\tkeysValue\022j\n\014val" +
-      "ues_value\030\004 \003(\01327.example.hello.v1.MapVa" +
-      "lidationExample.ValuesValueEntryB\016\272H\013\232\001\010" +
-      "*\006r\004\020\003\030\nR\013valuesValue\032@\n\022MinPairsValueEn" +
-      "try\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005va" +
-      "lue:\0028\001\032@\n\022MaxPairsValueEntry\022\020\n\003key\030\001 \001" +
-      "(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032<\n\016Key" +
-      "sValueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002" +
-      " \001(\tR\005value:\0028\001\032>\n\020ValuesValueEntry\022\020\n\003k" +
-      "ey\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"" +
-      "\335\001\n\031RepeatedValidationExample\0220\n\017min_ite" +
-      "ms_value\030\001 \003(\tB\010\272H\005\222\001\002\010\002R\rminItemsValue\022" +
-      "0\n\017max_items_value\030\002 \003(\tB\010\272H\005\222\001\002\020\002R\rmaxI" +
-      "temsValue\022+\n\014unique_value\030\003 \003(\tB\010\272H\005\222\001\002\030" +
-      "\001R\013uniqueValue\022/\n\013items_value\030\004 \003(\tB\016\272H\013" +
-      "\222\001\010\"\006r\004\020\003\030\nR\nitemsValue\"\323\002\n\024AnyValidatio" +
-      "nExample\022\230\001\n\010in_value\030\001 \001(\0132\024.google.pro" +
-      "tobuf.AnyBg\272Hd\242\001a\022.type.googleapis.com/g" +
-      "oogle.protobuf.Int32Value\022/type.googleap" +
-      "is.com/google.protobuf.StringValueR\007inVa" +
-      "lue\022\237\001\n\014not_in_value\030\002 \001(\0132\024.google.prot" +
-      "obuf.AnyBg\272Hd\242\001a\032.type.googleapis.com/go" +
-      "ogle.protobuf.Int32Value\032/type.googleapi" +
-      "s.com/google.protobuf.StringValueR\nnotIn" +
-      "Value\"\212\004\n\031DurationValidationExample\022F\n\013c" +
-      "onst_value\030\001 \001(\0132\031.google.protobuf.Durat" +
-      "ionB\n\272H\007\252\001\004\022\002\010\005R\nconstValue\022@\n\010lt_value\030" +
-      "\002 \001(\0132\031.google.protobuf.DurationB\n\272H\007\252\001\004" +
-      "\032\002\010\005R\007ltValue\022B\n\tlte_value\030\003 \001(\0132\031.googl" +
-      "e.protobuf.DurationB\n\272H\007\252\001\004\"\002\010\005R\010lteValu" +
-      "e\022@\n\010gt_value\030\004 \001(\0132\031.google.protobuf.Du" +
-      "rationB\n\272H\007\252\001\004*\002\010\005R\007gtValue\022B\n\tgte_value" +
-      "\030\005 \001(\0132\031.google.protobuf.DurationB\n\272H\007\252\001" +
-      "\0042\002\010\005R\010gteValue\022H\n\010in_value\030\006 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\022\272H\017\252\001\014:\002\010\005:\002\010\006:\002\010\007" +
-      "R\007inValue\022O\n\014not_in_value\030\007 \001(\0132\031.google" +
-      ".protobuf.DurationB\022\272H\017\252\001\014B\002\010\005B\002\010\006B\002\010\007R\n" +
-      "notInValue\"\345\004\n\032TimestampValidationExampl" +
-      "e\022K\n\013const_value\030\001 \001(\0132\032.google.protobuf" +
-      ".TimestampB\016\272H\013\262\001\010\022\006\010\300\340\366\262\006R\nconstValue\022E" +
-      "\n\010lt_value\030\002 \001(\0132\032.google.protobuf.Times" +
-      "tampB\016\272H\013\262\001\010\032\006\010\300\340\366\262\006R\007ltValue\022G\n\tlte_val" +
-      "ue\030\003 \001(\0132\032.google.protobuf.TimestampB\016\272H" +
-      "\013\262\001\010\"\006\010\300\340\366\262\006R\010lteValue\022F\n\014lt_now_value\030\004" +
-      " \001(\0132\032.google.protobuf.TimestampB\010\272H\005\262\001\002" +
-      "8\001R\nltNowValue\022E\n\010gt_value\030\005 \001(\0132\032.googl" +
-      "e.protobuf.TimestampB\016\272H\013\262\001\010*\006\010\300\340\366\262\006R\007gt" +
-      "Value\022G\n\tgte_value\030\006 \001(\0132\032.google.protob" +
-      "uf.TimestampB\016\272H\013\262\001\0102\006\010\300\340\366\262\006R\010gteValue\022F" +
-      "\n\014gt_now_value\030\007 \001(\0132\032.google.protobuf.T" +
-      "imestampB\010\272H\005\262\001\002@\001R\ngtNowValue\022J\n\014within" +
-      "_value\030\010 \001(\0132\032.google.protobuf.Timestamp" +
-      "B\013\272H\010\262\001\005J\003\010\220\034R\013withinValue\"\304\006\n\027FieldCons" +
-      "traintsExample\022[\n\neven_value\030\001 \001(\005B<\272H9\272" +
-      "\0016\n\nint32.even\022\031value must be even numbe" +
-      "r\032\rthis % 2 == 0R\tevenValue\022o\n\026required_" +
-      "message_value\030\002 \001(\01321.example.hello.v1.F" +
-      "ieldConstraintsExample.MyValueB\006\272H\003\310\001\001R\024" +
-      "requiredMessageValue\022:\n\025required_string_" +
-      "value\030\003 \001(\tB\006\272H\003\310\001\001R\023requiredStringValue" +
-      "\0228\n\024required_int32_value\030\004 \001(\005B\006\272H\003\310\001\001R\022" +
-      "requiredInt32Value\022h\n\023required_enum_valu" +
-      "e\030\005 \001(\01620.example.hello.v1.FieldConstrai" +
-      "ntsExample.StatusB\006\272H\003\310\001\001R\021requiredEnumV" +
-      "alue\022>\n\027required_repeated_value\030\006 \003(\tB\006\272" +
-      "H\003\310\001\001R\025requiredRepeatedValue\022u\n\022required" +
-      "_map_value\030\007 \003(\0132?.example.hello.v1.Fiel" +
-      "dConstraintsExample.RequiredMapValueEntr" +
-      "yB\006\272H\003\310\001\001R\020requiredMapValue\022-\n\014ignore_va" +
-      "lue\030\010 \001(\tB\n\272H\007r\002`\001\330\001\001R\013ignoreValue\032\037\n\007My" +
-      "Value\022\024\n\005value\030\001 \001(\005R\005value\032C\n\025RequiredM" +
-      "apValueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030" +
-      "\002 \001(\tR\005value:\0028\001\"/\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\r\n\tSTATUS_OK\020\001b\006proto3"
+      "\n\020v1/example.proto\022\nexample.v1\032\033buf/vali" +
+      "date/validate.proto\032\037google/api/field_be" +
+      "havior.proto\032\033google/api/visibility.prot" +
+      "o\032\031google/protobuf/any.proto\032\036google/pro" +
+      "tobuf/duration.proto\032\037google/protobuf/ti" +
+      "mestamp.proto\"B\n\021DeprecatedExample\022-\n\020de" +
+      "precated_value\030\001 \001(\tB\002\030\001R\017deprecatedValu" +
+      "e\"J\n\014OneofExample\022\024\n\004val1\030\001 \001(\tH\000R\004val1\022" +
+      "\024\n\004val2\030\002 \001(\tH\000R\004val2B\016\n\005union\022\005\272H\002\010\001\"h\n" +
+      "\022IgnoreEmptyExample\022\032\n\004val1\030\001 \001(\tB\006\272H\003\330\001" +
+      "\002R\004val1\022\032\n\004val2\030\002 \001(\tB\006\272H\003\330\001\003R\004val2\022\032\n\004v" +
+      "al3\030\003 \001(\tB\006\272H\003\330\001\001R\004val3\"\316\014\n\027StringValida" +
+      "tionExample\022-\n\013const_value\030\001 \001(\tB\014\272H\tr\007\n" +
+      "\005constR\nconstValue\022%\n\tlen_value\030\002 \001(\tB\010\272" +
+      "H\005r\003\230\001\005R\010lenValue\022+\n\rmin_len_value\030\003 \001(\t" +
+      "B\007\272H\004r\002\020\005R\013minLenValue\022+\n\rmax_len_value\030" +
+      "\004 \001(\tB\007\272H\004r\002\030\005R\013maxLenValue\0220\n\017len_bytes" +
+      "_value\030\005 \001(\tB\010\272H\005r\003\240\001\002R\rlenBytesValue\022/\n" +
+      "\017min_bytes_value\030\006 \001(\tB\007\272H\004r\002 \002R\rminByte" +
+      "sValue\022/\n\017max_bytes_value\030\007 \001(\tB\007\272H\004r\002(\002" +
+      "R\rmaxBytesValue\0227\n\rpattern_value\030\010 \001(\tB\022" +
+      "\272H\017r\r2\013^hello, .*$R\014patternValue\022/\n\014pref" +
+      "ix_value\030\t \001(\tB\014\272H\tr\007:\005HelloR\013prefixValu" +
+      "e\022/\n\014suffix_value\030\n \001(\tB\014\272H\tr\007B\005WorldR\013s" +
+      "uffixValue\0224\n\016contains_value\030\013 \001(\tB\r\272H\nr" +
+      "\010J\006bananaR\rcontainsValue\022<\n\022not_contains" +
+      "_value\030\014 \001(\tB\016\272H\013r\t\272\001\006bananaR\020notContain" +
+      "sValue\022)\n\010in_value\030\r \001(\tB\016\272H\013r\tR\001AR\001BR\001C" +
+      "R\007inValue\0220\n\014not_in_value\030\016 \001(\tB\016\272H\013r\tZ\001" +
+      "AZ\001BZ\001CR\nnotInValue\022(\n\013email_value\030\017 \001(\t" +
+      "B\007\272H\004r\002`\001R\nemailValue\022.\n\016hostname_value\030" +
+      "\020 \001(\tB\007\272H\004r\002h\001R\rhostnameValue\022\"\n\010ip_valu" +
+      "e\030\021 \001(\tB\007\272H\004r\002p\001R\007ipValue\022&\n\nipv4_value\030" +
+      "\022 \001(\tB\007\272H\004r\002x\001R\tipv4Value\022\'\n\nipv6_value\030" +
+      "\023 \001(\tB\010\272H\005r\003\200\001\001R\tipv6Value\022%\n\turi_value\030" +
+      "\024 \001(\tB\010\272H\005r\003\210\001\001R\010uriValue\022,\n\ruri_ref_val" +
+      "ue\030\025 \001(\tB\010\272H\005r\003\220\001\001R\013uriRefValue\022-\n\raddre" +
+      "ss_value\030\026 \001(\tB\010\272H\005r\003\250\001\001R\014addressValue\022\'" +
+      "\n\nuuid_value\030\027 \001(\tB\010\272H\005r\003\260\001\001R\tuuidValue\022" +
+      ")\n\013tuuid_value\030\030 \001(\tB\010\272H\005r\003\210\002\001R\ntuuidVal" +
+      "ue\022?\n\027ip_with_preifxlen_value\030\031 \001(\tB\010\272H\005" +
+      "r\003\320\001\001R\024ipWithPreifxlenValue\022C\n\031ipv4_with" +
+      "_preifxlen_value\030\032 \001(\tB\010\272H\005r\003\330\001\001R\026ipv4Wi" +
+      "thPreifxlenValue\022C\n\031ipv6_with_preifxlen_" +
+      "value\030\033 \001(\tB\010\272H\005r\003\340\001\001R\026ipv6WithPreifxlen" +
+      "Value\0220\n\017ip_prefix_value\030\034 \001(\tB\010\272H\005r\003\350\001\001" +
+      "R\ripPrefixValue\0222\n\020ip4_prefix_value\030\035 \001(" +
+      "\tB\010\272H\005r\003\360\001\001R\016ip4PrefixValue\0222\n\020ip6_prefi" +
+      "x_value\030\036 \001(\tB\010\272H\005r\003\370\001\001R\016ip6PrefixValue\022" +
+      "7\n\023host_and_port_value\030\037 \001(\tB\010\272H\005r\003\200\002\001R\020" +
+      "hostAndPortValue\022>\n\025well_kown_regex_valu" +
+      "e\030  \001(\tB\013\272H\010r\006\300\001\001\310\001\001R\022wellKownRegexValue" +
+      "\"i\n\025BoolValidationExample\022&\n\ntrue_value\030" +
+      "\001 \001(\010B\007\272H\004j\002\010\001R\ttrueValue\022(\n\013false_value" +
+      "\030\002 \001(\010B\007\272H\004j\002\010\000R\nfalseValue\"\346\004\n\026BytesVal" +
+      "idationExample\022,\n\013const_value\030\001 \001(\014B\013\272H\010" +
+      "z\006\n\004\001\002\003\004R\nconstValue\022$\n\tlen_value\030\002 \001(\014B" +
+      "\007\272H\004z\002h\004R\010lenValue\022+\n\rmin_len_value\030\003 \001(" +
+      "\014B\007\272H\004z\002\020\002R\013minLenValue\022+\n\rmax_len_value" +
+      "\030\004 \001(\014B\007\272H\004z\002\030\002R\013maxLenValue\022:\n\rpattern_" +
+      "value\030\005 \001(\014B\025\272H\022z\020\"\016^[a-zA-Z0-9]+$R\014patt" +
+      "ernValue\022,\n\014prefix_value\030\006 \001(\014B\t\272H\006z\004*\002\001" +
+      "\002R\013prefixValue\022,\n\014suffix_value\030\007 \001(\014B\t\272H" +
+      "\006z\0042\002\002\003R\013suffixValue\022/\n\016contains_value\030\010" +
+      " \001(\014B\010\272H\005z\003:\001\002R\rcontainsValue\022,\n\010in_valu" +
+      "e\030\t \001(\014B\021\272H\016z\014B\002\001\002B\002\002\003B\002\003\004R\007inValue\0223\n\014n" +
+      "ot_in_value\030\n \001(\014B\021\272H\016z\014J\002\001\002J\002\002\003J\002\003\004R\nno" +
+      "tInValue\022\"\n\010ip_value\030\013 \001(\014B\007\272H\004z\002P\001R\007ipV" +
+      "alue\022&\n\nipv4_value\030\014 \001(\014B\007\272H\004z\002X\001R\tipv4V" +
+      "alue\022&\n\nipv6_value\030\r \001(\014B\007\272H\004z\002`\001R\tipv6V" +
+      "alue\"\247\003\n\027DoubleValidationExample\022/\n\013cons" +
+      "t_value\030\001 \001(\001B\016\272H\013\022\t\t\000\000\000\000\000\000E@R\nconstValu" +
+      "e\022)\n\010lt_value\030\002 \001(\001B\016\272H\013\022\t\021\000\000\000\000\000\000$@R\007ltV" +
+      "alue\022+\n\tlte_value\030\003 \001(\001B\016\272H\013\022\t\031\000\000\000\000\000\000$@R" +
+      "\010lteValue\022)\n\010gt_value\030\004 \001(\001B\016\272H\013\022\t!\000\000\000\000\000" +
+      "\000$@R\007gtValue\022+\n\tgte_value\030\005 \001(\001B\016\272H\013\022\t)\000" +
+      "\000\000\000\000\000$@R\010gteValue\022;\n\010in_value\030\006 \001(\001B \272H\035" +
+      "\022\0331\000\000\000\000\000\000$@1\000\000\000\000\000\000&@1\000\000\000\000\000\000(@R\007inValue\022B" +
+      "\n\014not_in_value\030\007 \001(\001B \272H\035\022\0339\000\000\000\000\000\000$@9\000\000\000" +
+      "\000\000\000&@9\000\000\000\000\000\000(@R\nnotInValue\022*\n\014finite_val" +
+      "ue\030\010 \001(\001B\007\272H\004\022\002@\001R\013finiteValue\"\254\005\n\024MapVa" +
+      "lidationExample\022e\n\017min_pairs_value\030\001 \003(\013" +
+      "23.example.v1.MapValidationExample.MinPa" +
+      "irsValueEntryB\010\272H\005\232\001\002\010\002R\rminPairsValue\022e" +
+      "\n\017max_pairs_value\030\002 \003(\01323.example.v1.Map" +
+      "ValidationExample.MaxPairsValueEntryB\010\272H" +
+      "\005\232\001\002\020\002R\rmaxPairsValue\022^\n\nkeys_value\030\003 \003(" +
+      "\0132/.example.v1.MapValidationExample.Keys" +
+      "ValueEntryB\016\272H\013\232\001\010\"\006r\004\020\003\030\nR\tkeysValue\022d\n" +
+      "\014values_value\030\004 \003(\01321.example.v1.MapVali" +
+      "dationExample.ValuesValueEntryB\016\272H\013\232\001\010*\006" +
+      "r\004\020\003\030\nR\013valuesValue\032@\n\022MinPairsValueEntr" +
+      "y\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005valu" +
+      "e:\0028\001\032@\n\022MaxPairsValueEntry\022\020\n\003key\030\001 \001(\t" +
+      "R\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\032<\n\016KeysV" +
+      "alueEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001" +
+      "(\tR\005value:\0028\001\032>\n\020ValuesValueEntry\022\020\n\003key" +
+      "\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001\"\335\001" +
+      "\n\031RepeatedValidationExample\0220\n\017min_items" +
+      "_value\030\001 \003(\tB\010\272H\005\222\001\002\010\002R\rminItemsValue\0220\n" +
+      "\017max_items_value\030\002 \003(\tB\010\272H\005\222\001\002\020\002R\rmaxIte" +
+      "msValue\022+\n\014unique_value\030\003 \003(\tB\010\272H\005\222\001\002\030\001R" +
+      "\013uniqueValue\022/\n\013items_value\030\004 \003(\tB\016\272H\013\222\001" +
+      "\010\"\006r\004\020\003\030\nR\nitemsValue\"\323\002\n\024AnyValidationE" +
+      "xample\022\230\001\n\010in_value\030\001 \001(\0132\024.google.proto" +
+      "buf.AnyBg\272Hd\242\001a\022.type.googleapis.com/goo" +
+      "gle.protobuf.Int32Value\022/type.googleapis" +
+      ".com/google.protobuf.StringValueR\007inValu" +
+      "e\022\237\001\n\014not_in_value\030\002 \001(\0132\024.google.protob" +
+      "uf.AnyBg\272Hd\242\001a\032.type.googleapis.com/goog" +
+      "le.protobuf.Int32Value\032/type.googleapis." +
+      "com/google.protobuf.StringValueR\nnotInVa" +
+      "lue\"\212\004\n\031DurationValidationExample\022F\n\013con" +
+      "st_value\030\001 \001(\0132\031.google.protobuf.Duratio" +
+      "nB\n\272H\007\252\001\004\022\002\010\005R\nconstValue\022@\n\010lt_value\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationB\n\272H\007\252\001\004\032\002" +
+      "\010\005R\007ltValue\022B\n\tlte_value\030\003 \001(\0132\031.google." +
+      "protobuf.DurationB\n\272H\007\252\001\004\"\002\010\005R\010lteValue\022" +
+      "@\n\010gt_value\030\004 \001(\0132\031.google.protobuf.Dura" +
+      "tionB\n\272H\007\252\001\004*\002\010\005R\007gtValue\022B\n\tgte_value\030\005" +
+      " \001(\0132\031.google.protobuf.DurationB\n\272H\007\252\001\0042" +
+      "\002\010\005R\010gteValue\022H\n\010in_value\030\006 \001(\0132\031.google" +
+      ".protobuf.DurationB\022\272H\017\252\001\014:\002\010\005:\002\010\006:\002\010\007R\007" +
+      "inValue\022O\n\014not_in_value\030\007 \001(\0132\031.google.p" +
+      "rotobuf.DurationB\022\272H\017\252\001\014B\002\010\005B\002\010\006B\002\010\007R\nno" +
+      "tInValue\"\326\003\n\025EnumValidationExample\022S\n\013co" +
+      "nst_value\030\001 \001(\0162(.example.v1.EnumValidat" +
+      "ionExample.MyEnumB\010\272H\005\202\001\002\010\001R\nconstValue\022" +
+      "`\n\022defined_only_value\030\002 \001(\0162(.example.v1" +
+      ".EnumValidationExample.MyEnumB\010\272H\005\202\001\002\020\001R" +
+      "\020definedOnlyValue\022O\n\010in_value\030\003 \001(\0162(.ex" +
+      "ample.v1.EnumValidationExample.MyEnumB\n\272" +
+      "H\007\202\001\004\030\001\030\002R\007inValue\022V\n\014not_in_value\030\004 \001(\016" +
+      "2(.example.v1.EnumValidationExample.MyEn" +
+      "umB\n\272H\007\202\001\004 \001 \002R\nnotInValue\"]\n\006MyEnum\022\027\n\023" +
+      "MY_ENUM_UNSPECIFIED\020\000\022\022\n\016MY_ENUM_VALUE1\020" +
+      "\001\022\022\n\016MY_ENUM_VALUE2\020\002\022\022\n\016MY_ENUM_VALUE3\020" +
+      "\003\"\345\004\n\032TimestampValidationExample\022K\n\013cons" +
+      "t_value\030\001 \001(\0132\032.google.protobuf.Timestam" +
+      "pB\016\272H\013\262\001\010\022\006\010\300\340\366\262\006R\nconstValue\022E\n\010lt_valu" +
+      "e\030\002 \001(\0132\032.google.protobuf.TimestampB\016\272H\013" +
+      "\262\001\010\032\006\010\300\340\366\262\006R\007ltValue\022G\n\tlte_value\030\003 \001(\0132" +
+      "\032.google.protobuf.TimestampB\016\272H\013\262\001\010\"\006\010\300\340" +
+      "\366\262\006R\010lteValue\022F\n\014lt_now_value\030\004 \001(\0132\032.go" +
+      "ogle.protobuf.TimestampB\010\272H\005\262\001\0028\001R\nltNow" +
+      "Value\022E\n\010gt_value\030\005 \001(\0132\032.google.protobu" +
+      "f.TimestampB\016\272H\013\262\001\010*\006\010\300\340\366\262\006R\007gtValue\022G\n\t" +
+      "gte_value\030\006 \001(\0132\032.google.protobuf.Timest" +
+      "ampB\016\272H\013\262\001\0102\006\010\300\340\366\262\006R\010gteValue\022F\n\014gt_now_" +
+      "value\030\007 \001(\0132\032.google.protobuf.TimestampB" +
+      "\010\272H\005\262\001\002@\001R\ngtNowValue\022J\n\014within_value\030\010 " +
+      "\001(\0132\032.google.protobuf.TimestampB\013\272H\010\262\001\005J" +
+      "\003\010\220\034R\013withinValue\"\254\002\n\025GoogleApiFieldExam" +
+      "ple\022>\n\ncreated_at\030\001 \001(\0132\032.google.protobu" +
+      "f.TimestampB\003\340A\003R\tcreatedAt\022>\n\nupdated_a" +
+      "t\030\002 \001(\0132\032.google.protobuf.TimestampB\003\340A\004" +
+      "R\tupdatedAt\022@\n\013required_at\030\003 \001(\0132\032.googl" +
+      "e.protobuf.TimestampB\003\340A\002R\nrequiredAt\022@\n" +
+      "\013optional_at\030\004 \001(\0132\032.google.protobuf.Tim" +
+      "estampB\003\340A\001R\noptionalAt:\017\372\322\344\223\002\t\022\007PREVIEW" +
+      "\"v\n\027FieldConstraintsExample\022[\n\neven_valu" +
+      "e\030\001 \001(\005B<\272H9\272\0016\n\nint32.even\022\031value must " +
+      "be even number\032\rthis % 2 == 0R\tevenValue" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           build.buf.validate.ValidateProto.getDescriptor(),
+          com.google.api.FieldBehaviorProto.getDescriptor(),
+          com.google.api.VisibilityProto.getDescriptor(),
           com.google.protobuf.AnyProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
-    internal_static_example_hello_v1_Hello_descriptor =
+    internal_static_example_v1_DeprecatedExample_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_example_hello_v1_Hello_fieldAccessorTable = new
+    internal_static_example_v1_DeprecatedExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_Hello_descriptor,
-        new java.lang.String[] { "Hello", });
-    internal_static_example_hello_v1_DisabledExample_descriptor =
+        internal_static_example_v1_DeprecatedExample_descriptor,
+        new java.lang.String[] { "DeprecatedValue", });
+    internal_static_example_v1_OneofExample_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_example_hello_v1_DisabledExample_fieldAccessorTable = new
+    internal_static_example_v1_OneofExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_DisabledExample_descriptor,
-        new java.lang.String[] { "Val", });
-    internal_static_example_hello_v1_OneofExample_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_example_hello_v1_OneofExample_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_OneofExample_descriptor,
+        internal_static_example_v1_OneofExample_descriptor,
         new java.lang.String[] { "Val1", "Val2", "Union", });
-    internal_static_example_hello_v1_StringValidationExample_descriptor =
+    internal_static_example_v1_IgnoreEmptyExample_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_example_v1_IgnoreEmptyExample_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_example_v1_IgnoreEmptyExample_descriptor,
+        new java.lang.String[] { "Val1", "Val2", "Val3", });
+    internal_static_example_v1_StringValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_example_hello_v1_StringValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_StringValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_StringValidationExample_descriptor,
+        internal_static_example_v1_StringValidationExample_descriptor,
         new java.lang.String[] { "ConstValue", "LenValue", "MinLenValue", "MaxLenValue", "LenBytesValue", "MinBytesValue", "MaxBytesValue", "PatternValue", "PrefixValue", "SuffixValue", "ContainsValue", "NotContainsValue", "InValue", "NotInValue", "EmailValue", "HostnameValue", "IpValue", "Ipv4Value", "Ipv6Value", "UriValue", "UriRefValue", "AddressValue", "UuidValue", "TuuidValue", "IpWithPreifxlenValue", "Ipv4WithPreifxlenValue", "Ipv6WithPreifxlenValue", "IpPrefixValue", "Ip4PrefixValue", "Ip6PrefixValue", "HostAndPortValue", "WellKownRegexValue", });
-    internal_static_example_hello_v1_BoolValidationExample_descriptor =
+    internal_static_example_v1_BoolValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_example_hello_v1_BoolValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_BoolValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_BoolValidationExample_descriptor,
+        internal_static_example_v1_BoolValidationExample_descriptor,
         new java.lang.String[] { "TrueValue", "FalseValue", });
-    internal_static_example_hello_v1_BytesValidationExample_descriptor =
+    internal_static_example_v1_BytesValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_example_hello_v1_BytesValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_BytesValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_BytesValidationExample_descriptor,
+        internal_static_example_v1_BytesValidationExample_descriptor,
         new java.lang.String[] { "ConstValue", "LenValue", "MinLenValue", "MaxLenValue", "PatternValue", "PrefixValue", "SuffixValue", "ContainsValue", "InValue", "NotInValue", "IpValue", "Ipv4Value", "Ipv6Value", });
-    internal_static_example_hello_v1_DoubleValidationExample_descriptor =
+    internal_static_example_v1_DoubleValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(6);
-    internal_static_example_hello_v1_DoubleValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_DoubleValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_DoubleValidationExample_descriptor,
+        internal_static_example_v1_DoubleValidationExample_descriptor,
         new java.lang.String[] { "ConstValue", "LtValue", "LteValue", "GtValue", "GteValue", "InValue", "NotInValue", "FiniteValue", });
-    internal_static_example_hello_v1_EnumValidationExample_descriptor =
+    internal_static_example_v1_MapValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_example_hello_v1_EnumValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_MapValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_EnumValidationExample_descriptor,
-        new java.lang.String[] { "ConstValue", "DefinedOnlyValue", "InValue", "NotInValue", });
-    internal_static_example_hello_v1_MapValidationExample_descriptor =
-      getDescriptor().getMessageTypes().get(8);
-    internal_static_example_hello_v1_MapValidationExample_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_MapValidationExample_descriptor,
+        internal_static_example_v1_MapValidationExample_descriptor,
         new java.lang.String[] { "MinPairsValue", "MaxPairsValue", "KeysValue", "ValuesValue", });
-    internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_descriptor =
-      internal_static_example_hello_v1_MapValidationExample_descriptor.getNestedTypes().get(0);
-    internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_fieldAccessorTable = new
+    internal_static_example_v1_MapValidationExample_MinPairsValueEntry_descriptor =
+      internal_static_example_v1_MapValidationExample_descriptor.getNestedTypes().get(0);
+    internal_static_example_v1_MapValidationExample_MinPairsValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_MapValidationExample_MinPairsValueEntry_descriptor,
+        internal_static_example_v1_MapValidationExample_MinPairsValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_descriptor =
-      internal_static_example_hello_v1_MapValidationExample_descriptor.getNestedTypes().get(1);
-    internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_fieldAccessorTable = new
+    internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_descriptor =
+      internal_static_example_v1_MapValidationExample_descriptor.getNestedTypes().get(1);
+    internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_MapValidationExample_MaxPairsValueEntry_descriptor,
+        internal_static_example_v1_MapValidationExample_MaxPairsValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_descriptor =
-      internal_static_example_hello_v1_MapValidationExample_descriptor.getNestedTypes().get(2);
-    internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_fieldAccessorTable = new
+    internal_static_example_v1_MapValidationExample_KeysValueEntry_descriptor =
+      internal_static_example_v1_MapValidationExample_descriptor.getNestedTypes().get(2);
+    internal_static_example_v1_MapValidationExample_KeysValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_MapValidationExample_KeysValueEntry_descriptor,
+        internal_static_example_v1_MapValidationExample_KeysValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_descriptor =
-      internal_static_example_hello_v1_MapValidationExample_descriptor.getNestedTypes().get(3);
-    internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_fieldAccessorTable = new
+    internal_static_example_v1_MapValidationExample_ValuesValueEntry_descriptor =
+      internal_static_example_v1_MapValidationExample_descriptor.getNestedTypes().get(3);
+    internal_static_example_v1_MapValidationExample_ValuesValueEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_MapValidationExample_ValuesValueEntry_descriptor,
+        internal_static_example_v1_MapValidationExample_ValuesValueEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_example_hello_v1_RepeatedValidationExample_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_example_hello_v1_RepeatedValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_RepeatedValidationExample_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_example_v1_RepeatedValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_RepeatedValidationExample_descriptor,
+        internal_static_example_v1_RepeatedValidationExample_descriptor,
         new java.lang.String[] { "MinItemsValue", "MaxItemsValue", "UniqueValue", "ItemsValue", });
-    internal_static_example_hello_v1_AnyValidationExample_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_example_hello_v1_AnyValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_AnyValidationExample_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_example_v1_AnyValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_AnyValidationExample_descriptor,
+        internal_static_example_v1_AnyValidationExample_descriptor,
         new java.lang.String[] { "InValue", "NotInValue", });
-    internal_static_example_hello_v1_DurationValidationExample_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_example_hello_v1_DurationValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_DurationValidationExample_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_example_v1_DurationValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_DurationValidationExample_descriptor,
+        internal_static_example_v1_DurationValidationExample_descriptor,
         new java.lang.String[] { "ConstValue", "LtValue", "LteValue", "GtValue", "GteValue", "InValue", "NotInValue", });
-    internal_static_example_hello_v1_TimestampValidationExample_descriptor =
+    internal_static_example_v1_EnumValidationExample_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_example_v1_EnumValidationExample_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_example_v1_EnumValidationExample_descriptor,
+        new java.lang.String[] { "ConstValue", "DefinedOnlyValue", "InValue", "NotInValue", });
+    internal_static_example_v1_TimestampValidationExample_descriptor =
       getDescriptor().getMessageTypes().get(12);
-    internal_static_example_hello_v1_TimestampValidationExample_fieldAccessorTable = new
+    internal_static_example_v1_TimestampValidationExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_TimestampValidationExample_descriptor,
+        internal_static_example_v1_TimestampValidationExample_descriptor,
         new java.lang.String[] { "ConstValue", "LtValue", "LteValue", "LtNowValue", "GtValue", "GteValue", "GtNowValue", "WithinValue", });
-    internal_static_example_hello_v1_FieldConstraintsExample_descriptor =
+    internal_static_example_v1_GoogleApiFieldExample_descriptor =
       getDescriptor().getMessageTypes().get(13);
-    internal_static_example_hello_v1_FieldConstraintsExample_fieldAccessorTable = new
+    internal_static_example_v1_GoogleApiFieldExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_FieldConstraintsExample_descriptor,
-        new java.lang.String[] { "EvenValue", "RequiredMessageValue", "RequiredStringValue", "RequiredInt32Value", "RequiredEnumValue", "RequiredRepeatedValue", "RequiredMapValue", "IgnoreValue", });
-    internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor =
-      internal_static_example_hello_v1_FieldConstraintsExample_descriptor.getNestedTypes().get(0);
-    internal_static_example_hello_v1_FieldConstraintsExample_MyValue_fieldAccessorTable = new
+        internal_static_example_v1_GoogleApiFieldExample_descriptor,
+        new java.lang.String[] { "CreatedAt", "UpdatedAt", "RequiredAt", "OptionalAt", });
+    internal_static_example_v1_FieldConstraintsExample_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_example_v1_FieldConstraintsExample_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_FieldConstraintsExample_MyValue_descriptor,
-        new java.lang.String[] { "Value", });
-    internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_descriptor =
-      internal_static_example_hello_v1_FieldConstraintsExample_descriptor.getNestedTypes().get(1);
-    internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_example_hello_v1_FieldConstraintsExample_RequiredMapValueEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        internal_static_example_v1_FieldConstraintsExample_descriptor,
+        new java.lang.String[] { "EvenValue", });
     descriptor.resolveAllFeaturesImmutable();
     build.buf.validate.ValidateProto.getDescriptor();
+    com.google.api.FieldBehaviorProto.getDescriptor();
+    com.google.api.VisibilityProto.getDescriptor();
     com.google.protobuf.AnyProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(build.buf.validate.ValidateProto.field);
-    registry.add(build.buf.validate.ValidateProto.message);
     registry.add(build.buf.validate.ValidateProto.oneof);
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
+    registry.add(com.google.api.VisibilityProto.messageVisibility);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
   }

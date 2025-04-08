@@ -10,24 +10,35 @@ import { Any } from "../google/protobuf/any";
 import { Duration } from "../google/protobuf/duration";
 import { Timestamp } from "../google/protobuf/timestamp";
 
-export const protobufPackage = "example.hello.v1";
+export const protobufPackage = "example.v1";
 
-/** proto_validate_examples.proto */
-
-/** 文字列に1文字以上が必要なとき */
-export interface Hello {
-  hello: string;
-}
-
-/** メッセージ全体のバリデーションを無効にしたいとき */
-export interface DisabledExample {
-  val: string;
+/** 非推奨のフィールドを使いたいとき */
+export interface DeprecatedExample {
+  /**
+   * 非推奨のフィールドを使いたいとき
+   *
+   * @deprecated
+   */
+  deprecatedValue: string;
 }
 
 /** oneofフィールドのうち、どれか一つは必須にしたいとき */
 export interface OneofExample {
   val1?: string | undefined;
   val2?: string | undefined;
+}
+
+/** ignore_empty */
+export interface IgnoreEmptyExample {
+  /** Stingなら空文字列、int32ならゼロ値のようにdefault値を持つフィールドを無視したいとき */
+  val1: string;
+  /** 常にバリデーションをスキップする */
+  val2: string;
+  /**
+   * リクエストボディに値がないときだけバリデーションをスキップする
+   * ただし、リクエストボディに値がある場合はバリデーションを実行する
+   */
+  val3: string;
 }
 
 /** 各種文字列バリデーションを試したいとき */
@@ -93,8 +104,9 @@ export interface StringValidationExample {
   wellKownRegexValue: string;
 }
 
-/** 真偽値がtrueに限定されるとき */
+/** bool型の値を制限したいとき */
 export interface BoolValidationExample {
+  /** 真偽値がtrueに限定されるとき */
   trueValue: boolean;
   /** 真偽値がfalseに限定されるとき */
   falseValue: boolean;
@@ -132,29 +144,134 @@ export interface BytesValidationExample {
 
 /** 数値（浮動小数点）の条件をつけたいとき */
 export interface DoubleValidationExample {
+  /** 値が 42.0 である必要がある */
   constValue: number;
+  /** 10.0 より小さい値である必要がある（9.9など） */
   ltValue: number;
+  /** 10.0 以下の値である必要がある（10.0もOK） */
   lteValue: number;
+  /** 10.0 より大きい値である必要がある（10.1など） */
   gtValue: number;
+  /** 10.0 以上の値である必要がある（10.0もOK） */
   gteValue: number;
+  /** 10.0, 11.0, 12.0 のいずれかでなければならない */
   inValue: number;
+  /** 10.0, 11.0, 12.0 は使用禁止（それ以外の値ならOK） */
   notInValue: number;
-  /** 無限大やNaNを弾きたいとき */
+  /** 無限大や NaN を拒否したいとき（finite = true） */
   finiteValue: number;
+}
+
+/** Mapのサイズやキー・値の制約をしたいとき */
+export interface MapValidationExample {
+  minPairsValue: { [key: string]: string };
+  maxPairsValue: { [key: string]: string };
+  keysValue: { [key: string]: string };
+  valuesValue: { [key: string]: string };
+}
+
+export interface MapValidationExample_MinPairsValueEntry {
+  key: string;
+  value: string;
+}
+
+export interface MapValidationExample_MaxPairsValueEntry {
+  key: string;
+  value: string;
+}
+
+export interface MapValidationExample_KeysValueEntry {
+  key: string;
+  value: string;
+}
+
+export interface MapValidationExample_ValuesValueEntry {
+  key: string;
+  value: string;
+}
+
+/** 繰り返しフィールドの制約をかけたいとき */
+export interface RepeatedValidationExample {
+  /** 繰り返しフィールドの最小要素数を指定したいとき */
+  minItemsValue: string[];
+  /** 繰り返しフィールドの最大要素数を指定したいとき */
+  maxItemsValue: string[];
+  /** 繰り返しフィールドの要素に対して、ユニークな値を要求したいとき */
+  uniqueValue: string[];
+  /** 繰り返しフィールドの要素に対して、特定の長さを要求したいとき */
+  itemsValue: string[];
+}
+
+/** Any型のタイプを制限したいとき */
+export interface AnyValidationExample {
+  /**
+   * int32やstringのAny型を許可したいとき
+   * ただし、Any型の中身はint32やstringである必要がある
+   */
+  inValue:
+    | Any
+    | undefined;
+  /**
+   * int32やstringのAny型を許可したくないとき
+   * ただし、Any型の中身はint32やstring 以外である必要がある
+   */
+  notInValue: Any | undefined;
+}
+
+/**
+ * Durationの比較をしたいとき
+ * Durationの比較をしたいとき
+ */
+export interface DurationValidationExample {
+  /** 指定された秒数と正確に一致している必要があるとき */
+  constValue:
+    | Duration
+    | undefined;
+  /** 指定された秒数より短い必要があるとき */
+  ltValue:
+    | Duration
+    | undefined;
+  /** 指定された秒数以下である必要があるとき */
+  lteValue:
+    | Duration
+    | undefined;
+  /** 指定された秒数より長い必要があるとき */
+  gtValue:
+    | Duration
+    | undefined;
+  /** 指定された秒数以上である必要があるとき */
+  gteValue:
+    | Duration
+    | undefined;
+  /** 指定された複数の候補の中のいずれかに一致している必要があるとき */
+  inValue:
+    | Duration
+    | undefined;
+  /** 指定された複数の値以外でなければならないとき */
+  notInValue: Duration | undefined;
 }
 
 /** 列挙型（enum）の値制限をしたいとき */
 export interface EnumValidationExample {
+  /** 特定の値だけを許可 */
   constValue: EnumValidationExample_MyEnum;
+  /** enumに定義された値のみ許可（未定義の数値はエラー） */
   definedOnlyValue: EnumValidationExample_MyEnum;
+  /** 指定した値（1または2）のみ許容 */
   inValue: EnumValidationExample_MyEnum;
+  /** 指定した値（1と2）以外のみ許容 */
   notInValue: EnumValidationExample_MyEnum;
 }
 
+/** 列挙型の定義 */
 export enum EnumValidationExample_MyEnum {
+  /** MY_ENUM_UNSPECIFIED - 未指定（デフォルト） */
   MY_ENUM_UNSPECIFIED = 0,
+  /** MY_ENUM_VALUE1 - 値1 */
   MY_ENUM_VALUE1 = 1,
+  /** MY_ENUM_VALUE2 - 値2 */
   MY_ENUM_VALUE2 = 2,
+  /** MY_ENUM_VALUE3 - 値3 */
   MY_ENUM_VALUE3 = 3,
   UNRECOGNIZED = -1,
 }
@@ -196,141 +313,79 @@ export function enumValidationExample_MyEnumToJSON(object: EnumValidationExample
   }
 }
 
-/** Mapのサイズやキー・値の制約をしたいとき */
-export interface MapValidationExample {
-  minPairsValue: { [key: string]: string };
-  maxPairsValue: { [key: string]: string };
-  keysValue: { [key: string]: string };
-  valuesValue: { [key: string]: string };
-}
-
-export interface MapValidationExample_MinPairsValueEntry {
-  key: string;
-  value: string;
-}
-
-export interface MapValidationExample_MaxPairsValueEntry {
-  key: string;
-  value: string;
-}
-
-export interface MapValidationExample_KeysValueEntry {
-  key: string;
-  value: string;
-}
-
-export interface MapValidationExample_ValuesValueEntry {
-  key: string;
-  value: string;
-}
-
-/** 繰り返しフィールドの制約をかけたいとき */
-export interface RepeatedValidationExample {
-  minItemsValue: string[];
-  maxItemsValue: string[];
-  uniqueValue: string[];
-  itemsValue: string[];
-}
-
-/** Any型のタイプを制限したいとき */
-export interface AnyValidationExample {
-  inValue: Any | undefined;
-  notInValue: Any | undefined;
-}
-
-/** Durationの比較をしたいとき */
-export interface DurationValidationExample {
-  constValue: Duration | undefined;
-  ltValue: Duration | undefined;
-  lteValue: Duration | undefined;
-  gtValue: Duration | undefined;
-  gteValue: Duration | undefined;
-  inValue: Duration | undefined;
-  notInValue: Duration | undefined;
-}
-
 /** Timestampの比較をしたいとき */
 export interface TimestampValidationExample {
-  constValue: Date | undefined;
-  ltValue: Date | undefined;
-  lteValue: Date | undefined;
-  ltNowValue: Date | undefined;
-  gtValue: Date | undefined;
-  gteValue: Date | undefined;
-  gtNowValue: Date | undefined;
+  /** 指定された時刻と一致している必要があるとき */
+  constValue:
+    | Date
+    | undefined;
+  /** 指定された時刻よりも前である必要があるとき */
+  ltValue:
+    | Date
+    | undefined;
+  /** 指定された時刻以前（同じでもOK）である必要があるとき */
+  lteValue:
+    | Date
+    | undefined;
+  /** 現在時刻よりも前である必要があるとき */
+  ltNowValue:
+    | Date
+    | undefined;
+  /** 指定された時刻よりも後である必要があるとき */
+  gtValue:
+    | Date
+    | undefined;
+  /** 指定された時刻以降（同じでもOK）である必要があるとき */
+  gteValue:
+    | Date
+    | undefined;
+  /** 現在時刻よりも後である必要があるとき */
+  gtNowValue:
+    | Date
+    | undefined;
+  /** 現在時刻の前後N秒以内である必要があるとき（この例では±1時間） */
   withinValue: Date | undefined;
+}
+
+export interface GoogleApiFieldExample {
+  /** サーバーからの出力専用フィールド（リクエストに含めても無視される） */
+  createdAt:
+    | Date
+    | undefined;
+  /** クライアントからの入力専用フィールド（レスポンスには含まれない） */
+  updatedAt:
+    | Date
+    | undefined;
+  /** リクエスト時に必須のフィールド（未指定ならバリデーションエラー） */
+  requiredAt:
+    | Date
+    | undefined;
+  /** 明示的にオプション（省略可能）であることを示すフィールド */
+  optionalAt: Date | undefined;
 }
 
 /** CEL式で柔軟なルールを定義したいとき */
 export interface FieldConstraintsExample {
+  /** 偶数であることを検証するCEL式 */
   evenValue: number;
-  requiredMessageValue: FieldConstraintsExample_MyValue | undefined;
-  requiredStringValue: string;
-  requiredInt32Value: number;
-  requiredEnumValue: FieldConstraintsExample_Status;
-  requiredRepeatedValue: string[];
-  requiredMapValue: { [key: string]: string };
-  ignoreValue: string;
 }
 
-export enum FieldConstraintsExample_Status {
-  STATUS_UNSPECIFIED = 0,
-  STATUS_OK = 1,
-  UNRECOGNIZED = -1,
+function createBaseDeprecatedExample(): DeprecatedExample {
+  return { deprecatedValue: "" };
 }
 
-export function fieldConstraintsExample_StatusFromJSON(object: any): FieldConstraintsExample_Status {
-  switch (object) {
-    case 0:
-    case "STATUS_UNSPECIFIED":
-      return FieldConstraintsExample_Status.STATUS_UNSPECIFIED;
-    case 1:
-    case "STATUS_OK":
-      return FieldConstraintsExample_Status.STATUS_OK;
-    case -1:
-    case "UNRECOGNIZED":
-    default:
-      return FieldConstraintsExample_Status.UNRECOGNIZED;
-  }
-}
-
-export function fieldConstraintsExample_StatusToJSON(object: FieldConstraintsExample_Status): string {
-  switch (object) {
-    case FieldConstraintsExample_Status.STATUS_UNSPECIFIED:
-      return "STATUS_UNSPECIFIED";
-    case FieldConstraintsExample_Status.STATUS_OK:
-      return "STATUS_OK";
-    case FieldConstraintsExample_Status.UNRECOGNIZED:
-    default:
-      return "UNRECOGNIZED";
-  }
-}
-
-export interface FieldConstraintsExample_MyValue {
-  value: number;
-}
-
-export interface FieldConstraintsExample_RequiredMapValueEntry {
-  key: string;
-  value: string;
-}
-
-function createBaseHello(): Hello {
-  return { hello: "" };
-}
-
-export const Hello: MessageFns<Hello> = {
-  encode(message: Hello, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
-    if (message.hello !== "") {
-      writer.uint32(10).string(message.hello);
+export const DeprecatedExample: MessageFns<DeprecatedExample> = {
+  encode(message: DeprecatedExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.deprecatedValue !== "") {
+      writer.uint32(10).string(message.deprecatedValue);
     }
     return writer;
   },
 
-  decode(input: BinaryReader | Uint8Array, length?: number): Hello {
+  decode(input: BinaryReader | Uint8Array, length?: number): DeprecatedExample {
     const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
     let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseHello();
+    const message = createBaseDeprecatedExample();
     while (reader.pos < end) {
       const tag = reader.uint32();
       switch (tag >>> 3) {
@@ -339,7 +394,7 @@ export const Hello: MessageFns<Hello> = {
             break;
           }
 
-          message.hello = reader.string();
+          message.deprecatedValue = reader.string();
           continue;
         }
       }
@@ -351,82 +406,24 @@ export const Hello: MessageFns<Hello> = {
     return message;
   },
 
-  fromJSON(object: any): Hello {
-    return { hello: isSet(object.hello) ? globalThis.String(object.hello) : "" };
+  fromJSON(object: any): DeprecatedExample {
+    return { deprecatedValue: isSet(object.deprecatedValue) ? globalThis.String(object.deprecatedValue) : "" };
   },
 
-  toJSON(message: Hello): unknown {
+  toJSON(message: DeprecatedExample): unknown {
     const obj: any = {};
-    if (message.hello !== "") {
-      obj.hello = message.hello;
+    if (message.deprecatedValue !== "") {
+      obj.deprecatedValue = message.deprecatedValue;
     }
     return obj;
   },
 
-  create<I extends Exact<DeepPartial<Hello>, I>>(base?: I): Hello {
-    return Hello.fromPartial(base ?? ({} as any));
+  create<I extends Exact<DeepPartial<DeprecatedExample>, I>>(base?: I): DeprecatedExample {
+    return DeprecatedExample.fromPartial(base ?? ({} as any));
   },
-  fromPartial<I extends Exact<DeepPartial<Hello>, I>>(object: I): Hello {
-    const message = createBaseHello();
-    message.hello = object.hello ?? "";
-    return message;
-  },
-};
-
-function createBaseDisabledExample(): DisabledExample {
-  return { val: "" };
-}
-
-export const DisabledExample: MessageFns<DisabledExample> = {
-  encode(message: DisabledExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
-    if (message.val !== "") {
-      writer.uint32(10).string(message.val);
-    }
-    return writer;
-  },
-
-  decode(input: BinaryReader | Uint8Array, length?: number): DisabledExample {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseDisabledExample();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1: {
-          if (tag !== 10) {
-            break;
-          }
-
-          message.val = reader.string();
-          continue;
-        }
-      }
-      if ((tag & 7) === 4 || tag === 0) {
-        break;
-      }
-      reader.skip(tag & 7);
-    }
-    return message;
-  },
-
-  fromJSON(object: any): DisabledExample {
-    return { val: isSet(object.val) ? globalThis.String(object.val) : "" };
-  },
-
-  toJSON(message: DisabledExample): unknown {
-    const obj: any = {};
-    if (message.val !== "") {
-      obj.val = message.val;
-    }
-    return obj;
-  },
-
-  create<I extends Exact<DeepPartial<DisabledExample>, I>>(base?: I): DisabledExample {
-    return DisabledExample.fromPartial(base ?? ({} as any));
-  },
-  fromPartial<I extends Exact<DeepPartial<DisabledExample>, I>>(object: I): DisabledExample {
-    const message = createBaseDisabledExample();
-    message.val = object.val ?? "";
+  fromPartial<I extends Exact<DeepPartial<DeprecatedExample>, I>>(object: I): DeprecatedExample {
+    const message = createBaseDeprecatedExample();
+    message.deprecatedValue = object.deprecatedValue ?? "";
     return message;
   },
 };
@@ -503,6 +500,98 @@ export const OneofExample: MessageFns<OneofExample> = {
     const message = createBaseOneofExample();
     message.val1 = object.val1 ?? undefined;
     message.val2 = object.val2 ?? undefined;
+    return message;
+  },
+};
+
+function createBaseIgnoreEmptyExample(): IgnoreEmptyExample {
+  return { val1: "", val2: "", val3: "" };
+}
+
+export const IgnoreEmptyExample: MessageFns<IgnoreEmptyExample> = {
+  encode(message: IgnoreEmptyExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.val1 !== "") {
+      writer.uint32(10).string(message.val1);
+    }
+    if (message.val2 !== "") {
+      writer.uint32(18).string(message.val2);
+    }
+    if (message.val3 !== "") {
+      writer.uint32(26).string(message.val3);
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): IgnoreEmptyExample {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseIgnoreEmptyExample();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 10) {
+            break;
+          }
+
+          message.val1 = reader.string();
+          continue;
+        }
+        case 2: {
+          if (tag !== 18) {
+            break;
+          }
+
+          message.val2 = reader.string();
+          continue;
+        }
+        case 3: {
+          if (tag !== 26) {
+            break;
+          }
+
+          message.val3 = reader.string();
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): IgnoreEmptyExample {
+    return {
+      val1: isSet(object.val1) ? globalThis.String(object.val1) : "",
+      val2: isSet(object.val2) ? globalThis.String(object.val2) : "",
+      val3: isSet(object.val3) ? globalThis.String(object.val3) : "",
+    };
+  },
+
+  toJSON(message: IgnoreEmptyExample): unknown {
+    const obj: any = {};
+    if (message.val1 !== "") {
+      obj.val1 = message.val1;
+    }
+    if (message.val2 !== "") {
+      obj.val2 = message.val2;
+    }
+    if (message.val3 !== "") {
+      obj.val3 = message.val3;
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<IgnoreEmptyExample>, I>>(base?: I): IgnoreEmptyExample {
+    return IgnoreEmptyExample.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<IgnoreEmptyExample>, I>>(object: I): IgnoreEmptyExample {
+    const message = createBaseIgnoreEmptyExample();
+    message.val1 = object.val1 ?? "";
+    message.val2 = object.val2 ?? "";
+    message.val3 = object.val3 ?? "";
     return message;
   },
 };
@@ -1614,116 +1703,6 @@ export const DoubleValidationExample: MessageFns<DoubleValidationExample> = {
   },
 };
 
-function createBaseEnumValidationExample(): EnumValidationExample {
-  return { constValue: 0, definedOnlyValue: 0, inValue: 0, notInValue: 0 };
-}
-
-export const EnumValidationExample: MessageFns<EnumValidationExample> = {
-  encode(message: EnumValidationExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
-    if (message.constValue !== 0) {
-      writer.uint32(8).int32(message.constValue);
-    }
-    if (message.definedOnlyValue !== 0) {
-      writer.uint32(16).int32(message.definedOnlyValue);
-    }
-    if (message.inValue !== 0) {
-      writer.uint32(24).int32(message.inValue);
-    }
-    if (message.notInValue !== 0) {
-      writer.uint32(32).int32(message.notInValue);
-    }
-    return writer;
-  },
-
-  decode(input: BinaryReader | Uint8Array, length?: number): EnumValidationExample {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseEnumValidationExample();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1: {
-          if (tag !== 8) {
-            break;
-          }
-
-          message.constValue = reader.int32() as any;
-          continue;
-        }
-        case 2: {
-          if (tag !== 16) {
-            break;
-          }
-
-          message.definedOnlyValue = reader.int32() as any;
-          continue;
-        }
-        case 3: {
-          if (tag !== 24) {
-            break;
-          }
-
-          message.inValue = reader.int32() as any;
-          continue;
-        }
-        case 4: {
-          if (tag !== 32) {
-            break;
-          }
-
-          message.notInValue = reader.int32() as any;
-          continue;
-        }
-      }
-      if ((tag & 7) === 4 || tag === 0) {
-        break;
-      }
-      reader.skip(tag & 7);
-    }
-    return message;
-  },
-
-  fromJSON(object: any): EnumValidationExample {
-    return {
-      constValue: isSet(object.constValue) ? enumValidationExample_MyEnumFromJSON(object.constValue) : 0,
-      definedOnlyValue: isSet(object.definedOnlyValue)
-        ? enumValidationExample_MyEnumFromJSON(object.definedOnlyValue)
-        : 0,
-      inValue: isSet(object.inValue) ? enumValidationExample_MyEnumFromJSON(object.inValue) : 0,
-      notInValue: isSet(object.notInValue) ? enumValidationExample_MyEnumFromJSON(object.notInValue) : 0,
-    };
-  },
-
-  toJSON(message: EnumValidationExample): unknown {
-    const obj: any = {};
-    if (message.constValue !== 0) {
-      obj.constValue = enumValidationExample_MyEnumToJSON(message.constValue);
-    }
-    if (message.definedOnlyValue !== 0) {
-      obj.definedOnlyValue = enumValidationExample_MyEnumToJSON(message.definedOnlyValue);
-    }
-    if (message.inValue !== 0) {
-      obj.inValue = enumValidationExample_MyEnumToJSON(message.inValue);
-    }
-    if (message.notInValue !== 0) {
-      obj.notInValue = enumValidationExample_MyEnumToJSON(message.notInValue);
-    }
-    return obj;
-  },
-
-  create<I extends Exact<DeepPartial<EnumValidationExample>, I>>(base?: I): EnumValidationExample {
-    return EnumValidationExample.fromPartial(base ?? ({} as any));
-  },
-  fromPartial<I extends Exact<DeepPartial<EnumValidationExample>, I>>(object: I): EnumValidationExample {
-    const message = createBaseEnumValidationExample();
-    message.constValue = object.constValue ?? 0;
-    message.definedOnlyValue = object.definedOnlyValue ?? 0;
-    message.inValue = object.inValue ?? 0;
-    message.notInValue = object.notInValue ?? 0;
-    return message;
-  },
-};
-
 function createBaseMapValidationExample(): MapValidationExample {
   return { minPairsValue: {}, maxPairsValue: {}, keysValue: {}, valuesValue: {} };
 }
@@ -2614,6 +2593,116 @@ export const DurationValidationExample: MessageFns<DurationValidationExample> = 
   },
 };
 
+function createBaseEnumValidationExample(): EnumValidationExample {
+  return { constValue: 0, definedOnlyValue: 0, inValue: 0, notInValue: 0 };
+}
+
+export const EnumValidationExample: MessageFns<EnumValidationExample> = {
+  encode(message: EnumValidationExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.constValue !== 0) {
+      writer.uint32(8).int32(message.constValue);
+    }
+    if (message.definedOnlyValue !== 0) {
+      writer.uint32(16).int32(message.definedOnlyValue);
+    }
+    if (message.inValue !== 0) {
+      writer.uint32(24).int32(message.inValue);
+    }
+    if (message.notInValue !== 0) {
+      writer.uint32(32).int32(message.notInValue);
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): EnumValidationExample {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseEnumValidationExample();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 8) {
+            break;
+          }
+
+          message.constValue = reader.int32() as any;
+          continue;
+        }
+        case 2: {
+          if (tag !== 16) {
+            break;
+          }
+
+          message.definedOnlyValue = reader.int32() as any;
+          continue;
+        }
+        case 3: {
+          if (tag !== 24) {
+            break;
+          }
+
+          message.inValue = reader.int32() as any;
+          continue;
+        }
+        case 4: {
+          if (tag !== 32) {
+            break;
+          }
+
+          message.notInValue = reader.int32() as any;
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): EnumValidationExample {
+    return {
+      constValue: isSet(object.constValue) ? enumValidationExample_MyEnumFromJSON(object.constValue) : 0,
+      definedOnlyValue: isSet(object.definedOnlyValue)
+        ? enumValidationExample_MyEnumFromJSON(object.definedOnlyValue)
+        : 0,
+      inValue: isSet(object.inValue) ? enumValidationExample_MyEnumFromJSON(object.inValue) : 0,
+      notInValue: isSet(object.notInValue) ? enumValidationExample_MyEnumFromJSON(object.notInValue) : 0,
+    };
+  },
+
+  toJSON(message: EnumValidationExample): unknown {
+    const obj: any = {};
+    if (message.constValue !== 0) {
+      obj.constValue = enumValidationExample_MyEnumToJSON(message.constValue);
+    }
+    if (message.definedOnlyValue !== 0) {
+      obj.definedOnlyValue = enumValidationExample_MyEnumToJSON(message.definedOnlyValue);
+    }
+    if (message.inValue !== 0) {
+      obj.inValue = enumValidationExample_MyEnumToJSON(message.inValue);
+    }
+    if (message.notInValue !== 0) {
+      obj.notInValue = enumValidationExample_MyEnumToJSON(message.notInValue);
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<EnumValidationExample>, I>>(base?: I): EnumValidationExample {
+    return EnumValidationExample.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<EnumValidationExample>, I>>(object: I): EnumValidationExample {
+    const message = createBaseEnumValidationExample();
+    message.constValue = object.constValue ?? 0;
+    message.definedOnlyValue = object.definedOnlyValue ?? 0;
+    message.inValue = object.inValue ?? 0;
+    message.notInValue = object.notInValue ?? 0;
+    return message;
+  },
+};
+
 function createBaseTimestampValidationExample(): TimestampValidationExample {
   return {
     constValue: undefined,
@@ -2795,44 +2884,122 @@ export const TimestampValidationExample: MessageFns<TimestampValidationExample> 
   },
 };
 
+function createBaseGoogleApiFieldExample(): GoogleApiFieldExample {
+  return { createdAt: undefined, updatedAt: undefined, requiredAt: undefined, optionalAt: undefined };
+}
+
+export const GoogleApiFieldExample: MessageFns<GoogleApiFieldExample> = {
+  encode(message: GoogleApiFieldExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
+    if (message.createdAt !== undefined) {
+      Timestamp.encode(toTimestamp(message.createdAt), writer.uint32(10).fork()).join();
+    }
+    if (message.updatedAt !== undefined) {
+      Timestamp.encode(toTimestamp(message.updatedAt), writer.uint32(18).fork()).join();
+    }
+    if (message.requiredAt !== undefined) {
+      Timestamp.encode(toTimestamp(message.requiredAt), writer.uint32(26).fork()).join();
+    }
+    if (message.optionalAt !== undefined) {
+      Timestamp.encode(toTimestamp(message.optionalAt), writer.uint32(34).fork()).join();
+    }
+    return writer;
+  },
+
+  decode(input: BinaryReader | Uint8Array, length?: number): GoogleApiFieldExample {
+    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = createBaseGoogleApiFieldExample();
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1: {
+          if (tag !== 10) {
+            break;
+          }
+
+          message.createdAt = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          continue;
+        }
+        case 2: {
+          if (tag !== 18) {
+            break;
+          }
+
+          message.updatedAt = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          continue;
+        }
+        case 3: {
+          if (tag !== 26) {
+            break;
+          }
+
+          message.requiredAt = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          continue;
+        }
+        case 4: {
+          if (tag !== 34) {
+            break;
+          }
+
+          message.optionalAt = fromTimestamp(Timestamp.decode(reader, reader.uint32()));
+          continue;
+        }
+      }
+      if ((tag & 7) === 4 || tag === 0) {
+        break;
+      }
+      reader.skip(tag & 7);
+    }
+    return message;
+  },
+
+  fromJSON(object: any): GoogleApiFieldExample {
+    return {
+      createdAt: isSet(object.createdAt) ? fromJsonTimestamp(object.createdAt) : undefined,
+      updatedAt: isSet(object.updatedAt) ? fromJsonTimestamp(object.updatedAt) : undefined,
+      requiredAt: isSet(object.requiredAt) ? fromJsonTimestamp(object.requiredAt) : undefined,
+      optionalAt: isSet(object.optionalAt) ? fromJsonTimestamp(object.optionalAt) : undefined,
+    };
+  },
+
+  toJSON(message: GoogleApiFieldExample): unknown {
+    const obj: any = {};
+    if (message.createdAt !== undefined) {
+      obj.createdAt = message.createdAt.toISOString();
+    }
+    if (message.updatedAt !== undefined) {
+      obj.updatedAt = message.updatedAt.toISOString();
+    }
+    if (message.requiredAt !== undefined) {
+      obj.requiredAt = message.requiredAt.toISOString();
+    }
+    if (message.optionalAt !== undefined) {
+      obj.optionalAt = message.optionalAt.toISOString();
+    }
+    return obj;
+  },
+
+  create<I extends Exact<DeepPartial<GoogleApiFieldExample>, I>>(base?: I): GoogleApiFieldExample {
+    return GoogleApiFieldExample.fromPartial(base ?? ({} as any));
+  },
+  fromPartial<I extends Exact<DeepPartial<GoogleApiFieldExample>, I>>(object: I): GoogleApiFieldExample {
+    const message = createBaseGoogleApiFieldExample();
+    message.createdAt = object.createdAt ?? undefined;
+    message.updatedAt = object.updatedAt ?? undefined;
+    message.requiredAt = object.requiredAt ?? undefined;
+    message.optionalAt = object.optionalAt ?? undefined;
+    return message;
+  },
+};
+
 function createBaseFieldConstraintsExample(): FieldConstraintsExample {
-  return {
-    evenValue: 0,
-    requiredMessageValue: undefined,
-    requiredStringValue: "",
-    requiredInt32Value: 0,
-    requiredEnumValue: 0,
-    requiredRepeatedValue: [],
-    requiredMapValue: {},
-    ignoreValue: "",
-  };
+  return { evenValue: 0 };
 }
 
 export const FieldConstraintsExample: MessageFns<FieldConstraintsExample> = {
   encode(message: FieldConstraintsExample, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
     if (message.evenValue !== 0) {
       writer.uint32(8).int32(message.evenValue);
-    }
-    if (message.requiredMessageValue !== undefined) {
-      FieldConstraintsExample_MyValue.encode(message.requiredMessageValue, writer.uint32(18).fork()).join();
-    }
-    if (message.requiredStringValue !== "") {
-      writer.uint32(26).string(message.requiredStringValue);
-    }
-    if (message.requiredInt32Value !== 0) {
-      writer.uint32(32).int32(message.requiredInt32Value);
-    }
-    if (message.requiredEnumValue !== 0) {
-      writer.uint32(40).int32(message.requiredEnumValue);
-    }
-    for (const v of message.requiredRepeatedValue) {
-      writer.uint32(50).string(v!);
-    }
-    Object.entries(message.requiredMapValue).forEach(([key, value]) => {
-      FieldConstraintsExample_RequiredMapValueEntry.encode({ key: key as any, value }, writer.uint32(58).fork()).join();
-    });
-    if (message.ignoreValue !== "") {
-      writer.uint32(66).string(message.ignoreValue);
     }
     return writer;
   },
@@ -2852,65 +3019,6 @@ export const FieldConstraintsExample: MessageFns<FieldConstraintsExample> = {
           message.evenValue = reader.int32();
           continue;
         }
-        case 2: {
-          if (tag !== 18) {
-            break;
-          }
-
-          message.requiredMessageValue = FieldConstraintsExample_MyValue.decode(reader, reader.uint32());
-          continue;
-        }
-        case 3: {
-          if (tag !== 26) {
-            break;
-          }
-
-          message.requiredStringValue = reader.string();
-          continue;
-        }
-        case 4: {
-          if (tag !== 32) {
-            break;
-          }
-
-          message.requiredInt32Value = reader.int32();
-          continue;
-        }
-        case 5: {
-          if (tag !== 40) {
-            break;
-          }
-
-          message.requiredEnumValue = reader.int32() as any;
-          continue;
-        }
-        case 6: {
-          if (tag !== 50) {
-            break;
-          }
-
-          message.requiredRepeatedValue.push(reader.string());
-          continue;
-        }
-        case 7: {
-          if (tag !== 58) {
-            break;
-          }
-
-          const entry7 = FieldConstraintsExample_RequiredMapValueEntry.decode(reader, reader.uint32());
-          if (entry7.value !== undefined) {
-            message.requiredMapValue[entry7.key] = entry7.value;
-          }
-          continue;
-        }
-        case 8: {
-          if (tag !== 66) {
-            break;
-          }
-
-          message.ignoreValue = reader.string();
-          continue;
-        }
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -2921,60 +3029,13 @@ export const FieldConstraintsExample: MessageFns<FieldConstraintsExample> = {
   },
 
   fromJSON(object: any): FieldConstraintsExample {
-    return {
-      evenValue: isSet(object.evenValue) ? globalThis.Number(object.evenValue) : 0,
-      requiredMessageValue: isSet(object.requiredMessageValue)
-        ? FieldConstraintsExample_MyValue.fromJSON(object.requiredMessageValue)
-        : undefined,
-      requiredStringValue: isSet(object.requiredStringValue) ? globalThis.String(object.requiredStringValue) : "",
-      requiredInt32Value: isSet(object.requiredInt32Value) ? globalThis.Number(object.requiredInt32Value) : 0,
-      requiredEnumValue: isSet(object.requiredEnumValue)
-        ? fieldConstraintsExample_StatusFromJSON(object.requiredEnumValue)
-        : 0,
-      requiredRepeatedValue: globalThis.Array.isArray(object?.requiredRepeatedValue)
-        ? object.requiredRepeatedValue.map((e: any) => globalThis.String(e))
-        : [],
-      requiredMapValue: isObject(object.requiredMapValue)
-        ? Object.entries(object.requiredMapValue).reduce<{ [key: string]: string }>((acc, [key, value]) => {
-          acc[key] = String(value);
-          return acc;
-        }, {})
-        : {},
-      ignoreValue: isSet(object.ignoreValue) ? globalThis.String(object.ignoreValue) : "",
-    };
+    return { evenValue: isSet(object.evenValue) ? globalThis.Number(object.evenValue) : 0 };
   },
 
   toJSON(message: FieldConstraintsExample): unknown {
     const obj: any = {};
     if (message.evenValue !== 0) {
       obj.evenValue = Math.round(message.evenValue);
-    }
-    if (message.requiredMessageValue !== undefined) {
-      obj.requiredMessageValue = FieldConstraintsExample_MyValue.toJSON(message.requiredMessageValue);
-    }
-    if (message.requiredStringValue !== "") {
-      obj.requiredStringValue = message.requiredStringValue;
-    }
-    if (message.requiredInt32Value !== 0) {
-      obj.requiredInt32Value = Math.round(message.requiredInt32Value);
-    }
-    if (message.requiredEnumValue !== 0) {
-      obj.requiredEnumValue = fieldConstraintsExample_StatusToJSON(message.requiredEnumValue);
-    }
-    if (message.requiredRepeatedValue?.length) {
-      obj.requiredRepeatedValue = message.requiredRepeatedValue;
-    }
-    if (message.requiredMapValue) {
-      const entries = Object.entries(message.requiredMapValue);
-      if (entries.length > 0) {
-        obj.requiredMapValue = {};
-        entries.forEach(([k, v]) => {
-          obj.requiredMapValue[k] = v;
-        });
-      }
-    }
-    if (message.ignoreValue !== "") {
-      obj.ignoreValue = message.ignoreValue;
     }
     return obj;
   },
@@ -2985,170 +3046,9 @@ export const FieldConstraintsExample: MessageFns<FieldConstraintsExample> = {
   fromPartial<I extends Exact<DeepPartial<FieldConstraintsExample>, I>>(object: I): FieldConstraintsExample {
     const message = createBaseFieldConstraintsExample();
     message.evenValue = object.evenValue ?? 0;
-    message.requiredMessageValue = (object.requiredMessageValue !== undefined && object.requiredMessageValue !== null)
-      ? FieldConstraintsExample_MyValue.fromPartial(object.requiredMessageValue)
-      : undefined;
-    message.requiredStringValue = object.requiredStringValue ?? "";
-    message.requiredInt32Value = object.requiredInt32Value ?? 0;
-    message.requiredEnumValue = object.requiredEnumValue ?? 0;
-    message.requiredRepeatedValue = object.requiredRepeatedValue?.map((e) => e) || [];
-    message.requiredMapValue = Object.entries(object.requiredMapValue ?? {}).reduce<{ [key: string]: string }>(
-      (acc, [key, value]) => {
-        if (value !== undefined) {
-          acc[key] = globalThis.String(value);
-        }
-        return acc;
-      },
-      {},
-    );
-    message.ignoreValue = object.ignoreValue ?? "";
     return message;
   },
 };
-
-function createBaseFieldConstraintsExample_MyValue(): FieldConstraintsExample_MyValue {
-  return { value: 0 };
-}
-
-export const FieldConstraintsExample_MyValue: MessageFns<FieldConstraintsExample_MyValue> = {
-  encode(message: FieldConstraintsExample_MyValue, writer: BinaryWriter = new BinaryWriter()): BinaryWriter {
-    if (message.value !== 0) {
-      writer.uint32(8).int32(message.value);
-    }
-    return writer;
-  },
-
-  decode(input: BinaryReader | Uint8Array, length?: number): FieldConstraintsExample_MyValue {
-    const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
-    let end = length === undefined ? reader.len : reader.pos + length;
-    const message = createBaseFieldConstraintsExample_MyValue();
-    while (reader.pos < end) {
-      const tag = reader.uint32();
-      switch (tag >>> 3) {
-        case 1: {
-          if (tag !== 8) {
-            break;
-          }
-
-          message.value = reader.int32();
-          continue;
-        }
-      }
-      if ((tag & 7) === 4 || tag === 0) {
-        break;
-      }
-      reader.skip(tag & 7);
-    }
-    return message;
-  },
-
-  fromJSON(object: any): FieldConstraintsExample_MyValue {
-    return { value: isSet(object.value) ? globalThis.Number(object.value) : 0 };
-  },
-
-  toJSON(message: FieldConstraintsExample_MyValue): unknown {
-    const obj: any = {};
-    if (message.value !== 0) {
-      obj.value = Math.round(message.value);
-    }
-    return obj;
-  },
-
-  create<I extends Exact<DeepPartial<FieldConstraintsExample_MyValue>, I>>(base?: I): FieldConstraintsExample_MyValue {
-    return FieldConstraintsExample_MyValue.fromPartial(base ?? ({} as any));
-  },
-  fromPartial<I extends Exact<DeepPartial<FieldConstraintsExample_MyValue>, I>>(
-    object: I,
-  ): FieldConstraintsExample_MyValue {
-    const message = createBaseFieldConstraintsExample_MyValue();
-    message.value = object.value ?? 0;
-    return message;
-  },
-};
-
-function createBaseFieldConstraintsExample_RequiredMapValueEntry(): FieldConstraintsExample_RequiredMapValueEntry {
-  return { key: "", value: "" };
-}
-
-export const FieldConstraintsExample_RequiredMapValueEntry: MessageFns<FieldConstraintsExample_RequiredMapValueEntry> =
-  {
-    encode(
-      message: FieldConstraintsExample_RequiredMapValueEntry,
-      writer: BinaryWriter = new BinaryWriter(),
-    ): BinaryWriter {
-      if (message.key !== "") {
-        writer.uint32(10).string(message.key);
-      }
-      if (message.value !== "") {
-        writer.uint32(18).string(message.value);
-      }
-      return writer;
-    },
-
-    decode(input: BinaryReader | Uint8Array, length?: number): FieldConstraintsExample_RequiredMapValueEntry {
-      const reader = input instanceof BinaryReader ? input : new BinaryReader(input);
-      let end = length === undefined ? reader.len : reader.pos + length;
-      const message = createBaseFieldConstraintsExample_RequiredMapValueEntry();
-      while (reader.pos < end) {
-        const tag = reader.uint32();
-        switch (tag >>> 3) {
-          case 1: {
-            if (tag !== 10) {
-              break;
-            }
-
-            message.key = reader.string();
-            continue;
-          }
-          case 2: {
-            if (tag !== 18) {
-              break;
-            }
-
-            message.value = reader.string();
-            continue;
-          }
-        }
-        if ((tag & 7) === 4 || tag === 0) {
-          break;
-        }
-        reader.skip(tag & 7);
-      }
-      return message;
-    },
-
-    fromJSON(object: any): FieldConstraintsExample_RequiredMapValueEntry {
-      return {
-        key: isSet(object.key) ? globalThis.String(object.key) : "",
-        value: isSet(object.value) ? globalThis.String(object.value) : "",
-      };
-    },
-
-    toJSON(message: FieldConstraintsExample_RequiredMapValueEntry): unknown {
-      const obj: any = {};
-      if (message.key !== "") {
-        obj.key = message.key;
-      }
-      if (message.value !== "") {
-        obj.value = message.value;
-      }
-      return obj;
-    },
-
-    create<I extends Exact<DeepPartial<FieldConstraintsExample_RequiredMapValueEntry>, I>>(
-      base?: I,
-    ): FieldConstraintsExample_RequiredMapValueEntry {
-      return FieldConstraintsExample_RequiredMapValueEntry.fromPartial(base ?? ({} as any));
-    },
-    fromPartial<I extends Exact<DeepPartial<FieldConstraintsExample_RequiredMapValueEntry>, I>>(
-      object: I,
-    ): FieldConstraintsExample_RequiredMapValueEntry {
-      const message = createBaseFieldConstraintsExample_RequiredMapValueEntry();
-      message.key = object.key ?? "";
-      message.value = object.value ?? "";
-      return message;
-    },
-  };
 
 function bytesFromBase64(b64: string): Uint8Array {
   if ((globalThis as any).Buffer) {

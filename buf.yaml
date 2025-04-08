@@ -9,6 +9,8 @@ lint:
 modules:
   - path: proto/example
 deps:
+  - buf.build/envoyproxy/protoc-gen-validate
+  - buf.build/googleapis/googleapis
   - buf.build/bufbuild/protovalidate
 
   
